@@ -1,4 +1,5 @@
-# Real code challenges. Completed_solutions
+# Real code challenges. 
+# Completed_solutions 1-10
 
 # Task 1. Multiply
 https://www.codewars.com/kata/50654ddff44f800200000004
