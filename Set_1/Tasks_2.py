@@ -150,14 +150,14 @@ def how_many_pizzas(n):
 
 print (how_many_pizzas(n))
 
-# Solution 19
+# Solution 2
 def how_many_pizzas(n): 
   return f"pizzas: {(n ** 2) // 64}, slices: {(n ** 2) % 64 // 8}"
   
 print (how_many_pizzas(n))
 
 
-# Task 4. Holiday VIII - Duty Free
+# Task 19. Holiday VIII - Duty Free
 https://www.codewars.com/kata/57e92e91b63b6cbac20001e5/train/python
 
 # The purpose of this kata is to work out just how many bottles of duty free whiskey 
