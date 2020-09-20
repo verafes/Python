@@ -1,5 +1,5 @@
 # Real code challenges. 
-# Completed_solutions 1-10
+# Set #1. Completed_solutions 1-10
 
 # Task 1. Multiply
 https://www.codewars.com/kata/50654ddff44f800200000004
@@ -103,65 +103,22 @@ def past(h,m,s):
 print(f"Given '{h}' hours, '{m}' minutes and 'S' seconds after midnight")  
 print("Total milliseconds = ", past(h,m,s))
 
-# Task 9. Count Odd Numbers below n
-https://www.codewars.com/kata/59342039eb450e39970000a6/python
+# Task 9. Opposite number
+https://www.codewars.com/kata/56dec885c54a926dcd001095
+# Very simple, given a number, find its opposite. 
+# Examples: 1: -1, -34: 34
+# Examples: 1: -1, -34: 34
 
-# Given a number n, return the number of positive odd numbers below n, EASY!
+def opposite(number): 
+	return -number
 
-# oddCount(7) //=> 3, i.e [1, 3, 5] 
-# oddCount(15) //=> 7, i.e [1, 3, 5, 7, 9, 11, 13]
+# Task 10. Returning Strings
+https://www.codewars.com/kata/55a70521798b14d4750000a4/train/python 
+# Make a function that will return a greeting statement that uses an input; 
+# your program should return, "Hello, <name> how are you doing today?".
+# [Make sure you type the exact thing I wrote or the program may not execute properly]
 
-def odd_count(n):
-    if n < 1:
-        return 0
-    else:
-        return n // 2
-
-n = int(input("Enter n: "))
-print(oddCount(n))
-
-def century(year):
-    if year %  100 == 0:
-        return year / 100
-    else:
-        return year // 100 + 1
-		
-# Task 10. Expressions Matter
-https://www.codewars.com/kata/5ae62fcf252e66d44d00008e
-
-# Given three integers a ,b ,c, return the largest number obtained after inserting 
-# the following operators and brackets: +, *, () 
-# In other words , try every combination of a,b,c with [*+()], 
-# and return the Maximum Obtained
-
-# !!! Notes
-# The numbers are always positive. 
-# The numbers are in the range (1 ≤ a, b, c ≤ 10).
-# You can use the same operation more than once.
-# It's not necessary to place all the signs and brackets.
-# Repetition in numbers may occur.
-# You cannot swap the operands. For instance, 
-# in the given example you cannot get expression (1 + 3) * 2 = 8.
-
-def expressionsMatter(a,b,c):
-  # for i in range(1,10):
-    if a <= 0 or b<= 0 or c <= 0:
-      return ("Error. Value of a, b, c should be greater than zero")
-    else:
-      n1 = a * (b + c) 
-      n2 = a * b * c
-      n3 = a + b * c
-      n4 = (a + b) * c
-      n5 = a + b + c
-      n6 = a * b + c
-    return(max(n1, n2, n3, n4, n5, n6))
+def greet(name):
+    return f"Hello, {name} how are you doing today?"
 	
-a = int(input("Enter integer for a: "))
-b = int(input("Enter integer for c: "))
-c = int(input("Enter integer for c: "))
-
-print(expressionsMatter(a,b,c))
-
-
-	
-
+#
