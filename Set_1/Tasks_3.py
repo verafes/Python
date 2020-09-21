@@ -121,6 +121,7 @@ https://www.codewars.com/kata/5ae62fcf252e66d44d00008e
 
 def expressionsMatter(a,b,c):
   # for i in range(1,10):
+  # for i in range(1,10):
     if a <= 0 or b<= 0 or c <= 0:
       return ("Error. Value of a, b, c should be greater than zero")
     else:
@@ -148,12 +149,62 @@ def angle(n):
 n = int(input("Enter number of sides of a regular polygon: "))
 print(angle(n))
 
-# Task 27.	Miles per gallon to kilometers per liter
+# Task 27.	Convert a Number to a String!
 https://www.codewars.com/kata/557b5e0bddf29d861400005d
+# We need a function that can transform a number into a string.
+# What ways of achieving this do you know?
+# Examples:
+# number_to_string(123) /* returns '123' */
+# number_to_string(999) /* returns '999' */
 
+def number_to_string(num):
+    # Return a string of the number here!
+    return str(num)
 
-# Task 28. 
+# Task 28. Drone Fly-By
+https://www.codewars.com/kata/5265326f5fda8eb1160004c8
+# The other day I saw an amazing video where a guy hacked some wifi controlled lightbulbs by flying 
+# a drone past them. Brilliant.
+# In this kata we will recreate that stunt... sort of.
+# You will be given two strings: lamps and drone. 
+# lamps represents a row of lamps, currently off, each represented by x. 
+# When these lamps are on, they should be represented by o.
+# The drone string represents the position of the drone T (any better suggestion for character??) and its flight path up until this point =. 
+# The drone always flies left to right, and always begins at the start of the row of lamps. 
+# Anywhere the drone has flown, including its current position, 
+# will result in the lamp at that position switching on.
+# Return the resulting lamps string. See example tests for more clarity.
 
-# Task 29. 
-		
-# Task 30. 
+Return the resulting lamps string. See example tests for more clarity.
+def fly_by(lamps, drone):
+    lend = len(drone)
+    lenl = len(lamps)
+    return lend * "o" + (lenl - lend)*'x' if lend <= lenl else lenl*"o"
+
+# Task 29. Breaking chocolate problem
+https://www.codewars.com/kata/534ea96ebb17181947000ada
+# Your task is to split the chocolate bar of given dimension n x m into small squares. 
+# Each square is of size 1x1 and unbreakable. 
+# Implement a function that will return minimum number of breaks needed.
+# For example if you are given a chocolate bar of size 2 x 1 you can split it 
+# to single squares in just one break, but for size 3 x 1 you must do two breaks.
+# If input data is invalid you should return 0 (as in no breaks are needed 
+# if we do not have any chocolate to split). Input will always be a non-negative integer.
+
+def breakChocolate(n, m):
+    return m*n-1 if n > 0 and m > 0 else 0
+#
+# Task 30. I love you, a little , a lot, passionately ... not at all
+https://www.codewars.com/kata/57f24e6a18e9fad8eb000296
+# Who remembers back to their time in the schoolyard, 
+# when girls would take a flower and tear its petals, 
+# saying each of the following phrases each time a petal was torn:
+# I love you, a little, a lot, passionately, madly, not at all
+# When the last petal was torn there were cries of excitement, dreams, surging thoughts and emotions.
+# Your goal in this kata is to determine which phrase the girls would say for a flower of a given number of petals, where nb_petals > 0.
+
+def how_much_i_love_you(nb_petals):
+    n = nb_petals % 6 
+    m = ["I love you", "a little", "a lot", "passionately", "madly", "not at all"] 
+    return m[n-1]
+#
