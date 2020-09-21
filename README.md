@@ -1,6 +1,5 @@
 # python
 
-# Code challenges focused on improving skill and technique
+# Code challenges focused on improving skill and technique in Python
 
-# Completed_solutions
  
