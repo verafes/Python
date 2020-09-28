@@ -73,12 +73,55 @@ def basic_op(operator, value1, value2):
         return "Error"
 
 
-# Task 6.
+# Task 6. Area of a Square
+https://www.codewars.com/kata/5748838ce2fab90b86001b1a
+#Complete the function that calculates the area of the red square, 
+#when the length of the circular arc A is given as the input. 
+#Return the result rounded to two decimals.
+
+def square_area(A):
+    from math import pi
+    r = (A*4)/(2*pi)
+    area = r**2
+    return (round(area, 2))
+
+# Task 7. Convert a Boolean to a String
+https://www.codewars.com/kata/551b4501ac0447318f0009cd
+# Implement a function which convert the given boolean value into its string representation.
+def boolean_to_string(b):
+    return str(b)
 	
-# Task 7. 
+# Task 8. Hello, Name or World!
+https://www.codewars.com/kata/57e3f79c9cb119374600046b
+# Define a method hello that returns "Hello, Name!" to a given name, or says Hello, World! 
+# if name is not given (or passed as an empty String).
+# Assuming that name is a String and it checks for user typos to return a name 
+# with a first capital letter (Xxxx).
+# Examples:
+# hello "john"   => "Hello, John!"
+# hello "aliCE"  => "Hello, Alice!"
+# hello          => "Hello, World!" # name not given
+# hello ''       => "Hello, World!" # name is an empty String
 
-# Task 8. 
+def hello(name=""):
+    if name:
+        return f"Hello, {name.title()}!"
+    else:
+         return f"Hello, World!"
 
-# Task 9. 
-		
-# Task 0. 
+# Task 9. Remove First and Last Character
+https://www.codewars.com/kata/56bc28ad5bdaeb48760009b0
+# It's pretty straightforward. Your goal is to create a function that removes 
+# the first and last characters of a string. You're given one parameter, the original string. 
+# You don't have to worry with strings with less than two characters.
+
+def remove_char(s):
+    return '' if len(s) <= 2 else s[1:-1]
+
+# Task 10. Remove exclamation marks
+# Write function RemoveExclamationMarks which removes all exclamation marks from a given string.
+
+def remove_exclamation_marks(s):
+    return s.replace("!","")
+
+# 
