@@ -42,6 +42,12 @@ https://www.codewars.com/kata/5a3fe3dde1ce0e8ed6000097
 # centuryFromYear(1601)  returns (17)
 # centuryFromYear(2000)  returns (20)
 
+def century(year):
+    if year %  100 == 0:
+        return year / 100
+    else:
+        return year // 100 + 1
+
 # Task 5. Return the closest number multiple of 10
 https://www.codewars.com/kata/58249d08b81f70a2fc0001a4
 # Given a number return the closest number to it that is divisible by 10.
