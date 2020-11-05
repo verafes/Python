@@ -128,7 +128,7 @@ def find_short(s):
         arr2.append(l)
     return min(arr2)
 	
-Solution 2
+# Solution 2
 
 def find_short(s):
     return min([len(el) for el in s.split()])
