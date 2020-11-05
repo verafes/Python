@@ -96,12 +96,6 @@ def odd_count(n):
 n = int(input("Enter n: "))
 print(oddCount(n))
 
-def century(year):
-    if year %  100 == 0:
-        return year / 100
-    else:
-        return year // 100 + 1
-		
 # Task 25. Expressions Matter
 https://www.codewars.com/kata/5ae62fcf252e66d44d00008e
 
