@@ -41,14 +41,23 @@ import math
 def how_many_times(annual_price, individual_price):
     return math.ceil(annual_price/individual_price)
 	
-# Task 4. Number of Decimal Digits
-https://www.codewars.com/kata/58fa273ca6d84c158e000052
-# Determine the total number of digits in the integer (n>=0) given as input to the function. 
-# For example, 9 is a single digit, 66 has 2 digits and 128685 has 6 digits. 
-# Be careful to avoid overflows/underflows.
+# Task 4. Multiples!
+https://www.codewars.com/kata/55a8a36703fe4c45ed00005b
+# Make a program that takes a value (x) and returns "Bang" if the number is divisible by 3, 
+# "Boom" if it is divisible by 5, "BangBoom" if it divisible by 3 and 5, and "Miss" if it isn't divisible by any of them. 
+# Note: Your program should only return one value
 
-def digits(n):
-    return len(str(n))
+Ex: Input: 105 --> Output: "BangBoom" Ex: Input: 9 --> Output: "Bang" Ex:Input: 25 --> Output: "Boom"
+
+def multiple(x):
+    if x % 3 == 0 and x % 5 != 0:
+        return "Bang"
+    if x % 3 != 0 and x % 5 == 0:
+        return  "Boom"
+    if x % 3 == 0 and x % 5 == 0:
+        return "BangBoom"
+    else: 
+        return "Miss"
 
 # Task 5. Basic Mathematical Operations
 # Your task is to create a function that does four basic mathematical operations.
