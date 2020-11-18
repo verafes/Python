@@ -79,11 +79,10 @@ https://www.codewars.com/kata/56dec885c54a926dcd001095
 def opposite(number): 
 	return -number
 
-# Task 5. Count Odd Numbers below n
+# Task 25\. Count Odd Numbers below n
 https://www.codewars.com/kata/59342039eb450e39970000a6/python
 
 # Given a number n, return the number of positive odd numbers below n, EASY!
-
 # oddCount(7) //=> 3, i.e [1, 3, 5] 
 # oddCount(15) //=> 7, i.e [1, 3, 5, 7, 9, 11, 13]
 
@@ -96,7 +95,7 @@ def odd_count(n):
 n = int(input("Enter n: "))
 print(oddCount(n))
 
-# Task 25. Expressions Matter
+# Task 25-2. Expressions Matter
 https://www.codewars.com/kata/5ae62fcf252e66d44d00008e
 
 # Given three integers a ,b ,c, return the largest number obtained after inserting 
@@ -156,7 +155,7 @@ def number_to_string(num):
     return str(num)
 
 # Task 28. Drone Fly-By
-https://www.codewars.com/kata/5265326f5fda8eb1160004c8
+https://www.codewars.com/kata/58356a94f8358058f30004b5
 # The other day I saw an amazing video where a guy hacked some wifi controlled lightbulbs by flying 
 # a drone past them. Brilliant.
 # In this kata we will recreate that stunt... sort of.
