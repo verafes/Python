@@ -3,11 +3,13 @@
 
 # Task 41. Get the Middle Character
 https://www.codewars.com/kata/56747fd5cb988479af000028
-#You are going to be given a word. Your job is to return the middle character of the word. If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.
+#You are going to be given a word. Your job is to return the middle character of the word. 
+# If the word's length is odd, return the middle character. 
+# If the word's length is even, return the middle 2 characters.
 #Examples:
 #Kata.getMiddle("test") should return "es"
 #Kata.getMiddle("testing") should return "t"
-#Kata.getMiddle("middle") should return "dd"
+ata.getMiddle("middle") should return "dd"
 #Kata.getMiddle("A") should return "A"
 
 def get_middle(s):
@@ -51,10 +53,7 @@ https://www.codewars.com/kata/5aa3af22ba1bb5209f000037
 
 def solve(eq):
     arr = list(eq.replace("*"," * ").replace("/"," / ").replace("-"," - ").replace("+"," + ").split(" "))
-    arr2 = arr[::-1]
-    print (arr)
-    print (arr2)
-    return "".join([el for el in arr[::-1]])
+    return "".join(arr[::-1])
 	
 # Task 46. String ends with?
 https://www.codewars.com/kata/51f2d1cafc9c0f745c00037d
