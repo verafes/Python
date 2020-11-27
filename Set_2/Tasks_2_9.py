@@ -113,6 +113,11 @@ def toCsvText(array):
         new_arr.append(",".join([str(el) for el in lst]))
     return "\n".join(new_arr)
 
+#Solution #2:
+def toCsvText(array) :
+    return "\n".join(",".join([str(el) for el in array]))
+
+
 # Task 86. IPv4 Validator
 https://www.codewars.com/kata/57193694938fcdfe3a001dd7
 # In this kata you have to write a method to verify the validity of IPv4 addresses.
