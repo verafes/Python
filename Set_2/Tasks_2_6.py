@@ -84,7 +84,7 @@ def maps(a):
     return [el * 2 for el in a]
 
 # Task 55. Sum of array's elements
-
+https://www.codewars.com/kata/58f475735e78fde4a2000011
 # You will be given an array of integers. You will need to return an integer that is the sum of the elements multiplied by an incrementing constant. The first element in the array is multiplied by 1, the second element multiplied by 2, etc:
 # a, b, c, d, ... => 1*a + 2*b + 3*c + 4*d + ...
 # Examples
