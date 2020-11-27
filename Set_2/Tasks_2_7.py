@@ -97,7 +97,7 @@ https://www.codewars.com/kata/557af4c6169ac832300000ba
 def remove_rotten(bag_of_fruits=[]):
     return [el.replace("rotten","").lower() for el in bag_of_fruits] if bag_of_fruits else []
 
-# Task 9. Word values
+# Task 69. Word values
 https://www.codewars.com/kata/598d91785d4ce3ec4f000018
 # Given a string "abc" and assuming that each letter in the string has a value equal to its position in the alphabet, 
 # our string will have a value of 1 + 2 + 3 = 6. This means that: a = 1, b = 2, c = 3 ....z = 26.

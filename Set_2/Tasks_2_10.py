@@ -98,7 +98,6 @@ def solve(arr):
 
 # Task 97. Santa's Naughty List
 https://www.codewars.com/kata/5a0b4dc2ffe75f72f70000ef
-https://www.codewars.com/kata/5a0b4dc2ffe75f72f70000ef
 Christmas is coming, and Santa has a long list to go through, to find who deserves presents for the big day. 
 # Go through a list of children, and return a list containing every child who appeared on Santa's list. 
 # Do not add any child more than once. Output should be sorted.
@@ -108,7 +107,7 @@ def find_children(santas_list, children):
     return sorted([el for el in children if el in santas_list])
 
 # Task 98. Return String of First Characters
-
+https://www.codewars.com/kata/5639bdcef2f9b06ce800005b
 # In this exercise, a string is passed to a method and a new string has to be returned with the first character of each word in the string.
 # For example: "This Is A Test" ==> "TIAT"
 

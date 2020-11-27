@@ -71,7 +71,7 @@ https://www.codewars.com/kata/53dc23c68a0c93699800041d
 def smash(words):
     return " ".join(words)
 
-# Task 45. 
+# Task 45. Remove duplicate words
 https://www.codewars.com/kata/5b39e3772ae7545f650000fc
 # Your task is to remove all duplicate words from a string, leaving only single (first) words entries.
 # Example:
