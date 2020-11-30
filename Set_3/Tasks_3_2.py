@@ -31,7 +31,7 @@ def is_x_prime(x):
     if x <= 1:
         return False
     isPrime = True
-    for i in range(2,x//2+1):
+    for i in range(2,round(x**0.5)+1):
         if x % i == 0:
             isPrime = False
             break
