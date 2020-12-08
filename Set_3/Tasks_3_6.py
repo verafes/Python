@@ -1,7 +1,7 @@
 # Real code challenges. Set #3
 # Completed_solutions 51-60.
 
-# Task 51. Mirror, mirror, on the wall...
+# Task 351. Mirror, mirror, on the wall...
 https://www.codewars.com/kata/5f55ecd770692e001484af7d
 # You get a list of integers, and you have to write a function mirror that returns the "mirror" (or symmetric) version of this list: 
 # i.e. the middle element is the greatest, then the next greatest on both sides, the the next greatest, and so on...
@@ -24,7 +24,7 @@ def mirror(data: list) -> list:
     arr = sorted(data)
     return arr + arr[-2::-1]
 	
-# Task 52. Simple Fun #63: Shape Area
+# Task 352. Simple Fun #63: Shape Area
 https://www.codewars.com/kata/5893e0c41a88085c330000a0
 # Task. Below we will define what and n-interesting polygon is and your task is to find its area for a given n. (use link to see pic)
 # A 1-interesting polygon is just a square with a side of length 1. An n-interesting polygon is obtained 
@@ -35,7 +35,7 @@ https://www.codewars.com/kata/5893e0c41a88085c330000a0
 def shape_area(n):
     return n**2+(n-1)**2
 
-# Task 53. Swap the head and the tail
+# Task 33. Swap the head and the tail
 https://www.codewars.com/kata/5a34f087c5e28462d9000082
 # You need to swap the head and the tail of the specified array:
 # the head (the first half) of array moves to the end, the tail (the second half) moves to the start. 
@@ -46,7 +46,7 @@ def swap_head_tail(arr):
     i = int(len(arr) / 2)
     return arr[-i:] + arr[i:-i] + arr[:i]
 
-# Task 54. Add Length
+# Task 354. Add Length
 https://www.codewars.com/kata/559d2284b5bb6799e9000047
 # What if we need the length of the words separated by a space to be added at the end of that same word and have it returned as an array?
 # add_length('apple ban') => ["apple 5", "ban 3"]
@@ -77,7 +77,7 @@ def count_letter(word):
 def solve(arr):
     return [count_letter(el) for el in arr]
 
-# Task 56. Breaking search bad
+# Task 356. Breaking search bad
 https://www.codewars.com/kata/52cd53948d673a6e66000576
 # The function must return the sequence of titles that match the string passed as an argument.
 # titles = ['Rocky 1', 'Rocky 2', 'My Little Poney']
@@ -105,7 +105,7 @@ def tower_builder(n):
 def tower_builder(n):
     return [('*' * i).center(2 * n - 1) for i in range(1,2 * n, 2)]
 
-# Task 58. Convert number to reversed array of digits
+# Task 358. Convert number to reversed array of digits
 https://www.codewars.com/kata/5583090cbe83f4fd8c000051
 # Given a random non-negative number, you have to return the digits of this number within an array in reverse order.
 # Example: 348597 => [7,9,5,8,4,3]
@@ -113,7 +113,7 @@ https://www.codewars.com/kata/5583090cbe83f4fd8c000051
 def digitize(n):
     return [int(el) for el in reversed(str(n))] 
 
-# Task 59. Count by X 
+# Task 359. Count by X 
 https://www.codewars.com/kata/5513795bd3fafb56c200049e
 # Create a function with two arguments that will return an array of the first (n) multiples of (x).
 # Assume both the given number and the number of times to count will be positive numbers greater than 0.
@@ -125,7 +125,7 @@ https://www.codewars.com/kata/5513795bd3fafb56c200049e
 def count_by(x, n):
     return [i * x for i in range(1, n + 1)]
 
-# Task 60. Duplicate sandwich
+# Task 360. Duplicate sandwich
 https://www.codewars.com/kata/5f8a15c06dbd530016be0c19
 # In this kata you will be given a list consisting of unique elements except for one thing that appears twice.
 # Your task is to output a list of everything inbetween both occurrences of this element in the list.
