@@ -1,7 +1,7 @@
 # Real code challenges. Set #3
 # Completed_solutions 31-40.
 
-# Task 31. Reversed Words
+# Task 331. Reversed Words
 https://www.codewars.com/kata/51c8991dee245d7ddf00000e
 # Complete the solution so that it reverses all of the words within the string passed in.
 # Example:
@@ -11,7 +11,7 @@ https://www.codewars.com/kata/51c8991dee245d7ddf00000e
 def reverseWords(s):
     return ' '.join(reversed(s.split(' ')))
 
-# Task 32. Odd or Even?
+# Task 332. Odd or Even?
 https://www.codewars.com/kata/5949481f86420f59480000e7
 # Task:  Given a list of numbers, determine whether the sum of its elements is odd or even.
 # Give your answer as a string matching "odd" or "even".
@@ -23,7 +23,7 @@ https://www.codewars.com/kata/5949481f86420f59480000e7
 def odd_or_even(arr):
     return 'even' if sum(arr)%2 == 0 else "odd"
 
-# Task 33. Powers of 2
+# Task 333. Powers of 2
 https://www.codewars.com/kata/57a083a57cb1f31db7000028
 # Complete the function that takes a non-negative integer n as input, and returns a list of all the powers of 2 with the exponent ranging from 0 to n (inclusive).
 # Examples
@@ -42,7 +42,7 @@ def powers_of_two(n):
 def powers_of_two(n):
     return [2**i for i in range(n+1)]
 
-# Task 34. No Loops 2 - You only need one
+# Task 334. No Loops 2 - You only need one
 https://www.codewars.com/kata/57cc40b2f8392dbf2a0003ce
 # You will be given an array (a) and a value (x). All you need to do is check whether the provided array contains the value, without using a loop.
 # Array can contain numbers or strings. X can be either. Return true if the array contains the value, false if not. With strings you will need to account for case.
@@ -50,7 +50,7 @@ https://www.codewars.com/kata/57cc40b2f8392dbf2a0003ce
 def check(a, x): 
     return x in a
 
-# Task 35. Match My Husband
+# Task 335. Match My Husband
 https://www.codewars.com/kata/5750699bcac40b3ed80001ca
 # It is 2050 and romance has long gone, relationships exist solely for practicality.
 # MatchMyHusband is a website that matches busy working women with perfect house husbands. You have been employed by MatchMyHusband to write a function that determines who matches!!
@@ -71,7 +71,7 @@ def match(usefulness, months):
             s *= 0.85
     return "No match!"
 	
-# Task 36. Simple Fun #152: Invite More Women?
+# Task 336. Simple Fun #152: Invite More Women?
 https://www.codewars.com/kata/58acfe4ae0201e1708000075
 # Task. King Arthur and his knights are having a New Years party. 
 # Last year Lancelot was jealous of Arthur, because Arthur had a date and Lancelot did not, and they started a duel.
@@ -84,7 +84,7 @@ def invite_more_women(arr):
     men = arr.count(1)
     return women < men
 
-# Task 37. Row Weights
+# Task 337. Row Weights
 https://www.codewars.com/kata/5abd66a5ccfd1130b30000a9
 # Scenario. Several people are standing in a row divided into two teams. The first person goes into team 1, the second goes into team 2, the third goes into team 1, and so on.
 # Task. Given an array of positive integers (the weights of the people), return a new array/tuple of two integers, where the first one is the total weight of team 1, and the second one is the total weight of team 2.
@@ -100,7 +100,7 @@ def row_weights(array):
             team2.append(el)
     return sum(team1), sum(team2)
 	
-# Task 38. Manhattan Distance
+# Task 338. Manhattan Distance
 https://www.codewars.com/kata/52998bf8caa22d98b800003a
 # The distance formula can be used to find the distance between two points. What if we were trying to walk from point A to point B, but there were buildings in the way? 
 # We would need some other formula..but which?
@@ -113,7 +113,7 @@ https://www.codewars.com/kata/52998bf8caa22d98b800003a
 def manhattan_distance(pointA, pointB):
     return abs(pointA[0] - pointB[0])+abs(pointA[1] - pointB[1])
 
-# Task 39. Tribonacci Sequence
+# Task 339. Tribonacci Sequence
 https://www.codewars.com/kata/556deca17c58da83c00002db
 # Well met with Fibonacci bigger brother, AKA Tribonacci.
 # As the name may already reveal, it works basically like a Fibonacci, but summing the last 3 (instead of 2) numbers of the sequence to generate the next. 
@@ -133,7 +133,7 @@ def tribonacci(signature, n):
         signature.append(sum(signature[i-3:i]))
     return signature
 
-# Task 40. Sums of Parts
+# Task 340. Sums of Parts
 https://www.codewars.com/kata/5ce399e0047a45001c853c2b
 # Let us consider this example (array written in general format):
 # ls = [0, 1, 3, 6, 10]

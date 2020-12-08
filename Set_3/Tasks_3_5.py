@@ -1,7 +1,7 @@
 # Real code challenges. Set #3
 # Completed_solutions 41-50.
 
-# Task 41. Sum of list values
+# Task 341. Sum of list values
 https://www.codewars.com/kata/57a0515f53ba33ac5e000245
 # Write function sumList (or sum_list) which will calculate the sum of the elements of the given list.
 # For example: [1, 2, 3] -> 1 + 2 + 3 -> 6
@@ -9,7 +9,7 @@ https://www.codewars.com/kata/57a0515f53ba33ac5e000245
 def sum_list(lst):
     return sum(lst)
 
-# Task 42. Pre-FizzBuzz Workout #1
+# Task 342. Pre-FizzBuzz Workout #1
 https://www.codewars.com/kata/569e09850a8e371ab200000b
 # Your inputs: a positive integer, n, greater than or equal to one. n is provided, you have NO CONTROL over its value.
 # Your expected output is an array of positive integers from 1 to n (inclusive).
@@ -18,7 +18,7 @@ https://www.codewars.com/kata/569e09850a8e371ab200000b
 def pre_fizz(n):
     return list(range(1,n+1))
 	
-# Task 43. Series of integers from 0 to n
+# Task 343. Series of integers from 0 to n
 https://www.codewars.com/kata/5841f4fb673ea2a2ae000111
 # Write a function generateIntegers/generate_integers that accepts a single argument n/$n 
 # and generates an array containing the integers from 0 to n/$n inclusive.
@@ -33,7 +33,7 @@ def generateIntegers(n):
 def generateIntegers(n):
     return list(range(n + 1))
 
-# Task 44. Lario and Muigi Pipe Problem
+# Task 344. Lario and Muigi Pipe Problem
 https://www.codewars.com/kata/56b29582461215098d00000f
 # Issue Looks like some hoodlum plumber and his brother has been running around and damaging your stages again.
 # The pipes connecting your level's stages together need to be fixed before you recieve any more complaints. Each pipe should be connecting, since the levels ascend, you can assume every number in the sequence after the first index will be greater than the previous and that there will be no duplicates.
@@ -65,7 +65,7 @@ def pipe_fix(numbers):
         x += 1
     return y
 
-# Task 45. Fizz Buzz Cuckoo Clock
+# Task 345. Fizz Buzz Cuckoo Clock
 https://www.codewars.com/kata/58485a43d750d23bad0000e6
 # Your story
 # You've always loved both Fizz Buzz katas and cuckoo clocks, and when you walked by a garage sale and saw an ornate cuckoo clock with a missing pendulum, and a "Beyond-Ultimate Raspberry Pi Starter Kit" filled with all sorts of sensors and motors and other components, it's like you were suddenly hit by a beam of light and knew that it was your mission to combine the two to create a computerized Fizz Buzz cuckoo clock!
@@ -96,7 +96,7 @@ def fizz_buzz_cuckoo_clock(time):
         res.append("Buzz")
     return "tick" if res == [] else " ".join(res)
 
-# Task 46. Generating Markdowns 
+# Task 346. Generating Markdowns 
 https://www.codewars.com/kata/5f656199132bf60027275739
 # Your friend has recently started using Codewars to learn more advanced coding. They have just created their first kata, and they want to write a proper description for it, using codeblocks, images and hyperlinks.
 # However, they are struggling to understand how to use Markdown formatting properly, so they decide to ask for your help, by having you write a program that will generate some of the syntaxes for you.
@@ -120,7 +120,7 @@ def generate_markdowns(markdown, text, url_or_language):
     if markdown == "code":
         return f'```{url_or_language}\n{text}\n```'
 
-# Task 47. Sum of positive
+# Task 347. Sum of positive
 https://www.codewars.com/kata/5715eaedb436cf5606000381
 # You get an array of numbers, return the sum of all of the positives ones.
 
@@ -141,7 +141,7 @@ def positive_sum(arr):
     return sum(i for i in arr if i > 0)
 
 
-# Task 48. Sum without highest and lowest number
+# Task 348. Sum without highest and lowest number
 https://www.codewars.com/kata/576b93db1129fcf2200001e6
 # Sum all the numbers of the array (in F# and Haskell you get a list) except the highest and the lowest element (the value, not the index!).
 # (The highest/lowest element is respectively only one element at each edge, even if there are more than one with the same value!)
@@ -153,7 +153,7 @@ https://www.codewars.com/kata/576b93db1129fcf2200001e6
 def sum_array(arr):
     return sum(sorted(arr)[1:-1]) if arr and len(arr) > 1 else 0
 
-# Task 49. You only need one - Beginner
+# Task 349. You only need one - Beginner
 https://www.codewars.com/kata/57cc975ed542d3148f00015b
 # You will be given an array a and a value x. All you need to do is check whether the provided array contains the value.
 # Array can contain numbers or strings. X can be either.
@@ -163,7 +163,7 @@ only need def check(seq, elem):
     return elem in seq
 
 
-# Task 50. What is between?
+# Task 350. What is between?
 https://www.codewars.com/kata/55ecd718f46fba02e5000029
 # Complete the function that takes two integers (a, b, where a < b) 
 # and return an array of all integers between the input parameters, including them.
