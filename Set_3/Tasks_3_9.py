@@ -57,34 +57,77 @@ def how_much_water(water, load, clothes):
 
     return round(water * 1.1 ** (clothes - load), 2)
 
-# Task 5. 
+# Task 385. Between Extremes
+https://www.codewars.com/kata/56d19b2ac05aed1a20000430
+# Given an array of numbers, return the difference between the largest and smallest values.
+# For example:
+# [23, 3, 19, 21, 16] should return 20 (i.e., 23 - 3).
+# [1, 434, 555, 34, 112] should return 554 (i.e., 555 - 1).
+# The array will contain a minimum of two elements. Input data range guarantees that max-min will cause no integer overflow.
 
-# 
+def between_extremes(numbers):
+    if [numbers[0]]*len(numbers) == numbers:
+        return 0
+    else:
+        return max(numbers) - min(numbers)
 
+# Task 386. Count cubes in a Menger Sponge
+https://www.codewars.com/kata/59d28768a25c8c51a6000057
+# In this kata you will create a function that takes non negative integers (from 0 to n) 
+# and return the amount of cubes that the Menger Sponge would have in that specific iteration.
 
-# Task 6. 
+def calc_ms(n):
+    return 20 ** n
 	
-# 
+# Task 387. How old will I be in 2099?
+https://www.codewars.com/kata/5761a717780f8950ce001473
+# Philip's just turned four and he wants to know how old he will be in various years in the future such as 2090 or 3044. 
+# His parents can't keep up calculating this so they've begged you to help them out by writing a programme that can answer Philip's endless questions.
+# Your task is to write a function that takes two parameters: the year of birth and the year to count years in relation to. 
+# As Philip is getting more curious every day he may soon want to know how many years it was until he would be born, so your function needs to work with both dates in the future and in the past.
+# Provide output in this format: For dates in the future: "You are ... year(s) old." For dates in the past: "You will be born in ... year(s)." 
+# If the year of birth equals the year requested return: "You were born this very year!"
+# "..." are to be replaced by the number, followed and proceeded by a single space. Mind that you need to account for both "year" and "years", depending on the result.
+
+def calculate_age(year_of_birth, current_year):
+    y = current_year - year_of_birth
+    if y == 0:
+        return 'You were born this very year!'
+    if y == -1:
+        return 'You will be born in 1 year.'
+    if y == 1:
+        return f"You are 1 year old." 
+    if y < 0: 
+        return f"You will be born in {abs(y)} years."
+    if y > 1:
+        return f"You are {abs(y)} years old." 
 
 
-# Task 7. 
+# Task 388. Multiplication table for number
+https://www.codewars.com/kata/5a2fd38b55519ed98f0000ce
+# Your goal is to return multiplication table for number that is always an integer from 1 to 10. 
+# P. S. You can use \n in string to jump to the next line.
 
-# 
+def multi_table(n):
+    return "\n".join([f"{el} * {n} = {el*n}"  for el in range (1,11)]) 
 
+# Task 389. Nth power rules them all!
+https://www.codewars.com/kata/58aed2cafab8faca1d000e20
+# You are provided with an array of positive integers and an additional integer n (n > 1).
+# Calculate the sum of each value in the array to the nth power. Then subtract the sum of the original array.
+# Examples
+# {1, 2, 3}, 3  -->  (1^3 + 2^3 + 3^3 ) - (1 + 2 + 3)  -->  36 - 6  -->  30
+# {1, 2}, 5     -->  (1^5 + 2^5) - (1 + 2)             -->  33 - 3  -->  30
 
-# Task 8. 
+def modified_sum(a, n):
+    return sum([el**n for el in a]) - sum(a)
 
-# 
+# Task 3900. Regex count lowercase letters
+https://www.codewars.com/kata/56a946cd7bd95ccab2000055
+# Your task is simply to count the total number of lowercase letters in a string.
+# Examples: lowercaseCount("abc"); ===> 3, lowercaseCount("abcABC123"); ===> 3
 
-
-# Task 9. 
- 
-# 
-
-
-# Task 0.
-
-# 
-
+def lowercase_count(strng):
+    return (len([x for x in strng if x.islower()]))
 
 #
