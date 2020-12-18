@@ -122,7 +122,7 @@ https://www.codewars.com/kata/58aed2cafab8faca1d000e20
 def modified_sum(a, n):
     return sum([el**n for el in a]) - sum(a)
 
-# Task 3900. Regex count lowercase letters
+# Task 390. Regex count lowercase letters
 https://www.codewars.com/kata/56a946cd7bd95ccab2000055
 # Your task is simply to count the total number of lowercase letters in a string.
 # Examples: lowercaseCount("abc"); ===> 3, lowercaseCount("abcABC123"); ===> 3
