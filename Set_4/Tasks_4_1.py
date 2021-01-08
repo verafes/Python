@@ -1,3 +1,6 @@
+# Real code challenges. Set #4	
+# Completed_solutions 401-410
+
 #  Task 401. Square Every Digit
 https://www.codewars.com/kata/546e2562b03326a88e000020
 # Task: to square every digit of a number and concatenate them.
