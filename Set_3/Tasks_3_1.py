@@ -26,7 +26,7 @@ def number(lines):
     return [f'{i+1}: {el}' for i, el in enumerate (lines)]
 
 # Task 303. Title Case
-https://www.codewars.com/kata/5202ef17a402dd033c000009/train/python
+https://www.codewars.com/kata/5202ef17a402dd033c000009
 # A string is considered to be in title case if each word in the string is either (a) capitalised 
 # (that is, only the first letter of the word is in upper case) or (b) considered to be an exception 
 # and put entirely into lower case unless it is the first word, which is always capitalised.
@@ -38,6 +38,10 @@ https://www.codewars.com/kata/5202ef17a402dd033c000009/train/python
 # First argument: space-delimited list of minor words that must always be lowercase except for the first word in the string.
 # Second argument: the original string to be converted.
 
+def title_case(title, minor_words=''):
+    title = title.capitalize().split()
+    minor_words = minor_words.lower().split()
+    return ' '.join([word if word in minor_words else word.capitalize() for word in title])
 
 # Task 304. Grasshopper - Summation
 https://www.codewars.com/kata/55d24f55d7dd296eb9000030
