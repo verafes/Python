@@ -1,5 +1,5 @@
 # Real code challenges. 
-# Set#1. Completed_solutions 11-20
+# Set#1. Completed solutions 11-20
 
 # Task 11. Abbreviate a Two Word Name
 https://www.codewars.com/kata/57eadb7ecd143f4c9c0000a3
