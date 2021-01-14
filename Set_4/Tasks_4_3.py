@@ -80,7 +80,7 @@ def transform(block):
         block_new.append(s[::-1])
     return block_new
 	
-# Task 425. 
+# Task 425. Split By Value
 https://www.codewars.com/kata/5a433c7a8f27f23bb00000dc 
 # For an integer k rearrange all the elements of the given array in such way, that:
 # all elements that are less than k are placed before elements that are not less than k;
