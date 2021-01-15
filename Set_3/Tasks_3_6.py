@@ -125,6 +125,11 @@ https://www.codewars.com/kata/5513795bd3fafb56c200049e
 def count_by(x, n):
     return [i * x for i in range(1, n + 1)]
 
+# Solution 2:
+
+def count_by(x, n):
+    return list(range(x, x*n+1, x))
+
 # Task 360. Duplicate sandwich
 https://www.codewars.com/kata/5f8a15c06dbd530016be0c19
 # In this kata you will be given a list consisting of unique elements except for one thing that appears twice.
