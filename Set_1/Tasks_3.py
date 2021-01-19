@@ -139,8 +139,6 @@ print(expressionsMatter(a,b,c))
 def angle(n):
     return 180 * (n - 2)
 
-n = int(input("Enter number of sides of a regular polygon: "))
-print(angle(n))
 
 # Task 27.	Convert a Number to a String!
 https://www.codewars.com/kata/557b5e0bddf29d861400005d
@@ -186,7 +184,7 @@ https://www.codewars.com/kata/534ea96ebb17181947000ada
 
 def breakChocolate(n, m):
     return m*n-1 if n > 0 and m > 0 else 0
-#
+
 # Task 30. I love you, a little , a lot, passionately ... not at all
 https://www.codewars.com/kata/57f24e6a18e9fad8eb000296
 # Who remembers back to their time in the schoolyard, 
