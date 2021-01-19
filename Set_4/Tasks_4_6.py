@@ -1,162 +1,127 @@
 # Real code challenges. Set #4
-# Completed_solutions 461-70
+# Completed_solutions 451-460
 
-#  Task 461. Unscrambled eggs
-https://www.codewars.com/kata/55ea5650fe9247a2ea0000a7
-# The string given to your function has had an "egg" inserted directly after each consonant. You need to return the string before it became eggcoded.
-# Example
-# unscrambleEggs("Beggegeggineggneggeregg"); => "Beginner"
-# //             "B---eg---in---n---er---"
+#  Task 451. Automorphic Number (Special Numbers Series #6)
+https://www.codewars.com/kata/5a58d889880385c2f40000aa
+# Definition
+# A number is called Automorphic number if and only if its square ends in the same digits as the number itself.
+# Task: Given a number determine if it Automorphic or not.
 
-def unscramble_eggs(word):
-    return word.replace("egg", "")
+def automorphic(n):
+    return "Automorphic" if str(n**2).endswith(str(n)) else "Not!!"
 
-# Task 462. Find the nth Digit of a Number
-https://www.codewars.com/kata/577b9960df78c19bca00007e  
-# Complete the function that takes two numbers as input, num and nth and return the nth digit of num (counting from right to left).
-# Note
-# If num is negative, ignore its sign and treat it as a positive value
-# If nth is not positive, return -1
-# Keep in mind that 42 = 00042. This means that findDigit(42, 5) would return 0
+# Task 452. Birthday II - Presents
+https://www.codewars.com/kata/5805f0663f1f9c49be00011f
+# Your colleagues have been good enough(?) to buy you a birthday gift. Even though it is your birthday and not theirs, 
+# they have decided to play pass the parcel with it so that everyone has an even chance of winning. 
+# There are multiple presents, and you will receive one, but not all are nice... 
+# One even explodes and covers you in soil... strange office. To make up for this one present is a dog! 
+# Happy days! (do not buy dogs as presents, and if you do, never wrap them).
+# Depending on the number of passes in the game (y), and the present you unwrap (x), return as follows:
+# x == goodpresent --> return x with num of passes added to each charCode (turn to charCode, add y to each, turn back)
+# x == crap || x == empty --> return string sorted alphabetically
+# x == bang --> return string turned to char codes, each code reduced by number of passes and summed to a single figure
+# x == badpresent --> return 'Take this back!'
+# x == dog, return 'pass out from excitement y times' (where y is the value given for y).
+
+def present(x,y):
+    if x == "goodpresent":
+        return "".join([chr(ord(c)+y )for c in x])
+    if x == "badpresent": 
+        return 'Take this back!'
+    if x == "crap" or x == "empty": 
+        return ''.join(sorted(x))
+    if x == "bang": 
+        return str(sum([(ord(ch)-y) for ch in x]))
+    if x == "dog": 
+        return f"pass out from excitement {y} times"
+
+# Task 453. Borrower Speak
+https://www.codewars.com/kata/57d2ba8095497e484e00002e
+# The borrowers are tiny tiny fictional people. As tiny tiny people they have to be sure they aren't spotted, or more importantly, stepped on.
+# As a result, the borrowers talk very very quietly. They find that capitals and punctuation of any sort lead them to raise their voices and put them in danger.
+# The young borrowers have begged their parents to stop using caps and punctuation.
+# Change the input text 's' to new borrower speak. Help save the next generation!
+
+def borrow(s):
+    return "".join([el.lower() for el in s if el.isalpha()])
+
+# Task 454. Bumps in the Road
+https://www.codewars.com/kata/57ed30dde7728215300005fa
+# Your car is old, it breaks easily. The shock absorbers are gone and you think it can handle about 15 more bumps before it dies totally.
+# Unfortunately for you, your drive is very bumpy! Given a string showing either flat road ("_") or bumps ("n"), work out if you make it home safely. 
+# 15 bumps or under, return "Woohoo!", over 15 bumps return "Car Dead".
+
+def bumps(road):
+     return "Woohoo!" if road.count("n") <= 15 else "Car Dead"
+
+# Task 455. Consecutive letters
+https://www.codewars.com/kata/5ce6728c939bf80029988b57
+# In this Kata, we will check if a string contains consecutive letters as they appear in the English alphabet and if each letter occurs only once.
+# Rules are: (1) the letters are adjacent in the English alphabet, and (2) each letter occurs only once.
+# For example: 
+# solve("abc") = True, because it contains a,b,c
+# solve("abd") = False, because a, b, d are not consecutive/adjacent in the alphabet, and c is missing.
+# solve("dabc") = True, because it contains a, b, c, d
+# solve("abbc") = False, because b does not occur once.
+# solve("v") = True
+# All inputs will be lowercase letters.
+
+def solve(st):
+    s = "abcdefghijklmnopqrstuvwxyz"
+    return "".join(sorted(st)) in s
+
+# Task 456. Convert a string to an array
+https://www.codewars.com/kata/57e76bc428d6fbc2d500036d
+# Write a function to split a string and convert it into an array of words. For example:
+# "Robin Singh" ==> ["Robin", "Singh"]
+
+def string_to_array(s):
+    return [''] if s == "" else s.split()
+
+# Task 457. Convert string to camel case
+https://www.codewars.com/kata/517abf86da9663f1d2000003
+# Complete the method/function so that it converts dash/underscore delimited words into camel casing. The first word within the output should be capitalized only if the original word was capitalized (known as Upper Camel Case, also often referred to as Pascal case).
 # Examples
-# findDigit(5673, 4)     returns 5
-# findDigit(129, 2)      returns 2
-# findDigit(-2825, 3)    returns 8
-# findDigit(-456, 4)     returns 0
+# to_camel_case("the-stealth-warrior") # returns "theStealthWarrior"
+# to_camel_case("The_Stealth_Warrior") # returns "TheStealthWarrior"
 
-def find_digit(num, nth):
-    if num < 0:
-        num = -num
-    if nth <= 0 :
-        return -1
-    if nth > len(str(num)):
-        return 0
-    res = (str(num)[::-1])
-    return int(res[nth-1])
-	
-# Task 463. Largest prime number containing n digit
-https://www.codewars.com/kata/5676f07029da352ba2000065
-# Just as the title suggestes :D . For example ->
-# largest(1); //Should return 7
-# largest(2); //Should return 97
-# ....
-# Do not mind the pattern as it is just an incident ! 
-# And make sure to return false if the input is not an integer :D 
-# This might seem simple at first, it is, but keep an eye on the performance. Go for it !
 
-def largest(n):
-    if type(n) != int or n < 1:
-        return False
-    x = 10**n - 3
-    while pow(2, x-1, x) != 1:
-        print(x)
-        x -= 2
-    return x
+# Task 458. Boiled Eggs
+https://www.codewars.com/kata/52b5247074ea613a09000164
+# You are the greatest chef on earth. No one boils eggs like you! Your restaurant is always full of guests, who love your boiled eggs. But when there is a greater order of boiled eggs, you need some time, because you have only one pot for your job. How much time do you need?
+# Your Task
+# Implement a function, which takes a non-negative integer, representing the number of eggs to boil. It must return the time in minutes (integer), which it takes to have all the eggs boiled.
+# Rules
+# you can put at most 8 eggs into the pot at once
+# it takes 5 minutes to boil an egg
+# we assume, that the water is boiling all the time (no time to heat up)
+# for simplicity we also don't consider the time it takes to put eggs into the pot or get them out of it
 
-# Task 464. Enumerable Magic #5- True for Just One?
-https://www.codewars.com/kata/54599705cbae2aa60b0011a4
-# Task. Create a function called one that accepts two params:
-# a sequence
-# a function
-# and returns true only if the function in the params returns true for exactly one (1) item in the sequence.
-# Example
-# one([1, 3, 5, 6, 99, 1, 3], bigger_than_ten) -> true
-# one([1, 3, 5, 6, 99, 88, 3], bigger_than_ten) -> false
-# one([1, 3, 5, 6, 5, 1, 3], bigger_than_ten) -> false
+import math
+def cooking_time(eggs):
+    return math.ceil(eggs / 8) * 5
 
-def one(sq, fun): 
-    return len([el for el in sq if fun(el)])== 1
+# Task 459. Return Even Whatever You've Been Given
+https://www.codewars.com/kata/5f8828d56dbd530014c1e241 
+# Given integer n return even numbers as they are, but subtract 1 from odd numbers.
+# Your solution should be 32 or less characters long.
+# Examples
+# Input = 3, Output = 2
+# Input = 16, Output = 16
+# Input = 45, Output = 44
 
-# Task 465. Put a Letter in a Column
-https://www.codewars.com/kata/563d54a7329a7af8f4000059
-# Create a function that takes index [0, 8] and a character. It returns a string with columns. Put character in column marked with index.
-# Ex.: index = 2, character = 'B'
-# | | |B| | | | | | |
-#  0 1 2 3 4 5 6 7 8
-# Assume that argument index is integer [0, 8]. Assume that argument character is string with one character.
+def always_even(n): return n-n%2
 
-def build_row_text(index, character):
-    arr = ['|','|','|','|','|','|','|','|','|','|']
-    lst = []
-    for i, el in enumerate(arr):
-        if i == index:
-            el = arr[i] + character
-            a = el + character
-        else: 
-            el = arr[i] + " "
-        lst.append(el)
-    lst = "".join(lst)
-    return lst.rstrip()
+# Task 460. [Code Golf] Return Odd No Matter What
+https://www.codewars.com/kata/5f882dcc272e7a00287743f5
+# Given the integer n return odd numbers as they are, but subtract 1 from even numbers.
+# Note: Your solution should be 36 or less characters long.
+# Examples
+# Input  = 2, Output = 1
+# Input  = 13, Output = 13
+# Input  = 46, Output = 45
 
-# Task 466. Flatten
-https://www.codewars.com/kata/5250a89b1625e5decd000413
-# Write a function that flattens an Array of Array objects into a flat Array. Your function must only do one level of flattening.
-# flatten [1,2,3] # => [1,2,3]
-# flatten [[1,2,3],["a","b","c"],[1,2,3]]  # => [1,2,3,"a","b","c",1,2,3]
-# flatten [[[1,2,3]]] # => [[1,2,3]]
-
-def flatten(lst):
-    new = []
-    for el in lst:
-        new.extend(el) if type(el)==list else new.append(el)
-    return new
-
-# Task 467. Remove duplicates from list
-https://www.codewars.com/kata/57a5b0dfcf1fa526bb000118/
-# Define a function that removes duplicates from an array of numbers and returns it as a result.
-# The order of the sequence has to stay the same.
-
-def distinct(seq):
-    new = []
-    for el in seq:
-        if el not in new:
-            new.append(el)
-    return(new)
-	
-# Task 468. Organise duplicate numbers in list
-https://www.codewars.com/kata/5884b6550785f7c58f000047
-# Sam is an avid collector of numbers. Every time he finds a new number he throws it on the top of his number-pile. Help Sam organise his collection so he can take it to the International Number Collectors Conference in Cologne.
-# Given an array of numbers, your function should return an array of arrays, where each subarray contains all the duplicates of a particular number. Subarrays should be in the same order as the first occurence of the number they contain:
-# group([3, 2, 6, 2, 1, 3])  >>> [[3, 3], [2, 2], [6], [1]]
-# Assume the input is always going to be an array of numbers. If the input is an empty array, an empty array should be returned.
-
-def group(arr):
-    new = [] 
-    for el in arr:
-        if el not in new:
-            new.append(el)
-    return [arr.count(el)*[el] for el in new]
-	
-# Task 469. Delete occurrences of an element if it occurs more than n times
-https://www.codewars.com/kata/554ca54ffa7d91b236000023 
-# Enough is enough! Alice and Bob were on a holiday. Both of them took many pictures of the places they've been, 
-# and now they want to show Charlie their entire collection. However, Charlie doesn't like these sessions, 
-# since the motive usually repeats. He isn't fond of seeing the Eiffel tower 40 times. 
-#  tells them that he will only sit during the session if they show the same motive at most N times. 
-# Luckily, Alice and Bob are able to encode the motive as a number. Can you help them to remove numbers such that their list contains each number only up to N times, without changing the order?
-# Task
-# Given a list lst and a number N, create a new list that contains each number of lst at most N times without reordering. 
-# For example if N = 2, and the input is [1,2,3,1,2,1,2,3], you take [1,2,3,1,2], drop the next [1,2] since this would lead to 1 and 2 being in the result 3 times, and then take 3, which leads to [1,2,3,1,2,3].
-# Example
-#   delete_nth ([1,1,1,1],2) # return [1,1]
-#   delete_nth ([20,37,20,21],1) # return [20,37,21]
-
-def delete_nth(order,max_e):
-    new = []
-    for el in order:
-        if new.count(el) < max_e:
-            new.append(el)
-    return new
-
-# Task 470. Find The Duplicated Number in a Consecutive Unsorted List
-
-# You are given an array of n+1 integers 1 through n. In addition there is a single duplicate integer.
-# The array is unsorted.
-# An example valid array would be [3, 2, 5, 1, 3, 4]. It has the integers 1 through 5 and 3 is duplicated. [1, 2, 4, 5, 5] would not be valid as it is missing 3.
-# You should return the duplicate value as a single integer.
-
-def find_dup(arr):
-    return [el for el in arr if arr.count(el) > 1][0]
-
+def always_odd(n): return n-(n+1)%2
 
 #
