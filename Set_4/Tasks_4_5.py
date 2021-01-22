@@ -1,127 +1,183 @@
 # Real code challenges. Set #4
-# Completed_solutions 451-460
+# Completed_solutions 441-450
 
-#  Task 451. Automorphic Number (Special Numbers Series #6)
-https://www.codewars.com/kata/5a58d889880385c2f40000aa
-# Definition
-# A number is called Automorphic number if and only if its square ends in the same digits as the number itself.
-# Task: Given a number determine if it Automorphic or not.
+#  Task 491. Fibonacci's FizzBuzz
+https://www.codewars.com/kata/57bf599f102a39bb1e000ae5
+# The goal of this kata is two-fold:
+# 1.) You must produce a fibonacci sequence in the form of an array, containing a number of items equal to the input provided.
+# 2.) You must replace all numbers in the sequence divisible by 3 with Fizz, those divisible by 5 with Buzz, and those divisible by both 3 and 5 with FizzBuzz.
+# For the sake of this kata, you can assume all input will be a positive integer.# 
+# Use Cases
+# Return output must be in the form of an array, with the numbers as integers and the replaced numbers (fizzbuzz) as strings.
 
-def automorphic(n):
-    return "Automorphic" if str(n**2).endswith(str(n)) else "Not!!"
+def fibs_fizz_buzz(n):
+    prev = 0
+    current = 1
+    arr = [1]
+    if n <= 0:
+        print("Incorrect input")
+    elif n == 1:
+        return arr
+    else:
+        for i in range(2,n+1):
+            prev, current = current, current + prev
+            arr.append(current)
+    res = ['FizzBuzz' if (arr[x]%3 == 0 and arr[x]%5 == 0) else 'Fizz' if arr[x]%3 == 0 else 'Buzz' if arr[x]%5 == 0  else arr[x] for x in range(len(arr))]            
+    return res
 
-# Task 452. Birthday II - Presents
-https://www.codewars.com/kata/5805f0663f1f9c49be00011f
-# Your colleagues have been good enough(?) to buy you a birthday gift. Even though it is your birthday and not theirs, 
-# they have decided to play pass the parcel with it so that everyone has an even chance of winning. 
-# There are multiple presents, and you will receive one, but not all are nice... 
-# One even explodes and covers you in soil... strange office. To make up for this one present is a dog! 
-# Happy days! (do not buy dogs as presents, and if you do, never wrap them).
-# Depending on the number of passes in the game (y), and the present you unwrap (x), return as follows:
-# x == goodpresent --> return x with num of passes added to each charCode (turn to charCode, add y to each, turn back)
-# x == crap || x == empty --> return string sorted alphabetically
-# x == bang --> return string turned to char codes, each code reduced by number of passes and summed to a single figure
-# x == badpresent --> return 'Take this back!'
-# x == dog, return 'pass out from excitement y times' (where y is the value given for y).
+# Task 442. 21 Sticks
+https://www.codewars.com/kata/5866a58b9cbc02c4f8000cac
+# The game. In this game, there are 21 sticks lying in a pile. Players take turns taking 1, 2, or 3 sticks. The last person to take a stick wins. For example:
+# 21 sticks in the pile
+# Bob takes 2  -->  19 sticks left
+# Jim takes 3  -->  16 sticks
+# Bob takes 3  -->  13 sticks
+# Jim takes 1  -->  12 sticks
+# Bob takes 2  -->  10 sticks
+# Jim takes 2  -->   8 sticks
+# Bob takes 3  -->   5 sticks
+# Jim takes 3  -->   2 sticks
+# Bob takes 2  -->  Bob wins!
+# Your task: Create a robot that will always win the game. Your robot will always go first. The function should take an integer and returns 1, 2, or 3.
+# Note: The input will always be valid (a positive integer)
 
-def present(x,y):
-    if x == "goodpresent":
-        return "".join([chr(ord(c)+y )for c in x])
-    if x == "badpresent": 
-        return 'Take this back!'
-    if x == "crap" or x == "empty": 
-        return ''.join(sorted(x))
-    if x == "bang": 
-        return str(sum([(ord(ch)-y) for ch in x]))
-    if x == "dog": 
-        return f"pass out from excitement {y} times"
+def make_move(sticks):
+    return sticks % 4
 
-# Task 453. Borrower Speak
-https://www.codewars.com/kata/57d2ba8095497e484e00002e
-# The borrowers are tiny tiny fictional people. As tiny tiny people they have to be sure they aren't spotted, or more importantly, stepped on.
-# As a result, the borrowers talk very very quietly. They find that capitals and punctuation of any sort lead them to raise their voices and put them in danger.
-# The young borrowers have begged their parents to stop using caps and punctuation.
-# Change the input text 's' to new borrower speak. Help save the next generation!
+# Task 443. Grasshopper - Bug Squashing
+https://www.codewars.com/kata/56214b6864fe8813f1000019
+# Terminal game bug squashing
+# You are creating a text-based terminal version of your favorite board game. In the board game, each turn has six steps that must happen in this order: roll the dice, move, combat, get coins, buy more health, and print status.
+# You are using a library that already has the functions below. Create a function named main that calls the functions in the proper order.
+# - `combat`
+# - `buy_health`
+# - `get_coins`
+# - `print_status`
+# - `roll_dice`
+# - `move`
 
-def borrow(s):
-    return "".join([el.lower() for el in s if el.isalpha()])
+Given:
+health = 100
+position = 0
+coins = 0
 
-# Task 454. Bumps in the Road
-https://www.codewars.com/kata/57ed30dde7728215300005fa
-# Your car is old, it breaks easily. The shock absorbers are gone and you think it can handle about 15 more bumps before it dies totally.
-# Unfortunately for you, your drive is very bumpy! Given a string showing either flat road ("_") or bumps ("n"), work out if you make it home safely. 
-# 15 bumps or under, return "Woohoo!", over 15 bumps return "Car Dead".
+def (main):
+  getCoins()
+  move()
+  print_status()
+  combat()
+  rolDice()
+  attack()
+ 
+#Solution:
 
-def bumps(road):
-     return "Woohoo!" if road.count("n") <= 15 else "Car Dead"
+def main():
+    roll_dice()
+    move()
+    combat()
+    get_coins()
+    buy_health()
+    print_status()
+	
+# Task 444. Do you speak retsec?
+https://www.codewars.com/kata/5516ab668915478845000780
+# You and your friends want to play undercover agents. In order to exchange your secret messages, you've come up with the following system: 
+# you take the word, cut it in half, and place the first half behind the latter. 
+# If the word has an uneven number of characters, you leave the middle at its previous place:
+# That way, you'll be able to exchange your messages in private.
 
-# Task 455. Consecutive letters
-https://www.codewars.com/kata/5ce6728c939bf80029988b57
-# In this Kata, we will check if a string contains consecutive letters as they appear in the English alphabet and if each letter occurs only once.
-# Rules are: (1) the letters are adjacent in the English alphabet, and (2) each letter occurs only once.
-# For example: 
-# solve("abc") = True, because it contains a,b,c
-# solve("abd") = False, because a, b, d are not consecutive/adjacent in the alphabet, and c is missing.
-# solve("dabc") = True, because it contains a, b, c, d
-# solve("abbc") = False, because b does not occur once.
-# solve("v") = True
-# All inputs will be lowercase letters.
-
-def solve(st):
-    s = "abcdefghijklmnopqrstuvwxyz"
-    return "".join(sorted(st)) in s
-
-# Task 456. Convert a string to an array
-https://www.codewars.com/kata/57e76bc428d6fbc2d500036d
-# Write a function to split a string and convert it into an array of words. For example:
-# "Robin Singh" ==> ["Robin", "Singh"]
-
-def string_to_array(s):
-    return [''] if s == "" else s.split()
-
-# Task 457. Convert string to camel case
-https://www.codewars.com/kata/517abf86da9663f1d2000003
-# Complete the method/function so that it converts dash/underscore delimited words into camel casing. The first word within the output should be capitalized only if the original word was capitalized (known as Upper Camel Case, also often referred to as Pascal case).
+# Task. # You're given a single word. Your task is to swap the halves. If the word has an uneven length, 
+# leave the character in the middle at that position and swap the chunks around it.
 # Examples
-# to_camel_case("the-stealth-warrior") # returns "theStealthWarrior"
-# to_camel_case("The_Stealth_Warrior") # returns "TheStealthWarrior"
+# reverse_by_center("secret")  == "retsec" # no center character
+# reverse_by_center("agent")   == "nteag"  # center character is "e"
 
+def reverse_by_center(s):
+    i = len(s) // 2
+    return s[i:] + s[:i] if len(s)%2 == 0 else s[i+1:] + s[i] + s[:i]
+	
+# Task 445. Bill & Bobs Secret Language
+https://www.codewars.com/kata/58dd1c1710d1620c27000219
+# Bill & Bob chat a lot but they don’t want people to understand what they’re talking about. 
+# So they have created a secret language where they reverse each word in a sentence as well as reversing the sentence itself!
+# They also add "#" at the start and the end of the sentence so they know it's the secret language.
+# For example: -> Hello this is me = #em si siht olleH#,
+# -> Bye! = #!eyB#
+# Unfortunately Bob is a very lazy man and needs someone to convert sentences into their secret language.
+# Please help Bob in constructing his secret conversations with Bill!
 
-# Task 458. Boiled Eggs
-https://www.codewars.com/kata/52b5247074ea613a09000164
-# You are the greatest chef on earth. No one boils eggs like you! Your restaurant is always full of guests, who love your boiled eggs. But when there is a greater order of boiled eggs, you need some time, because you have only one pot for your job. How much time do you need?
-# Your Task
-# Implement a function, which takes a non-negative integer, representing the number of eggs to boil. It must return the time in minutes (integer), which it takes to have all the eggs boiled.
-# Rules
-# you can put at most 8 eggs into the pot at once
-# it takes 5 minutes to boil an egg
-# we assume, that the water is boiling all the time (no time to heat up)
-# for simplicity we also don't consider the time it takes to put eggs into the pot or get them out of it
+def reverser(string):
+    return "#" + string [::-1 ] + "#"
 
-import math
-def cooking_time(eggs):
-    return math.ceil(eggs / 8) * 5
-
-# Task 459. Return Even Whatever You've Been Given
-https://www.codewars.com/kata/5f8828d56dbd530014c1e241 
-# Given integer n return even numbers as they are, but subtract 1 from odd numbers.
-# Your solution should be 32 or less characters long.
+# Task 446. Exclamation marks series #1: Remove a exclamation mark from the end of string
+https://www.codewars.com/kata/57fae964d80daa229d000126
+# Remove a exclamation mark from the end of string. For a beginner kata, you can assume that the input data is always a string, no need to verify it.
 # Examples
-# Input = 3, Output = 2
-# Input = 16, Output = 16
-# Input = 45, Output = 44
+# remove("Hi!") === "Hi"
+# remove("Hi!!!") === "Hi!!"
+# remove("!Hi") === "!Hi"
+# remove("!Hi!") === "!Hi"
+# remove("Hi! Hi!") === "Hi! Hi"
+# remove("Hi") === "Hi"
+# Note. Please don't post issue about difficulty or duplicate.
 
-def always_even(n): return n-n%2
-
-# Task 460. [Code Golf] Return Odd No Matter What
-https://www.codewars.com/kata/5f882dcc272e7a00287743f5
-# Given the integer n return odd numbers as they are, but subtract 1 from even numbers.
-# Note: Your solution should be 36 or less characters long.
+def remove(s):
+    return s[:-1] if s and s[-1] == "!" else s 
+	
+# Task 447. Exclamation marks series #2: Remove all exclamation marks from the end of sentence
+https://www.codewars.com/kata/57faece99610ced690000165
+# Remove all exclamation marks from the end of sentence.
 # Examples
-# Input  = 2, Output = 1
-# Input  = 13, Output = 13
-# Input  = 46, Output = 45
+# remove("Hi!") === "Hi"
+# remove("Hi!!!") === "Hi"
+# remove("!Hi") === "!Hi"
+# remove("!Hi!") === "!Hi"
+# remove("Hi! Hi!") === "Hi! Hi"
+# remove("Hi") === "Hi"
 
-def always_odd(n): return n-(n+1)%2
+def remove(s):
+    return s.rstrip("!")
+	
+# Task 448. Exclamation marks series #3: Remove all exclamation marks from sentence except at the end
+https://www.codewars.com/kata/57faefc42b531482d5000123
+# Remove all exclamation marks from sentence except at the end.
+# Examples
+# remove("Hi!") == "Hi!"
+# remove("Hi!!!") == "Hi!!!"
+# remove("!Hi") == "Hi"
+# remove("!Hi!") == "Hi!"
+# remove("Hi! Hi!") == "Hi Hi!"
+# remove("Hi") == "Hi"
+
+def remove(s):
+    count = len(s) - len(s.rstrip("!"))
+    return s.replace("!", "") + "!"*count
+
+# Task 449. Exclamation marks series #4: Remove all exclamation marks from sentence but ensure a exclamation mark at the end of string
+https://www.codewars.com/kata/57faf12b21c84b5ba30001b0
+# Remove all exclamation marks from sentence but ensure a exclamation mark at the end of string. For a beginner kata, you can assume that the input data is always a non empty string, no need to verify it.
+# Examples
+# remove("Hi!") === "Hi!"
+# remove("Hi!!!") === "Hi!"
+# remove("!Hi") === "Hi!"
+# remove("!Hi!") === "Hi!"
+# remove("Hi! Hi!") === "Hi Hi!"
+# remove("Hi") === "Hi!"
+
+def remove(s):
+    return s.replace("!", "") + "!"
+
+# Task 450. Backspaces in string
+https://www.codewars.com/kata/5727bb0fe81185ae62000ae3
+# Assume "#" is like a backspace in string. This means that string "a#bc#d" actually is "bd"
+
+Your task is to process a string with "#" symbols.
+
+Examples
+"abc#d##c"      ==>  "ac"
+"abc##d######"  ==>  ""
+"#######"       ==>  ""
+""              ==>  ""
+
 
 #
