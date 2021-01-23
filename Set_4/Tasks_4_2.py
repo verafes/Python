@@ -16,7 +16,7 @@ def fake_bin(x):
         if int(el) < 5 :
             el = "0" 
             r += el
-        elif int(el) >= 5: 
+        elif int(el) >= 5:
             el = "1"
             r += el 
     return r
