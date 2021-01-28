@@ -179,5 +179,23 @@ Examples
 "#######"       ==>  ""
 ""              ==>  ""
 
+def clean_string(s):
+    final = []
+    for i in s:
+        if i != "#":
+            final.append(i)
+        elif len(final) > 0: 
+            final.pop()
+    return "".join(final)
+
+# Solution 2:
+def clean_string(s):
+    s2 = ""
+    for el in s:
+        if el != "#":
+            s2 += el
+        else:
+            s2 = s2[:-1]
+    return s2
 
 #
