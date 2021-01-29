@@ -110,7 +110,8 @@ def largest_power(N):
 
 # Task 517. CubeSummation
 https://www.codewars.com/kata/550e9fd127c656709400024d
-# Write a function cubeSum(n, m) that will calculate a sum of cubes of numbers in a given range, starting from the smaller (but not including it) to the larger (including). 
+# Write a function cubeSum(n, m) that will calculate a sum of cubes of numbers in a given range, 
+# starting from the smaller (but not including it) to the larger (including). 
 # The first argument is not necessarily the larger number.
 # If both numbers are the same, then the range is empty and the result should be 0.
 # Examples:
