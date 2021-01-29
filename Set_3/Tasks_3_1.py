@@ -1,7 +1,7 @@
 # Real code challenges. Set #3
-# Completed_solutions 1-10.
+# Completed_solutions 3.01 - 3.10.
 
-# Task 301. Sum of prime-indexed elements
+# Task 3.01. Sum of prime-indexed elements
 https://www.codewars.com/kata/59f38b033640ce9fc700015b
 # In this Kata, you will be given an integer array and your task is to return the sum of elements occupying prime-numbered indices.
 # The first element of the array is at index 0.
@@ -16,8 +16,8 @@ def isprime(num):
 def total(arr):
     return sum([el for i, el in enumerate(arr) if isprime(i)])
 
-# Task 302. Testing 1-2-3
-
+# Task 3.02. Testing 1-2-3
+https://www.codewars.com/kata/54bf85e3d5b56c7a05000cf9
 # Your team is writing a fancy new text editor and you've been tasked with implementing the line numbering.
 # Write a function which takes a list of strings and returns each line prepended by the correct number.
 # The numbering starts at 1. The format is n: string. Notice the colon and space in between.
@@ -25,7 +25,7 @@ def total(arr):
 def number(lines):
     return [f'{i+1}: {el}' for i, el in enumerate (lines)]
 
-# Task 303. Title Case
+# Task 3.03. Title Case
 https://www.codewars.com/kata/5202ef17a402dd033c000009
 # A string is considered to be in title case if each word in the string is either (a) capitalised 
 # (that is, only the first letter of the word is in upper case) or (b) considered to be an exception 
@@ -43,7 +43,7 @@ def title_case(title, minor_words=''):
     minor_words = minor_words.lower().split()
     return ' '.join([word if word in minor_words else word.capitalize() for word in title])
 
-# Task 304. Grasshopper - Summation
+# Task 3.04. Grasshopper - Summation
 https://www.codewars.com/kata/55d24f55d7dd296eb9000030
 # Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.
 # For example:  summation(2) -> 3  - > 1 + 2
@@ -52,7 +52,7 @@ https://www.codewars.com/kata/55d24f55d7dd296eb9000030
 def summation(num):
     return sum(i for i in range(1, num+1))
 	
-# Task 305. Persistent Bugger
+# Task 3.05. Persistent Bugger
 https://www.codewars.com/kata/55bf01e5a717a0d57e0000ec
 # Write a function, persistence, that takes in a positive parameter num and returns its multiplicative persistence, 
 # which is the number of times you must multiply the digits in num until you reach a single digit.
@@ -73,11 +73,12 @@ def persistence(n):
         n=p
     return count
 	
-# Task 306. Reverse Factorials
+# Task 3.06. Reverse Factorials
 https://www.codewars.com/kata/58067088c27998b119000451
 # I'm sure you're familiar with factorials – that is, the product of an integer and all the integers below it.
 # For example, 5! = 120, as 5 * 4 * 3 * 2 * 1 = 120
-# Your challenge is to create a function that takes any number and returns the number that it is a factorial of. So, if your function receives 120, it should return "5!" (as a string).
+# Your challenge is to create a function that takes any number and returns the number that it is a factorial of.0
+#  So, if your function receives 120, it should return "5!" (as a string).
 # Of course, not every number is a factorial of another. In this case, your function would return "None" (as a string).
 # Examples
 # 120 will return "5!"
@@ -91,9 +92,10 @@ def reverse_factorial(num):
         f = f * n
     return f"{n}!" if f == num else "None"
 
-# Task 307. Single digit
+# Task 3.07. Single digit
 https://www.codewars.com/kata/5a7778790136a132a00000c1
-# The goal of this Kata is to reduce the passed integer to a single digit (if not already) by converting the number to binary, taking the sum of the binary digits, and if that sum is not a single digit then repeat the process.
+# The goal of this Kata is to reduce the passed integer to a single digit (if not already) by converting the number to binary, 
+# taking the sum of the binary digits, and if that sum is not a single digit then repeat the process.
 # n will be an integer such that 0 < n < 10^20
 # If the passed integer is already a single digit there is no need to reduce
 # For example given 5665 the function should return 5:
@@ -105,7 +107,7 @@ def single_digit(n):
         n = bin(n).count("1")
     return n
 	
-# Task 308. Square(n) Sum
+# Task 3.08. Square(n) Sum
 https://www.codewars.com/kata/515e271a311df0350d00000f
 # Complete the square sum function so that it squares each number passed into it and then sums the results together.
 
@@ -114,7 +116,7 @@ For example, for [1, 2, 2] it should return 9 because 1^2 + 2^2 + 2^2 = 9.
 def square_sum(numbers):
     return sum(x**2 for x in numbers)
 
-# Task 309. Squares sequence
+# Task 3.09. Squares sequence
 https://www.codewars.com/kata/5546180ca783b6d2d5000062
 # Complete the function that returns an array of length n, starting with the given number x and the squares of the previous number. 
 # If n is negative or zero, return an empty array/list.
@@ -135,7 +137,7 @@ def squares(x, n):
 def squares(x,n):
     return [x**(2**i) for i in range(n)]
 
-# Task 310. Subtract the Sum
+# Task 3.10. Subtract the Sum
 https://www.codewars.com/kata/56c5847f27be2c3db20009c3
 # Complete the function which get an input number n such that n >= 10 and n < 10000, then:
 # Sum all the digits of n.
