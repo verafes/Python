@@ -1,14 +1,14 @@
 # Real code challenges. Set #2
-# Completed_solutions 1-10
+# Completed_solutions 2.01-2.10
 
-# Task 1. Convert boolean values to strings 'Yes' or 'No'.
+# Task 2.01. Convert boolean values to strings 'Yes' or 'No'.
 https://www.codewars.com/kata/53369039d7ab3ac506000467
 # Complete the method that takes a boolean value and return a "Yes" string for true, or a "No" string for false.
 
 def bool_to_word(boolean):
     return "Yes" if boolean == True else "No"
 	
-# Task 2. Keep Hydrated!
+# Task 2.02. Keep Hydrated!
 https://www.codewars.com/kata/582cb0224e56e068d800003c
 # Nathan loves cycling.
 # Because Nathan knows it is important to stay hydrated, he drinks 0.5 litres of water per hour of cycling.
@@ -22,7 +22,7 @@ https://www.codewars.com/kata/582cb0224e56e068d800003c
 def litres(time):
     return time // 2
 
-# Task 3. How many times should I go?
+# Task 2.03. How many times should I go?
 https://www.codewars.com/kata/53369039d7ab3ac506000467
 # Complete the method that takes a boolean value and return a "Yes" string for true, 
 # or a "No" string for false.
@@ -41,7 +41,7 @@ import math
 def how_many_times(annual_price, individual_price):
     return math.ceil(annual_price/individual_price)
 	
-# Task 4. Multiples!
+# Task 2.04. Multiples!
 https://www.codewars.com/kata/55a8a36703fe4c45ed00005b
 # Make a program that takes a value (x) and returns "Bang" if the number is divisible by 3, 
 # "Boom" if it is divisible by 5, "BangBoom" if it divisible by 3 and 5, and "Miss" if it isn't divisible by any of them. 
@@ -59,7 +59,7 @@ def multiple(x):
     else: 
         return "Miss"
 
-# Task 5. Basic Mathematical Operations
+# Task 2.05. Basic Mathematical Operations
 # Your task is to create a function that does four basic mathematical operations.
 # The function should take three arguments - operation(string/char), value1(number), value2(number).
 # The function should return result of numbers after applying the chosen operation.
@@ -82,7 +82,7 @@ def basic_op(operator, value1, value2):
         return "Error"
 
 
-# Task 6. Area of a Square
+# Task 2.06. Area of a Square
 https://www.codewars.com/kata/5748838ce2fab90b86001b1a
 #Complete the function that calculates the area of the red square, 
 #when the length of the circular arc A is given as the input. 
@@ -118,7 +118,7 @@ def hello(name=""):
     else:
          return f"Hello, World!"
 
-# Task 9. Remove First and Last Character
+# Task 2.09. Remove First and Last Character
 https://www.codewars.com/kata/56bc28ad5bdaeb48760009b0
 # It's pretty straightforward. Your goal is to create a function that removes 
 # the first and last characters of a string. You're given one parameter, the original string. 
@@ -127,7 +127,7 @@ https://www.codewars.com/kata/56bc28ad5bdaeb48760009b0
 def remove_char(s):
     return '' if len(s) <= 2 else s[1:-1]
 
-# Task 10. Remove exclamation marks
+# Task 2.10. Remove exclamation marks
 # Write function RemoveExclamationMarks which removes all exclamation marks from a given string.
 
 def remove_exclamation_marks(s):
