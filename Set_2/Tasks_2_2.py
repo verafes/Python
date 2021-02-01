@@ -1,7 +1,7 @@
 # Real code challenges. Set #2
-# Completed_solutions 11-20
+# Completed_solutions 2.11-20
 
-# Task 11. How far will I go?
+# Task 2.11. How far will I go?
 https://www.codewars.com/kata/56d46b8fda159582e100001b
 # You have recently discovered that horses travel in a unique pattern - they're either running (at top speed) or resting (standing still).
 # Here's an example of how one particular horse might travel:
@@ -27,7 +27,7 @@ def travel(total_time, run_time, rest_time, speed):
         total_dist += reminder * speed
     return total_dist
 
-# Task 12. Cat Years, Dog Years (2)
+# Task 2.12. Cat Years, Dog Years (2)
 https://www.codewars.com/kata/5a6d3bd238f80014a2000187
 ## I have a cat and a dog which I got as kitten / puppy.
 # I forget when that was, but I do know their current ages as catYears and dogYears.
@@ -58,7 +58,7 @@ def owned_cat_and_dog(cat_years, dog_years):
         dog = 2 + ((dog_years - 24)//5)
     return [cat, dog]
 
-# Task 13. Fuel Calculator
+# Task 2.13. Fuel Calculator
 https://www.codewars.com/kata/57b58827d2a31c57720012e8
 # In this kata you will have to write a function that takes litres and price_per_litre as arguments. 
 # Purchases of 2 or more litres get a discount of 5 cents per litre, purchases of 4 or more litres 
@@ -81,7 +81,7 @@ def fuel_price(litres, price_per_litre):
         price = litres * (price_per_litre - 0.25)
     return round(price, 2)
 
-# Task 14. Check the exam
+# Task 2.14. Check the exam
 https://www.codewars.com/kata/5a3dd29055519e23ec000074
 # The first input array is the key to the correct answers to an exam, like ["a", "a", "b", "d"]. 
 # The second one contains a student's submitted answers.
@@ -104,7 +104,7 @@ def check_exam(arr1,arr2):
                 score -= 1
     return 0 if score < 0 else score 
 
-# Task 15. Factorial
+# Task 2.15. Factorial
 https://www.codewars.com/kata/57a049e253ba33ac5e000212
 # Your task is to write function factorial
 # https://en.wikipedia.org/wiki/Factorial
@@ -135,7 +135,7 @@ def factorial(n):
     else:
         raise ValueError
 	
-# Task 17. Find the unique number
+# Task 2.17. Find the unique number
 https://www.codewars.com/kata/585d7d5adb20cf33cb000235
 # There is an array with some numbers. All numbers are equal except for one. Try to find it!
 # find_uniq([ 1, 1, 1, 2, 1, 1 ]) == 2
@@ -150,10 +150,13 @@ def find_uniq(arr):
     else: 
         return arr[0]   # n: unique integer in the array
 
-# Task 18. Palindrome chain length
+# Task 2.18. Palindrome chain length
 https://www.codewars.com/kata/525f039017c7cd0e1a000a26
-# Number is a palindrome if it is equal to the number with digits in reversed order. For example, 5, 44, 171, 4884 are palindromes and 43, 194, 4773 are not palindromes.
-# Write a method palindrome_chain_length which takes a positive number and returns the number of special steps needed to obtain a palindrome. The special step is: "reverse the digits, and add to the original number". If the resulting number is not a palindrome, repeat the procedure with the sum until the resulting number is a palindrome.
+# Number is a palindrome if it is equal to the number with digits in reversed order. 
+# For example, 5, 44, 171, 4884 are palindromes and 43, 194, 4773 are not palindromes.
+# Write a method palindrome_chain_length which takes a positive number and returns the number of special steps needed to obtain a palindrome. 
+# The special step is: "reverse the digits, and add to the original number". If the resulting number is not a palindrome, 
+# repeat the procedure with the sum until the resulting number is a palindrome.
 # If the input number is already a palindrome, the number of steps is 0.
 # Input will always be a positive integer.
 # For example, start with 87:
@@ -167,7 +170,7 @@ def palindrome_chain_length(n):
         count += 1
     return count
 
-# Task 19. Halving Sum
+# Task 2.19. Halving Sum
 https://www.codewars.com/kata/5a58d46cfd56cb4e8600009d
 # Given a positive integer n, calculate the following sum:
 # n + n/2 + n/4 + n/8 + ...
@@ -182,7 +185,7 @@ def halving_sum(n):
         sum += n
     return sum
 
-# Task 20. Deodorant Evaporator
+# Task 2.20. Deodorant Evaporator
 https://www.codewars.com/kata/5506b230a11c0aeab3000c1f
 # This program tests the life of an evaporator containing a gas.
 # We know the content of the evaporator (content in ml), the percentage of foam or gas lost every day (evap_per_day) 
