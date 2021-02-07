@@ -1,9 +1,11 @@
 # Real code challenges. Set #2
-# Completed_solutions 2.11-20
+
+# Completed_solutions 2.11-2.20
 
 # Task 2.11. How far will I go?
 https://www.codewars.com/kata/56d46b8fda159582e100001b
-# You have recently discovered that horses travel in a unique pattern - they're either running (at top speed) or resting (standing still).
+# You have recently discovered that horses travel in a unique pattern - 
+# they're either running (at top speed) or resting (standing still).
 # Here's an example of how one particular horse might travel:
 # The horse Blaze can run at 14 metres/second for 60 seconds, but must then rest for 45 seconds.
 # After 500 seconds Blaze will have traveled 4200 metres.
@@ -29,7 +31,7 @@ def travel(total_time, run_time, rest_time, speed):
 
 # Task 2.12. Cat Years, Dog Years (2)
 https://www.codewars.com/kata/5a6d3bd238f80014a2000187
-## I have a cat and a dog which I got as kitten / puppy.
+# I have a cat and a dog which I got as kitten / puppy.
 # I forget when that was, but I do know their current ages as catYears and dogYears.
 # Find how long I have owned each of my pets and return as a list [ownedCat, ownedDog]
 # NOTES:
@@ -115,7 +117,7 @@ def factorial(n):
         res = res * i  
     return res
 
-# Task 16. Factorial (2). 
+# Task 2.16. Factorial (2). 
 https://www.codewars.com/kata/54ff0d1f355cfd20e60001fc
 # In mathematics, the factorial of a non-negative integer n, denoted by n!, 
 # is the product of all positive integers less than or equal to n. 
