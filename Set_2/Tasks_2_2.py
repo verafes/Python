@@ -1,7 +1,8 @@
 # Real code challenges. Set #2
+
 # Completed_solutions 2.11-2.20
 
-# Task 11. How far will I go?
+# Task 2.11. How far will I go?
 https://www.codewars.com/kata/56d46b8fda159582e100001b
 # You have recently discovered that horses travel in a unique pattern - 
 # they're either running (at top speed) or resting (standing still).
@@ -30,7 +31,7 @@ def travel(total_time, run_time, rest_time, speed):
 
 # Task 2.12. Cat Years, Dog Years (2)
 https://www.codewars.com/kata/5a6d3bd238f80014a2000187
-## I have a cat and a dog which I got as kitten / puppy.
+# I have a cat and a dog which I got as kitten / puppy.
 # I forget when that was, but I do know their current ages as catYears and dogYears.
 # Find how long I have owned each of my pets and return as a list [ownedCat, ownedDog]
 # NOTES:
@@ -155,10 +156,9 @@ def find_uniq(arr):
 https://www.codewars.com/kata/525f039017c7cd0e1a000a26
 # Number is a palindrome if it is equal to the number with digits in reversed order. 
 # For example, 5, 44, 171, 4884 are palindromes and 43, 194, 4773 are not palindromes.
-# Write a method palindrome_chain_length which takes a positive number 
-# and returns the number of special steps needed to obtain a palindrome. 
-The special step is: "reverse the digits, and add to the original number". 
-# If the resulting number is not a palindrome, repeat the procedure with the sum until the resulting number is a palindrome.
+# Write a method palindrome_chain_length which takes a positive number and returns the number of special steps needed to obtain a palindrome. 
+# The special step is: "reverse the digits, and add to the original number". If the resulting number is not a palindrome, 
+# repeat the procedure with the sum until the resulting number is a palindrome.
 # If the input number is already a palindrome, the number of steps is 0.
 # Input will always be a positive integer.
 # For example, start with 87:
