@@ -1,7 +1,7 @@
 # Real code challenges. Set #2
-# Completed_solutions 21-30
+# Completed_solutions 2.21-30
 
-# Task 21. Arithmetic sequence - sum of n elements
+# Task 2.21. Arithmetic sequence - sum of n elements
 https://www.codewars.com/kata/55cb0597e12e896ab6000099
 # In your class, you have started lessons about "arithmetic progression". 
 # Because you are also a programmer, you have decided to write a function.
@@ -21,7 +21,7 @@ def arithmetic_sequence_sum(a, r, n):
         a += r
     return total
 
-# Task 22. Growth of a Population
+# Task 2.22. Growth of a Population
 https://www.codewars.com/kata/563b662a59afc2b5120000c6
 # In a small town the population is p0 = 1000 at the beginning of a year. 
 # The population regularly increases by 2 percent per year and moreover 50 new inhabitants per year come to live in the town. 
@@ -51,7 +51,7 @@ def nb_year(p0, percent, aug, p):
         years += 1
     return years
 
-# Task 3. Round up to the next multiple of 5
+# Task 2.3. Round up to the next multiple of 5
 https://www.codewars.com/kata/55d1d6d5955ec6365400006d
 # Given an integer as input, can you round it to the next (meaning, "higher") multiple of 5?
 # Examples:
@@ -73,7 +73,7 @@ def round_to_next5(n):
         n += 1    
     return n
 
-# Task 24. The wheat/rice and chessboard problem
+# Task 2.24. The wheat/rice and chessboard problem
 https://www.codewars.com/kata/5b0d67c1cb35dfa10b0022c7
 # I assume most of you are familiar with the ancient legend of the rice (but I see wikipedia suggests wheat, for some reason) problem, 
 # but a quick recap for you: a young man asks as a compensation only 1 grain of rice for the first square, 2 grains for the second, 
@@ -107,7 +107,7 @@ def squares_needed(grains):
         cell_count += 1
     return cell_count
 
-# Task 25. Product of consecutive Fib numbers
+# Task 2.25. Product of consecutive Fib numbers
 https://www.codewars.com/kata/5541f58a944b85ce6d00006a
 #The Fibonacci numbers are the numbers in the following integer sequence (Fn):
 # 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, ...
@@ -129,7 +129,7 @@ def productFib(prod):
         f1, f2 = f2, f1 + f2
     return [f1, f2, f1 * f2 == prod] 
 
-# Task 26. Count the divisors of a number
+# Task 2.26. Count the divisors of a number
 https://www.codewars.com/kata/542c0f198e077084c0000c2e
 #Count the number of divisors of a positive integer n.
 # Random tests go up to n = 500000.
@@ -146,7 +146,7 @@ def divisors(n):
             count += 1
     return count
 
-# Task 27. Beginner Series #3 Sum of Numbers
+# Task 2.27. Beginner Series #3 Sum of Numbers
 https://www.codewars.com/kata/55f2b110f61eb01779000053
 # Given two integers a and b, which can be positive or negative, find the sum of all the numbers between including them too and return it. 
 # If the two numbers are equal return a or b.
@@ -164,16 +164,17 @@ def reverse(n):
     n = str(n)
     return int(n[::-1])
 
-# Task 28. Reverser
+# Task 2.28. Reverser
 https://www.codewars.com/kata/58069e4cf3c13ef3a6000168
-Impliment the reverse function, which takes in input n and reverses it. For instance, reverse(123) should return 321. You should do this without converting the inputted number into a string.
+# Impliment the reverse function, which takes in input n and reverses it. For instance, reverse(123) should return 321. 
+# You should do this without converting the inputted number into a string.
 
 def reverse(n):
     """Returns n with all digits reversed. Assume positive n."""
     n = str(n)
     return int(n[::-1])
 
-# Task 29. Does my number look big in this?
+# Task 2.29. Does my number look big in this?
 https://www.codewars.com/kata/5287e858c6b5a9678200083c
 # A Narcissistic Number is a positive number which is the sum of its own digits, 
 # each raised to the power of the number of digits in a given base. 
@@ -195,9 +196,10 @@ def narcissistic( value ):
         sum = sum + int(el)**l
     return sum == int(value)
 
-# Task 30. Counting sheep...
+# Task 2.30. Counting sheep...
 https://www.codewars.com/kata/54edbc7200b811e956000556
-# Consider an array/list of sheep where some sheep may be missing from their place. We need a function that counts the number of sheep present in the array (true means present).
+# Consider an array/list of sheep where some sheep may be missing from their place. 
+# We need a function that counts the number of sheep present in the array (true means present).
 # For example,
 # [True,  True,  True,  False,
 #  True,  True,  True,  True ,
