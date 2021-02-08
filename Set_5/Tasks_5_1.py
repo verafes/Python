@@ -1,7 +1,7 @@
 # Real code challenges. Set #5
-# Completed_solutions 501-510
+# Completed_solutions 5.01-5.10
 
-#  Task 1. Squash the bugs
+#  Task 5.01. Squash the bugs
 https://www.codewars.com/kata/56f173a35b91399a05000cb7
 # Simple challenge - eliminate all bugs from the supplied code so that the code runs and outputs the expected value. 
 # Output should be the length of the longest word, as a number.
@@ -29,7 +29,7 @@ def find_longest(string):
         i +=1
     return longest
 
-# Task 502. Human Readable Time
+# Task 5.02. Human Readable Time
 https://www.codewars.com/kata/52685f7382004e774f0001f7
 # Write a function, which takes a non-negative integer (seconds) as input and returns the time in a human-readable format (HH:MM:SS)# 
 # HH = hours, padded to 2 digits, range: 00 - 99
@@ -40,7 +40,7 @@ https://www.codewars.com/kata/52685f7382004e774f0001f7
 def make_readable(seconds):
     return f"{str(seconds//3600).rjust(2,'0')}:{str(seconds%3600//60).rjust(2,'0')}:{str(seconds%60).rjust(2,'0')}"
 
-# Task 503. https://www.codewars.com/kata/546f922b54af40e1e90001da
+# Task 5.03. https://www.codewars.com/kata/546f922b54af40e1e90001da
 https://www.codewars.com/kata/546f922b54af40e1e90001da
 # In this kata you are required to, given a string, replace every letter with its position in the alphabet.
 # If anything in the text isn't a letter, ignore it and don't return it.
@@ -54,7 +54,7 @@ def alphabet_position(text):
     text = text.lower() 
     return " ".join([str(abc.index(el)+1) for el in text if el.isalpha()])
 
-# Task 504. Simple directions reversal
+# Task 5.04. Simple directions reversal
 https://www.codewars.com/kata/5b94d7eb1d5ed297680000ca
 # In this Kata, you will be given directions and your task will be to find your way back.
 # solve(["Begin on Road A","Right on Road B","Right on Road C","Left on Road D"]) = ['Begin on Road D', 'Right on Road C', 'Left on Road B', 'Left on Road A']
@@ -78,7 +78,7 @@ def solve(arr):
         s.append(new_d[i] + " " + street[i])
     return s
 
-# Task 505. Simple string characters
+# Task 5.05. Simple string characters
 https://www.codewars.com/kata/5a29a0898f27f2d9c9000058
 # In this Kata, you will be given a string and your task will be to return a list of ints detailing the count of uppercase letters, lowercase, numbers and special characters, as follows.
 # Solve("*'&ABCDabcde12345") = [4,5,5,3]. 
@@ -91,7 +91,7 @@ def solve(s):
     s = len(s)-u-l-n
     return [u,l,n,s]
 
-# Task 506. Single Word Pig Latin
+# Task 5.06. Single Word Pig Latin
 https://www.codewars.com/kata/558878ab7591c911a4000007
 # Pig Latin is an English language game where the goal is to hide the meaning of a word from people not aware of the rules.
 # So, the goal of this kata is to wite a function that encodes a single word string to pig latin.
@@ -118,7 +118,7 @@ def pig_latin(s):
         if s[i] in "aeiou":
             return s[i:] + s[:i] + "ay"
 
-# Task 507. String array duplicates
+# Task 5.07. String array duplicates
 https://www.codewars.com/kata/59f08f89a5e129c543000069
 # In this Kata, you will be given an array of strings and your task is to remove all consecutive duplicate letters from each string in the array.
 # For example:
@@ -136,7 +136,7 @@ def dup(arry):
         arr.append(s)
     return (arr)  
 
-# Task 508. Remove B M W
+# Task 5.08. Remove B M W
 https://www.codewars.com/kata/59de795c289ef9197f000c48
 # It happened decades before Snapchat, years before Twitter and even before Facebook. Targeted advertising was a bit of a challenge back then. 
 # One day, the marketing professor at my university told us a story that I am yet to confirm using reliable sources. 
@@ -156,7 +156,7 @@ def remove_bmw(string):
             return "This program only works for text."
     return string
 	
-# Task 509. Reverse and Invert
+# Task 5.09. Reverse and Invert
 https://www.codewars.com/kata/5899e054aa1498da6b0000cc
 # Reverse and invert all integer values in a given list.
 # Example: reverse_invert([1,12,'a',3.4,87,99.9,-42,50,5.6]) = [-1,-21,-78,24,-5]
@@ -172,7 +172,7 @@ def reverse_invert(lst):
                 arr.append(int(str(el)[::-1])*f)
     return [el for el in arr]
 
-# Task 510. Percentage of amino acids
+# Task 5.10. Percentage of amino acids
 https://www.codewars.com/kata/59759761e30a19cfe1000024
 # You are a biologist working on the amino acid composition of proteins. Every protein consists of a long chain of 20 different amino acids with different properties. 
 # Currently, you are collecting data on the percentage, various amino acids make up a protein you are working on. 
