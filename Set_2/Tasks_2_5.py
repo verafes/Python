@@ -1,8 +1,8 @@
 # Real code challenges. Set #2
-# Completed_solutions 41-50
+# Completed_solutions 2.41-2.50
 
 
-# Task 41. How many animals are there?
+# Task 2.41. How many animals are there?
 https://www.codewars.com/kata/593406b8f3d071d83c00005d
 # From a sentence, deduce the total number of animals.
 # For example :
@@ -17,7 +17,7 @@ def remove_duplicate_words(s):
             new_arr.append(el)
     return " ".join(new_arr)
 	
-# Task 42. Plus - minus - plus - plus - ... - Count
+# Task 2.42. Plus - minus - plus - plus - ... - Count
 https://www.codewars.com/kata/5bbb8887484fcd36fb0020ca
 # Count how often sign changes in array.
 #result: number from 0 to ... . Empty array returns 0
@@ -41,7 +41,7 @@ def catch_sign_change(lst):
             count += 1
     return count
 
-# Task 43. Take a Ten Minute Walk
+# Task 2.43. Take a Ten Minute Walk
 https://www.codewars.com/kata/54da539698b8a2ad76000228
 # You live in the city of Cartesia where all roads are laid out in a perfect grid. 
 # You arrived ten minutes too early to an appointment, so you decided to take the opportunity to go for a short walk. 
@@ -60,7 +60,7 @@ def is_valid_walk(walk):
         return True
     return False
 
-# Task 44. Sentence Smash
+# Task 2.44. Sentence Smash
 https://www.codewars.com/kata/53dc23c68a0c93699800041d
 # Write a function that takes an array of words and smashes them together into a sentence and returns the sentence. 
 # You can ignore any need to sanitize words or add punctuation, but you should add spaces between each word. 
@@ -71,7 +71,7 @@ https://www.codewars.com/kata/53dc23c68a0c93699800041d
 def smash(words):
     return " ".join(words)
 
-# Task 45. Remove duplicate words
+# Task 2.45. Remove duplicate words
 https://www.codewars.com/kata/5b39e3772ae7545f650000fc
 # Your task is to remove all duplicate words from a string, leaving only single (first) words entries.
 # Example:
@@ -86,7 +86,7 @@ def remove_duplicate_words(s):
             new_arr.append(el)
     return " ".join(new_arr)
 
-# Task 46. Average Array
+# Task 2.46. Average Array
 https://www.codewars.com/kata/596f6385e7cd727fff0000d6
 # Create a function that takes a 2D array as an input, and outputs another array that contains the average values for the numbers in the nested arrays at the corresponding indexes.
 # Note: the function should also work with negative numbers and floats.
@@ -117,7 +117,7 @@ def avg_array(arrs):
         m.append(average) 
     return m
 	
-# Task 47. Basic Sequence Practice
+# Task 2.47. Basic Sequence Practice
 https://www.codewars.com/kata/5436f26c4e3d6c40e5000282
 # A sequence or a series, in mathematics, is a string of objects, like numbers, that follow a particular pattern. 
 # The individual elements in a sequence are called terms. A simple example is 3, 6, 9, 12, 15, 18, 21, ..., 
@@ -144,7 +144,7 @@ def sum_of_n(n):
         el += step
     return arr
 
-# Task 48. Custom FizzBuzz Array
+# Task 2.48. Custom FizzBuzz Array
 https://www.codewars.com/kata/5355a811a93a501adf000ab7
 # Write a function that returns a (custom) FizzBuzz sequence of the numbers 1 to 100.
 # The function should be able to take up to 4 arguments:
@@ -167,7 +167,7 @@ def fizz_buzz_custom(string_one="Fizz", string_two="Buzz", num_one=3, num_two=5)
             arr[i] = string_two
     return arr
 
-# Task 49. Filling an array (part 1)
+# Task 2.49. Filling an array (part 1)
 https://www.codewars.com/kata/571d42206414b103dc0006a1
 # We want an array, but not just any old array, an array with contents!
 # Write a function that produces an array with the numbers 0 to N-1 in it.
@@ -177,7 +177,7 @@ https://www.codewars.com/kata/571d42206414b103dc0006a1
 def arr(n=0): 
     return list(range(n)) 
  
-# Task 50. Pre-FizzBuzz Workout #1
+# Task 2.50. Pre-FizzBuzz Workout #1
 https://www.codewars.com/kata/569e09850a8e371ab200000b
 # This is the first step to understanding FizzBuzz.
 # Your inputs: a positive integer, n, greater than or equal to one. n is provided, you have NO CONTROL over its value.
@@ -186,6 +186,4 @@ https://www.codewars.com/kata/569e09850a8e371ab200000b
 
 def pre_fizz(n):
     return list(range(1,n+1))
-
-
 
