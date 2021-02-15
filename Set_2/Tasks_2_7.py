@@ -1,11 +1,15 @@
 # Real code challenges. Set #2
-# Completed_solutions 61-70
+# Completed_solutions 2.61-2.70
 
-# Task 61. Simple Fun #37: House Numbers Sum
+# Task 2.61. Simple Fun #37: House Numbers Sum
 https://www.codewars.com/kata/58880c6e79a0a3e459000004
-# A boy is walking a long way from school to his home. To make the walk more fun he decides to add up all the numbers of the houses that he passes by during his walk. Unfortunately, not all of the houses have numbers written on them, and on top of that the boy is regularly taking turns to change streets, so the numbers don't appear to him in any particular order.
-# At some point during the walk the boy encounters a house with number 0 written on it, which surprises him so much that he stops adding numbers to his total right after seeing that house.
-# For the given sequence of houses determine the sum that the boy will get. It is guaranteed that there will always be at least one 0 house on the path.
+# A boy is walking a long way from school to his home. To make the walk more fun he decides to add up 
+# all the numbers of the houses that he passes by during his walk. Unfortunately, not all of the houses have numbers written on them, 
+# and on top of that the boy is regularly taking turns to change streets, so the numbers don't appear to him in any particular order.
+# At some point during the walk the boy encounters a house with number 0 written on it, 
+# which surprises him so much that he stops adding numbers to his total right after seeing that house.
+# For the given sequence of houses determine the sum that the boy will get. 
+# It is guaranteed that there will always be at least one 0 house on the path.
 # Example
 # For inputArray = [5, 1, 2, 3, 0, 1, 5, 0, 2], the output should be 11.
 # The answer was obtained as 5 + 1 + 2 + 3 = 11.
@@ -18,16 +22,17 @@ def house_numbers_sum(inp):
     zero = inp.index(0)
     return sum(inp[:zero])
 
-# Task 62. Sum of Odd Cubed Numbers
+# Task 2.62. Sum of Odd Cubed Numbers
 https://www.codewars.com/kata/580dda86c40fa6c45f00028a/
-# Find the sum of the odd numbers within an array, after cubing the initial integers. The function should return undefined/None/nil/NULL if any of the values aren't numbers.
+# Find the sum of the odd numbers within an array, after cubing the initial integers. 
+# The function should return undefined/None/nil/NULL if any of the values aren't numbers.
 # Note: Booleans should not be considered as numbers.
 
 def cube_odd(arr):
     ar = sum([el**3 for el in arr if type(el) == int and el%2 != 0])
     return ar if [el for el in arr if type(el) != int] == [] else None
 
-# Task 63. Create Phone Number
+# Task 2.63. Create Phone Number
 https://www.codewars.com/kata/525f50e3b73515a6db000b83
 # Write a function that accepts an array of 10 integers (between 0 and 9), that returns a string of those numbers in the form of a phone number.
 # Example:
@@ -39,7 +44,7 @@ def create_phone_number(n):
     s = "".join([str(el) for el in n])
     return f'({s[:3]}) {s[3:6]}-{s[6:]}'
 
-# Task 64. Removing Elements
+# Task 2.64. Removing Elements
 https://www.codewars.com/kata/5769b3802ae6f8e4890009d2/
 # Take an array and remove every second element from the array. Always keep the first element and start removing with the next element.
 # Example:
@@ -50,7 +55,7 @@ def remove_every_other(my_list):
     return [el for i, el in enumerate(my_list) if i %2 == 0 ]
     
 
-# Task 65. Count the Monkeys!
+# Task 2.65. Count the Monkeys!
 https://www.codewars.com/kata/56f69d9f9400f508fb000ba7
 # You take your son to the forest to see the monkeys. You know that there are a certain number there (n), 
 # but your son is too young to just appreciate the full number, he has to start counting them from 1.
@@ -63,7 +68,7 @@ https://www.codewars.com/kata/56f69d9f9400f508fb000ba7
 def monkey_count(n):
     return list(range(1, n+1))
 
-# Task 66. Find the lucky numbers
+# Task 2.66. Find the lucky numbers
 https://www.codewars.com/kata/580435ab150cca22650001fb
 # Write a function filterLucky/filter_lucky() that accepts a list of integers 
 # and filters the list to only include the elements that contain the digit 7.
@@ -83,7 +88,7 @@ https://www.codewars.com/kata/57a37f3cbb99449513000cd8
 def get_number_from_string(string):
     return int("".join([el for el in string if el.isdigit()]))
 
-# Task 68. Help the Fruit Guy
+# Task 2.68. Help the Fruit Guy
 https://www.codewars.com/kata/557af4c6169ac832300000ba
 # Our fruit guy has a bag of fruit (represented as an array of strings) where some fruits are rotten. 
 # He wants to replace all the rotten pieces of fruit with fresh ones. 
@@ -97,7 +102,7 @@ https://www.codewars.com/kata/557af4c6169ac832300000ba
 def remove_rotten(bag_of_fruits=[]):
     return [el.replace("rotten","").lower() for el in bag_of_fruits] if bag_of_fruits else []
 
-# Task 69. Word values
+# Task 2.69. Word values
 https://www.codewars.com/kata/598d91785d4ce3ec4f000018
 # Given a string "abc" and assuming that each letter in the string has a value equal to its position in the alphabet, 
 # our string will have a value of 1 + 2 + 3 = 6. This means that: a = 1, b = 2, c = 3 ....z = 26.
@@ -124,7 +129,7 @@ def name_value(my_list):
     abc = " abcdefghijklmnopqrstuvwxyz"
     return [sum([abc.index(letter) for letter in word])*(index+1) for index, word in enumerate(my_list)]
 	
-# Task 70. Sum two arrays
+# Task 2.70. Sum two arrays
 https://www.codewars.com/kata/59c3e8c9f5d5e40cab000ca6
 # Your task is to create a function called sum_arrays() in Python or addArrays in Javascript, 
 # which takes two arrays consisting of integers, and returns the sum of those two arrays.
@@ -162,5 +167,4 @@ def sum_arrays(array1,array2):
         all[0] = -all[0]
     return all  
  
-
 #
