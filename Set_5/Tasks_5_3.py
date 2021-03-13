@@ -1,223 +1,22 @@
 # Real code challenges. Set #5
-# Completed_solutions 5.31-5.40
+# Completed_solutions 5.21-5.30
 
-#  Task 5.31. Xmas Tree
-https://www.codewars.com/kata/577c349edf78c178a1000108
-# Complete the function that returns a christmas tree of the given height. 
-# The height is passed through to the function and the function should return a list containing each line of the tree.
-# XMasTree(5) should return : ['____#____', '___###___', '__#####__', '_#######_', '#########', '____#____', '____#____']
-# XMasTree(3) should return : ['__#__', '_###_', '#####', '__#__', '__#__']
-# The final idea is for the tree to look like this if you decide to print each element of the list:
-# XMasTree(5) will result in:
-# ____#____              1
-# ___###___              2
-# __#####__              3
-# _#######_              4
-# #########       -----> 5 - Height of Tree
-# ____#____        1      
-# ____#____        2 - Trunk/Stem of Tree
-# XMasTree(3) will result in:
-# __#__                  1
-# _###_                  2
-# #####          ----->  3 - Height of Tree
-# __#__           1
-# __#__           2 - Trunk/Stem of Tree
-# Pad with underscores i.e _ so each line is the same length. The last line forming the tree having only hashtags, no spaces. Also remember the trunk/stem of the tree.
+#  Task 5.21. Classic Hello World
+https://www.codewars.com/kata/57036f007fd72e3b77000023
+# You are given a method called main, make it print Hello World! and don't return anything
+# Note that for some languages, the function main is the entry point of the program.
+# Here's how it will be tested:
+#    Solution.main("parameter1", "parameter2","parametern")
 
-def xmastree(n):
-    width = n * 2 - 1
-    arr = []
-    for i in range (1, width + 1, 2):
-        arr.append((i*'#').center(width, '_'))
-    arr.extend([('#').center(width, '_')]*2)
-    return arr
+class Solution:
+    def main(self):
+        print("Hello World!")
 
-# Task 5.32. Custom Christmas Tree
-https://www.codewars.com/kata/5a405ba4e1ce0e1d7800012e
-# Task. Christmas is coming, and your task is to build a custom Christmas tree with the specified characters and the specified height.
-# Inputs:
-# chars: the specified characters.
-# n: the specified height. A positive integer greater than 2.
-# Output:
-# A multiline string. Each line is separated by \n. A tree contains two parts: leaves and trunks.
-# The leaves should be n rows. The first row fill in 1 char, the second row fill in 3 chars, and so on. 
-# A single space will be added between two adjust chars, and some of the necessary spaces will be added to the left side, 
-# to keep the shape of the tree. No space need to be added to the right side.
-# The trunk should be at least 1 unit height, it depends on the value of the n. The minimum value of n is 3, and the height of the tree trunk is 1 unit height. 
-# If n increased by 3, and the tree trunk increased by 1 unit. For example, when n is 3,4 or 5, trunk should be 1 row; when n is 6,7 or 8, trunk should be 2 row; and so on.
-# Still not understand the task? Look at the following example ;-)
-
-# Examples
-# For chars = "*@o" and n = 3,the output should be:
-#   *
-#  @ o
-# * @ o
-#   |
-# For chars = "*@o" and n = 6,the output should be:
-# 
-#      *
-#     @ o
-#    * @ o
-#   * @ o *
-#  @ o * @ o
-# * @ o * @ o
-#      |
-#      |
-# For chars = "1234" and n = 6,the output should be:
-# 
-#      1
-#     2 3
-#    4 1 2
-#   3 4 1 2
-#  3 4 1 2 3
-# 4 1 2 3 4 1
-#      |
-#      |
-
-
-def custom_christmas_tree(chars, n):
-    arr = []
-    copy_chars = chars
-    for i in range(1, n + 1):
-        line = " " * (n - i)
-        for j in range(i):
-            line += chars[0] + " "
-            chars = chars[1:]
-            if chars == "":
-                chars = copy_chars
-        line = line.rstrip()    
-        arr.append(line)
-    trunk = n // 3
-    for i in range(trunk):
-        arr.append(" " * (n - 1) + "|")    
-    return "\n".join(arr)
-
-# Solution 2
-def custom_christmas_tree(chars, n):
-    l = sum(list(range(1,n+1)))
-    st = (chars * l)[:l]
-    arr = []
-    for i in range(1,n+1):
-        arr.append(' '.join(st[:i]).rjust(n + i - 1, ' '))
-        st = st[i:]
-    for i in range(1, n// 3 +1):
-        arr.append("|".rjust(len(arr[0]), ' '))
-    return '\n'.join(arr)
-	
-
-# Task 5.33. Complete The Pattern #3 (Horizontal Image of #2)
-https://www.codewars.com/kata/557341907fbf439911000022
-# Task: You have to write a function pattern which creates the following pattern upto n number of rows. 
-# If the Argument is 0 or a Negative Integer then it should return "" i.e. empty string.
-# Pattern:
-# (n)
-# (n)(n-1)
-# (n)(n-1)(n-2)
-# ................
-# (n)(n-1)(n-2)....4
-# (n)(n-1)(n-2)....43
-# (n)(n-1)(n-2)....432
-# (n)(n-1)(n-2)....4321
-
-ef pattern(n):
-    s = ""
-    arr = []
-    for i in reversed(range(1,n+1)):
-        s += str(i)
-        arr.append(s)
-    return "" if n <=0 else str("\n".join(arr))
-
-# Task 5.34. Complete The Pattern #4
-https://www.codewars.com/kata/55736129f78b30311300010f
-# You have to write a function pattern which creates the following pattern upto n number of rows.
-# If the Argument is 0 or a Negative Integer then it should return "" i.e. empty string.
-##Examples:
-# pattern(4):
-# 1234
-# 234
-# 34
-# 4
-
-def pattern(n):
-    arr = []
-    for i in reversed(range(1,n+1)):
-        el = "".join([str(x) for x in range(i,n+1)])
-        arr.append(el)
-    return "" if n <=0 else str("\n".join(arr[::-1]))
-
-# Task 5.35. Complete The Pattern #6 - Odd Ladder
-https://www.codewars.com/kata/5574940eae1cf7d520000076
-# You have to write a function pattern which creates the following pattern (see examples) up to the desired number of rows.
-# If the Argument is 0 or a Negative Integer then it should return "" i.e. empty string.
-# If any even number is passed as argument then the pattern should last upto the largest odd number 
-# which is smaller than the passed even number.
-###Examples:
-# pattern(9):
-# 1
-# 333
-# 55555
-# 7777777
-# 999999999
-# Note: There are no spaces in the pattern
-# Hint: Use \n in string to jump to next line
-
-def pattern(n):
-    arr = []
-    for i in range(1,n+1):
-        if i%2 != 0:
-            arr.append(str(i)*i)
-    return "\n".join(arr)
-	
-# Short solution:
-	
-def pattern(n):
-    return "\n".join(str(i)*i for i in range(1,n+1) if i%2 != 0)
-
-# Task 5.36. Complete The Pattern #5 - Even Ladder
-https://www.codewars.com/kata/55749101ae1cf7673800003e
-# Task: You have to write a function pattern which creates the following pattern up to n/2 number of lines.
-# If n <= 1 then it should return "" (i.e. empty string).
-# If any odd number is passed as argument then the pattern should last up to the largest even number which is smaller than the passed odd number.
-# Examples:
-# pattern(8):
-# 22
-# 4444
-# 666666
-# 88888888
-# Note: There are no spaces in the pattern
-# Hint: Use \n in string to jump to next line
-
-def pattern(n):
-    return "\n".join(str(i)*i for i in range(2, n+1, 2))
-
-# Task 5.37. Summations: 1
-https://www.codewars.com/kata/55c02535bf0974404b0000f9
-# Make a program that will take an int (x) and give you the summation of all numbers from 1 up to x included. 
-# If the given input is not an integer, return "Invalid Value".
-# Examples:
-# summation(25)==325
-# summation(2.56)=="Invalid Value"
-
-def summation(x):
-    return sum(range(x+1)) if type(x) is int else "Invalid Value"
-
-# Task 5.38. Check for prime numbers
-https://www.codewars.com/kata/53daa9e5af55c184db00025f
-# In this kata you will create a function to check a non-negative input to see if it is a prime number.
-# The function will take in a number and will return True if it is a prime number and False if it is not.
-# A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself.
-
-def is_prime(n):
-    if n <= 1:
-        return False
-    for i in range(2, n//2+1):
-        if n % i == 0:
-            return False
-    return True
-
-# Task 5.39. Where is my parent!?(cry)
+# Task 5.22. Where is my parent!?(cry)
 https://www.codewars.com/kata/58539230879867a8cd00011c
-# Mothers arranged a dance party for the children in school. At that party, there are only mothers and their children. All are having great fun on the dance floor when suddenly all the lights went out. It's a dark night and no one can see each other. But you were flying nearby and you can see in the dark and have ability to teleport people anywhere you want.
+# Mothers arranged a dance party for the children in school. At that party, there are only mothers and their children. 
+# All are having great fun on the dance floor when suddenly all the lights went out. It's a dark night and no one can see each other. 
+# But you were flying nearby and you can see in the dark and have ability to teleport people anywhere you want.
 # Legend:
 # -Uppercase letters stands for mothers, lowercase stand for their children, i.e. "A" mother's children are "aaaa".
 # -Function input: String contains only letters, uppercase letters are unique.
@@ -231,24 +30,187 @@ def find_children(dancing_brigade):
         arr.append((c*d.count(c)).title())
     return ''.join(sorted(set(arr)))
 
-# Task 5.40. Sort Out The Men From Boys
-https://www.codewars.com/kata/5af15a37de4c7f223e00012d
-# Scenario
-# Now that the competition gets tough it will Sort out the men from the boys .
-# Men are the Even numbers and Boys are the odd
-# Task
-# Given an array/list [] of n integers , Separate The even numbers from the odds , or Separate the men from the boys
-# Notes
-# Return an array/list where Even numbers come first then odds
-# Since , Men are stronger than Boys , Then Even numbers in ascending order While odds in descending .
-# Array/list size is at least 4 .
-# Array/list numbers could be a mixture of positives , negatives .
-# Have no fear , It is guaranteed that no Zeroes will exists
+# Task 5.23. Baby shark lyrics generator
+https://www.codewars.com/kata/5d076515e102162ac0dc514e
+# Create a function, as short as possible, that returns this lyrics.
+# Your code should be less than 300 characters. Watch out for the three points at the end of the song.
 
-def men_from_boys(arr):
-    arr = list(set(arr))
-    men = sorted([x for x in arr if x%2==0])
-    boys = sorted([x for x in arr if x not in men], reverse=True)
-    return men + boys
-	
+# Baby shark, doo doo doo doo doo doo
+# Baby shark, doo doo doo doo doo doo
+# Baby shark, doo doo doo doo doo doo
+# Baby shark!
+# Mommy shark, doo doo doo doo doo doo
+# Mommy shark, doo doo doo doo doo doo
+# Mommy shark, doo doo doo doo doo doo
+# Mommy shark!
+# Daddy shark, doo doo doo doo doo doo
+# Daddy shark, doo doo doo doo doo doo
+# Daddy shark, doo doo doo doo doo doo
+# Daddy shark!
+# Grandma shark, doo doo doo doo doo doo
+# Grandma shark, doo doo doo doo doo doo
+# Grandma shark, doo doo doo doo doo doo
+# Grandma shark!
+# Grandpa shark, doo doo doo doo doo doo
+# Grandpa shark, doo doo doo doo doo doo
+# Grandpa shark, doo doo doo doo doo doo
+# Grandpa shark!
+# Let's go hunt, doo doo doo doo doo doo
+# Let's go hunt, doo doo doo doo doo doo
+# Let's go hunt, doo doo doo doo doo doo
+# Let's go hunt!
+# Run away,…
+
+def baby_shark_lyrics():
+    s = ''
+    doo = ',' + ' doo'*6 + '\n'
+    arr = ['Baby shark', 'Mommy shark', 'Daddy shark', 'Grandma shark', 'Grandpa shark', 'Let\'s go hunt']
+    for el in arr:
+        s += (el + doo)*3 + el + '!\n'
+    return s + 'Run away,…'   
+
+# Task 5.24. Fix the loop!
+https://www.codewars.com/kata/55ca43fb05c5f2f97f0000fd
+# Your collegue wrote an simple loop to list his favourite animals. 
+# But there seems to be a minor mistake in the grammar, which prevents the program to work. Fix it! :)
+# If you pass the list of your favourite animals to the function, you should get the list of the animals with orderings and newlines added.
+# For example, passing in:
+# animals = [ 'dog', 'cat', 'elephant' ]
+# will result in:
+
+list_animals(animals) == '1. dog\n2. cat\n3. elephant\n'
+
+# Given (Broken code)
+
+def list_animals(animals):
+    list = ''
+    for i in range(animals):
+        list += str(i + 1) + '. ' + animals[i] + '\n'
+    return list
+
+# Solution
+
+def list_animals(animals):
+    lst = ''
+    for i in range(len(animals)):
+        lst += str(i + 1) + '. ' + animals[i] + '\n'
+    return lst
+
+# Task 5.25. Exclamation marks series #13: Count the number of exclamation marks and question marks, return the product
+https://www.codewars.com/kata/57fb142297e0860073000064
+# Description:
+# Count the number of exclamation marks and question marks, return the product.
+# Examples
+# Product("") == 0
+# product("!") == 0
+# Product("!ab? ?") == 2
+# Product("!!") == 0
+# Product("!??") == 2
+# Product("!???") == 3
+# Product("!!!??") == 6
+# Product("!!!???") == 9
+# Product("!???!!") == 9
+# Product("!????!!!?") == 20
+
+def product(s):
+    return s.count("!") * s.count("?") 
+
+# Task 5.26. Encrypt this!
+https://www.codewars.com/kata/5848565e273af816fb000449
+# Description: Encrypt this!
+# You want to create secret messages which can be deciphered by the Decipher this! kata. Here are the conditions:
+# Your message is a string containing space separated words.
+# You need to encrypt each word in the message using the following rules:
+# The first letter needs to be converted to its ASCII code.
+# The second letter needs to be switched with the last letter
+# Keepin' it simple: There are no special characters in input.
+# Examples:
+# encrypt_this("Hello") == "72olle"
+# encrypt_this("good") == "103doo"
+# encrypt_this("hello world") == "104olle 119drlo"
+
+def encrypt_this(text):
+    text = text.split()
+    arr = []
+    for w in (text):
+        w = str(ord(w[0])) + w[2:][-1:] + w[2:len(w)-1] + w[1:2]
+        arr.append(w)
+    return " ".join(arr)
+
+# Task 5.27. WeIrD StRiNg CaSe
+https://www.codewars.com/kata/52b757663a95b11b3d00062d
+# Write a function toWeirdCase (weirdcase in Ruby) that accepts a string, and returns the same string 
+# with all even indexed characters in each word upper cased, and all odd indexed characters in each word lower cased. 
+# The indexing just explained is zero based, so the zero-ith index is even, therefore that character should be upper cased.
+# The passed in string will only consist of alphabetical characters and spaces(' '). 
+# Spaces will only be present if there are multiple words. Words will be separated by a single space(' ').
+# Examples:
+# to_weird_case('String'); # => returns 'StRiNg'
+# to_weird_case('Weird string case') # => returns 'WeIrD StRiNg CaSe'
+
+def to_weird_case(string):
+    s = string.split(" ")
+    n = []
+    for word in s:
+        new = ""
+        for i, el in enumerate(word):
+            if i %2 == 0:
+                new += el.upper()
+            else:
+                new += el.lower()
+        n.append(new)
+    return " ". join(n)
+
+# Task 5.28. Vowel Count
+https://www.codewars.com/kata/54ff3102c1bad923760001f3
+# Return the number (count) of vowels in the given string.
+# We will consider a, e, i, o, u as vowels for this Kata (but not y).
+# The input string will only consist of lower case letters and/or spaces.
+
+def get_count(str):
+    num_vowels = 0
+    for el in str:
+        if el in "aouie":
+            num_vowels += 1
+    return num_vowels
+
+# Task 5.29. Valid Spacing
+https://www.codewars.com/kata/5f77d62851f6bc0033616bd8
+#  our task is to write a function called valid_spacing() or validSpacing() which checks if a string has valid spacing. The function should return either True or False.
+# For this kata, the definition of valid spacing is one space between words, and no leading or trailing spaces. Below are some examples of what the function should return.
+# 'Hello world' = True
+# ' Hello world' = False
+# 'Hello world  ' = False
+# 'Hello  world' = False
+# 'Hello' = True
+# Even though there are no spaces, it is still valid because none are needed
+# 'Helloworld' = True 
+# True because we are not checking for the validity of words.
+# 'Helloworld ' = False
+# ' ' = False
+# '' = True
+# Note - there will be no punctuation or digits in the input string, only letters.
+
+def valid_spacing(s):
+    if s == "": return True
+    return False if "" in s.split(" ") else True
+
+# Task 5.30. Unique In Order
+https://www.codewars.com/kata/54e6533c92449cc251001667
+# Implement the function unique_in_order which takes as argument a sequence and returns a list of items without any elements 
+# with the same value next to each other and preserving the original order of elements.
+# For example:
+# unique_in_order('AAAABBBCCDAABBB') == ['A', 'B', 'C', 'D', 'A', 'B']
+# unique_in_order('ABBCcAD')         == ['A', 'B', 'C', 'c', 'A', 'D']
+# unique_in_order([1,2,2,3,3])       == [1,2,3]
+
+def unique_in_order(s):
+    if s == "" or s == []:
+        return []
+    new = [s[0]]
+    for i in range(len(s)-1):
+        if s[i] != s[i+1]:
+            new.append(s[i+1])
+    return new
+
 #
