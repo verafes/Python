@@ -1,7 +1,7 @@
 # Real code challenges. Set #5
-# Completed_solutions 511-520
+# Completed_solutions 5.11-5.20
 
-#  Task 511. Jumping Number (Special Numbers Series 
+#  Task 5.11. Jumping Number (Special Numbers Series 
 https://www.codewars.com/kata/5a54e796b3bfa8932c0000ed
 # Definition. # Jumping number is the number that All adjacent digits in it differ by 1.
 # Task. # Given a number, Find if it is Jumping or not .
@@ -24,7 +24,7 @@ def jumping_number(number):
         if  dif == 1: s += 1
     return "Not!!" if s < len(str(number))-1 else 'Jumping!!' 
  
-# Task 512. Special Number (Special Numbers Series #5)
+# Task 5.12. Special Number (Special Numbers Series #5)
 https://www.codewars.com/kata/5a55f04be6be383a50000187/
 # Definition. A number is a Special Number if it’s digits only consist 0, 1, 2, 3, 4 or 5
 # Given a number determine if it special number or not .
@@ -35,7 +35,7 @@ def special_number(number):
     num = [digit for digit in str(number) if digit in "012345"]
     return "Special!!" if len(num) == len(str(number)) else "NOT!!"
 
-# Task 513. Disarium Number (Special Numbers Series #3)
+# Task 5.13. Disarium Number (Special Numbers Series #3)
 https://www.codewars.com/kata/5a53a17bfd56cb9c14000003
 # Definition. Disarium number is the number that The sum of its digits powered with their respective positions is equal to the number itself.
 # Task. Given a number, Find if it is Disarium or not .
@@ -50,7 +50,7 @@ def disarium_number(number):
     arr = [int(digit)**(i+1) for i, digit in enumerate(str(number))]
     return 'Disarium !!' if sum(arr) == number else 'Not !!'
 
-# Task 514. https://www.codewars.com/kata/5a4e3782880385ba68000018
+# Task 5.14. https://www.codewars.com/kata/5a4e3782880385ba68000018
 Balanced Number (Special Numbers Series #1 )
 # Definition. Balanced number is the number that * The sum of all digits to the left of the middle digit(s) 
 # and the sum of all digits to the right of the middle digit(s) are *equal**.
@@ -71,7 +71,7 @@ def balanced_num(number):
     right = [int(d) for d in str(number)[i+1:]]
     return "Balanced" if int(len(str(number))) <= 2 or sum(left) == sum(right) else 'Not Balanced'
 
-# Task 515. By 3, or not by 3? That is the question . . .
+# Task 5.15. By 3, or not by 3? That is the question . . .
 https://www.codewars.com/kata/59f7fc109f0e86d705000043
 # A trick I learned in elementary school to determine whether or not a number was divisible by three 
 # is to add all of the integers in the number together and to divide the resulting sum by three. 
@@ -94,7 +94,7 @@ def divisible_by_three(st):
         s -= 3
     return s == 0
 
-# Task 516. Powers of 3
+# Task 5.16. Powers of 3
 https://www.codewars.com/kata/57be674b93687de78c0001d9
 # Given a positive integer N, return the largest integer k such that 3^k < N.
 # For example,
@@ -108,7 +108,7 @@ def largest_power(N):
         i+=1
     return i-1
 
-# Task 517. CubeSummation
+# Task 5.17. CubeSummation
 https://www.codewars.com/kata/550e9fd127c656709400024d
 # Write a function cubeSum(n, m) that will calculate a sum of cubes of numbers in a given range, 
 # starting from the smaller (but not including it) to the larger (including). 
@@ -126,7 +126,7 @@ def cube_sum(n, m):
         n, m = m, n
     return sum([x**3 for x in range(n+1,m+1)])
 
-# Task 518. Get the square of a number without ** or * or pow()
+# Task 5.18. Get the square of a number without ** or * or pow()
 https://www.codewars.com/kata/58a8807c5336a3f613000157
 # #Task: Write a function that gets a square of a number without the following:
 # Your code musn't contain any *s and you cannot use the pow function. Edit: You also cannot use **__mul__ function**
@@ -145,7 +145,7 @@ def square(n):
 def square(n):
     return sum(n for i in range(n))
 
-# Task 519. Square root without using library : math
+# Task 5.19. Square root without using library : math
 https://www.codewars.com/kata/5979d27b630baf1509000064
 # The challenge to you is to return the square root of the integers. You will only be given perfect square numbers.
 # Restrictions are as follows:
@@ -160,7 +160,7 @@ def square_root_me(sqrt):
         y = (x + sqrt // x) // 2
     return x
 
-# Task 520. To square(root) or not to square(root)
+# Task 5.20. To square(root) or not to square(root)
 https://www.codewars.com/kata/57f6ad55cca6e045d2000627
 # You are the host of a game show that only allows people whose height in centimeters is a perfect square. 
 # A perfect square is a number that is the result of a single whole number being multiplied by itself.
