@@ -2,8 +2,10 @@
 # Completed_solutions 3.11-3.20.
 
 # Task 3.11. Finding Remainder Without Using '%' Operator
-
-# Write a method remainder which takes two integer arguments, dividend and divisor, and returns the remainder when dividend is divided by divisor. Do NOT use the modulus operator (%) to calculate the remainder!
+https://www.codewars.com/kata/564f458b4d75e24fc9000041
+# Write a method remainder which takes two integer arguments, dividend and divisor, 
+# and returns the remainder when dividend is divided by divisor. 
+# Do NOT use the modulus operator (%) to calculate the remainder!
 # Assumption: Dividend will always be greater than or equal to divisor.
 # Notes: 
 # Make sure that the implemented remainder function works exactly the same as the Modulus operator (%).
@@ -16,7 +18,8 @@ def remainder(dividend,divisor):
 # Task 3.12. Sum of Primes
 https://www.codewars.com/kata/5902ea9b378a92a990000016
 # A prime number (or a prime) is a natural number greater than 1 that has no positive divisors other than 1 and itself.
-# You will be given the lower and upper limits: the program will look for any prime number that exists between the lower limit to the upper limit (included).
+# You will be given the lower and upper limits: the program will look for any prime number 
+# that exists between the lower limit to the upper limit (included).
 # Your objective is to sum all the primes between the given limits.
 # If the limits are primes, then they are included
 # -100000 <= lower < upper <= 100000
@@ -96,7 +99,8 @@ def array_plus_array(arr1,arr2):
 
 # Task 3.16. Beginner - Reduce but Grow
 https://www.codewars.com/kata/57f780909f7e8e3183000078
-# Given a non-empty array of integers, return the result of multiplying the values together in order. Example: [1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24
+# Given a non-empty array of integers, return the result of multiplying the values together in order. 
+# Example: [1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24
 
 def grow(arr):
     s = 1
@@ -119,7 +123,8 @@ def find_average(lst):
 https://www.codewars.com/kata/57faa6ff9610ce181b000028
 # You have stumbled across the divine pleasure that is owning a dog and a garden. Now time to pick up all the cr@p! :D
 # Given a 2D array to represent your garden, you must find and collect all of the dog cr@p - represented by '@'.
-# You will also be given the number of bags you have access to (bags), and the capactity of a bag (cap). If there are no bags then you can't pick anything up, so you can ignore cap.
+# You will also be given the number of bags you have access to (bags), and the capactity of a bag (cap). 
+# If there are no bags then you can't pick anything up, so you can ignore cap.
 # You need to find out if you have enough capacity to collect all the cr@p and make your garden clean again.
 # If you do, return 'Clean', else return 'Cr@p'.
 # Watch out though - if your dog is out there ('D'), he gets very touchy about being watched. If he is there you need to return 'Dog!!'.
@@ -167,6 +172,4 @@ https://www.codewars.com/kata/545991b4cbae2a5fda000158
 
 def include(arr,item):
     return (item in arr)
-
-
 
