@@ -1,6 +1,6 @@
-# Real code challenges. Set #3
-# Completed_solutions 71-80
-
+# Real code challenges. Set #3-8
+# Completed_solutions 3.71-3.80
+.
 # Task 371. Complete The Pattern #1
 https://www.codewars.com/kata/5572f7c346eb58ae9c000047
 # Task: You have to write a function pattern which returns the following Pattern(See Pattern & Examples) upto n number of rows.
@@ -24,7 +24,7 @@ def pattern(n):
 def pattern(n):
     return "\n".join([str(i)*i for i in range(1,n+1)])
 	
-# Task 372. Complete The Pattern #2
+# Task 3.72. Complete The Pattern #2
 https://www.codewars.com/kata/55733d3ef7c43f8b0700007c
 # You have to write a function pattern which returns the following Pattern (See Pattern & Examples) upto n number of rows.
 # Note: Returning the pattern is not the same as Printing the pattern.
@@ -50,10 +50,12 @@ def pattern(n):
         arr[i] = "".join([str(el) for el in arr[i]])
     return "\n".join(el for el in arr)
 	
-# Task 373. The highest profit wins!
+# Task 3.73. The highest profit wins!
 https://www.codewars.com/kata/559590633066759614000063
 # Story
-# Ben has a very simple idea to make some profit: he buys something and sells it again. Of course, this wouldn't give him any profit at all if he was simply to buy and sell it at the same price. Instead, he's going to buy it for the lowest possible price and sell it at the highest.
+# Ben has a very simple idea to make some profit: he buys something and sells it again. Of course, 
+#this wouldn't give him any profit at all if he was simply to buy and sell it at the same price. 
+#Instead, he's going to buy it for the lowest possible price and sell it at the highest.
 # Task. Write a function that returns both the minimum and maximum number of the given list/array.
 # Examples
 # min_max([1,2,3,4,5])   == [1,5]
@@ -63,9 +65,10 @@ https://www.codewars.com/kata/559590633066759614000063
 def min_max(lst):
     return [min(sorted(lst)), max(sorted(lst))]
 
-# Task 4. JavaScript Array Filter
+# Task 3.74. JavaScript Array Filter
 https://www.codewars.com/kata/514a6336889283a3d2000001
-# In Python, there is a built-in filter function that operates similarly to JS's filter. For more information on how to use this function, visit https://docs.python.org/3/library/functions.html#filter
+# In Python, there is a built-in filter function that operates similarly to JS's filter. 
+# For more information on how to use this function, visit https://docs.python.org/3/library/functions.html#filter
 # The solution would work like the following: get_even_numbers([2,4,5,6]) => [2,4,6]
 
 def get_even_numbers(arr):
@@ -76,7 +79,7 @@ def get_even_numbers(arr):
 def get_even_numbers(arr):
     return [el for el in arr if el%2 == 0]
 
-# Task 375. last digits of a number
+# Task 3.75. last digits of a number
 https://www.codewars.com/kata/5cd5ba1ce4471a00256930c0
 # Your job is to write function last_digits(n,d) which return the last d digits of an integer n as a list. n will be from 0 to 10^10
 # Examples:
@@ -90,7 +93,7 @@ https://www.codewars.com/kata/5cd5ba1ce4471a00256930c0
 def solution(n,d):
     return [int(el)for el in str(n)[-d:]] if d > 0 else []
 
-# Task 376. Sum of array singles
+# Task 3.76. Sum of array singles
 https://www.codewars.com/kata/59f11118a5e129e591000134
 # In this Kata, you will be given an array of numbers in which two numbers occur once and the rest occur only twice. 
 # Your task will be to return the sum of the numbers that occur only once.
@@ -99,7 +102,7 @@ https://www.codewars.com/kata/59f11118a5e129e591000134
 def repeats(arr):
     return sum(el for el in arr if arr.count(el) == 1)
 
-# Task 7. Minimize Sum Of Array (Array Series #1)
+# Task 3.77. Minimize Sum Of Array (Array Series #1)
 https://www.codewars.com/kata/5a523566b3bfa84c2e00010b
 # Given an array of integers , Find the minimum sum which is obtained from summing each Two integers product .
 # Notes. Array/list will contain positives only. Array/list will always has even size
@@ -116,7 +119,7 @@ def min_sum(arr):
     lst = sorted(arr)
     return sum(lst[i] * lst[-i-1] for i in range(len(lst)//2))
 	
-# Task 378. Multiples of 3 or 5
+# Task 3.78. Multiples of 3 or 5
 https://www.codewars.com/kata/514b92a657cdc65150000006
 # If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
 # Finish the solution so that it returns the sum of all the multiples of 3 or 5 below the number passed in.
@@ -135,7 +138,7 @@ def solution(number):
     return sum(i for i in range(1,number) if not i % 5 or not i % 3)
 
 
-# Task 379. Character with longest consecutive repetition 
+# Task 3.79. Character with longest consecutive repetition 
 https://www.codewars.com/kata/586d6cefbcc21eed7a001155
 # For a given string s find the character c (or C) with longest consecutive repetition and return: (c, l)
 # where l (or L) is the length of the repetition. If there are two or more characters with the same l return the first in order of appearance.
@@ -154,7 +157,7 @@ def longest_repetition(chars):
     lengths = [len(el) for el in arr]
     return arr[lengths.index(max(lengths))][0], max(lengths)
 
-# Task 380. Sum of array singles
+# Task 3.80. Sum of array singles
 https://www.codewars.com/kata/59f11118a5e129e591000134
 # In this Kata, you will be given an array of numbers in which two numbers occur once and the rest occur only twice. 
 # Your task will be to return the sum of the numbers that occur only once.
