@@ -157,14 +157,22 @@ def longest_repetition(chars):
     lengths = [len(el) for el in arr]
     return arr[lengths.index(max(lengths))][0], max(lengths)
 
-# Task 3.80. Sum of array singles
+# Task 3.80. +1 Array 
 https://www.codewars.com/kata/59f11118a5e129e591000134
-# In this Kata, you will be given an array of numbers in which two numbers occur once and the rest occur only twice. 
-# Your task will be to return the sum of the numbers that occur only once.
-# For example, repeats([4,5,7,5,4,8]) = 15 because only the numbers 7 and 8 occur once, and their sum is 15. Every other number occurs twice.
-# More examples in the test cases.
+# Given an array of integers of any length, return an array that has 1 added to the value represented by the array.
+# - the array can't be empty
+# - only non-negative, single digit integers are allowed
+# Return nil (or your language's equivalent) for invalid inputs.
+# Examples. For example the array [2, 3, 9] equals 239, adding one would return the array [2, 4, 0].
+# [4, 3, 2, 5] would return [4, 3, 2, 6]
 
-def repeats(arr):
-    return sum(el for el in arr if arr.count(el) == 1)
+def up_array(arr):
+    if arr == []:
+        return None
+    for el in arr:
+        if el < 0 or el > 9:
+            return None
+    s = int("".join([str(el) for el in arr])) + 1
+    return [int(el) for el in list(str(s))]
 
 #
