@@ -1,9 +1,10 @@
-# Real code challenges. Set #3
+# Real code challenges. Set #3-3
 # Completed_solutions 3.21-3.30.
 
 # Task 3.21. Find Maximum and Minimum Values of a List
 https://www.codewars.com/kata/577a98a6ae28071780000989
-# Your task is to make two functions, max and min (maximum and minimum in PHP and Python) that take a(n) array/vector of integers list as input 
+# Your task is to make two functions, max and min (maximum and minimum in PHP and Python) 
+# that take a(n) array/vector of integers list as input 
 # and outputs, respectively, the largest and lowest number in that array/vector.
 
 def minimum(arr):
@@ -35,7 +36,8 @@ def find(str, lst):
 https://www.codewars.com/kata/58f8a3a27a5c28d92e000144
 # Your task is to find the first element of an array that is not consecutive.
 # By not consecutive we mean not exactly 1 larger than the previous element of the array.
-# E.g. If we have an array [1,2,3,4,6,7,8] then 1 then 2 then 3 then 4 are all consecutive but 6 is not, so that's the first non-consecutive number.# 
+# E.g. If we have an array [1,2,3,4,6,7,8] then 1 then 2 then 3 then 4 are all consecutive 
+# but 6 is not, so that's the first non-consecutive number.
 # If the whole array is consecutive then return null2.
 # The array will always have at least 2 elements1 and all elements will be numbers. The numbers will also all be unique and in ascending order. 
 # The numbers could be positive or negative and the first non-consecutive could be either too!
@@ -80,14 +82,15 @@ https://www.codewars.com/kata/5601409514fc93442500010b
 # But you're an ambitious person. You want to know if you're better than the average student in your class.
 # You receive an array with your peers' test scores. Now calculate the average and compare your score!
 # Return True if you're better, else False!
-# Note: Your points are not included in the array of your class's points. For calculating the average point you may add your point to the given array!
+# Note: Your points are not included in the array of your class's points. 
+# For calculating the average point you may add your point to the given array!
 
 def better_than_average(class_points, your_points):
     average = (sum(class_points) + your_points) / (len(class_points) + 1)
     return your_points > average
 
 # Task 3.29. Head, Tail, Init and Last
-
+https://www.codewars.com/kata/54592a5052756d5c5d0009c3
 # Haskell has some useful functions for dealing with lists. Your job is to implement these functions in your given language. 
 # Make sure it doesn't edit the array; that would cause problems! Here's a cheat sheet:
 # | HEAD | <----------- TAIL ------------> |
