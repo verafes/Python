@@ -1,9 +1,10 @@
-# Real code challenges. Set #3
-# Completed_solutions 91-100
+# Real code challenges. Set #3-10
+# Completed_solutions 3.91-3.100
 
-#  Task 391. List Filtering
+#  Task 3.91. List Filtering
 https://www.codewars.com/kata/53dbd5315a3c69eed20002dd
-# In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
+# In this kata you will create a function that takes a list of non-negative integers and strings 
+#and returns a new list with the strings filtered out.
 # Example:
 # filter_list([1,2,'a','b']) == [1,2]
 # filter_list([1,'a','b',0,15]) == [1,0,15]
@@ -12,7 +13,7 @@ https://www.codewars.com/kata/53dbd5315a3c69eed20002dd
 def filter_list(l):
     return [x for x in l if type(x) is int]
 	
-# Task 392. Parts of a list
+# Task 3.92. Parts of a list
 https://www.codewars.com/kata/56f3a1e899b386da78000732
 # Write a function partlist that gives all the ways to divide a list (an array) of at least two elements into two non-empty parts.
 # Each two non empty parts will be in a pair (or an array for languages without tuples or a structin C - C: see Examples test Cases - )
@@ -24,7 +25,7 @@ https://www.codewars.com/kata/56f3a1e899b386da78000732
 def partlist(arr):
     return [(' '.join(arr[:i]), ' '.join(arr[i:])) for i in range(1, len(arr))]
 
-# Task 393. Figurate Numbers #2 - Pronic Number
+# Task 3.93. Figurate Numbers #2 - Pronic Number
 https://www.codewars.com/kata/55b1e5c4cbe09e46b3000034
 # You have to create a function isPronic to check whether the argument passed is a Pronic Number and return true if it is & false otherwise.
 # Description: Pronic Number -A pronic number, oblong number, rectangular number or heteromecic number, 
@@ -45,11 +46,12 @@ def is_pronic(n):
             return True 
     return False
 
-# Task 394. Mythical Heads and Tails
+# Task 3.94. Mythical Heads and Tails
 https://www.codewars.com/kata/5751aa92f2dac7695d000fb0
 # The formidable "Orthus" is a 2 headed dog with 1 tail. The mighty "Hydra" has 5 heads and 1 tail.
 # Before Hercules goes in, he asks you "How many of each beast am I up against!?".
-# You know the total number of heads and the total number of tails, that's the dangerous parts, right? But you didn't consider how many of each beast.
+# You know the total number of heads and the total number of tails, that's the dangerous parts, right? 
+# But you didn't consider how many of each beast.
 # Task: Given the number of heads and the number of tails, work out the number of each mythical beast!
 # The data is given as two parameters. Your answer should be returned as an array. 
 # If there aren't any cases for the given amount of heads and tails - return "No solutions" 
@@ -84,7 +86,7 @@ def beasts(heads, tails):
     orthus = tails - hydra
     return [orthus, hydra] if hydra * orthus >= 0 else "No solutions" 
 	
-# Task 395. Strong password?
+# Task 3.95. Strong password?
 https://www.codewars.com/kata/57e35f1bc763b8ccce000038 
 # Your users' passwords were all stolen in the Yahoo! hack, and it turns out they have been lax in creating secure passwords. 
 # Create a function that checks their new password (passed as a string) to make sure it meets the following requirements:
@@ -107,20 +109,22 @@ def check_password(s):
     s5 = [el for el in s if el not in string.ascii_letters + string.digits + "!@#$%^&*?"]
     return "valid" if s0 and s1 and s2 and s3 and s4 and  not s5 else "not valid"
 
-# Task 396. Zalgo text reader
+# Task 3.96. Zalgo text reader
 https://www.codewars.com/kata/588fe9eaadbbfb44b70001fc	
 # Zalgo text is text that leaks into our plane of existence from a corrupted dimension of Unicode. 
-# Complete the function that converts a string of Zalgo text into a string interpretable by our mortal eyes. For example, the string above would be converted into:
+# Complete the function that converts a string of Zalgo text into a string interpretable by our mortal eyes. 
+# For example, the string above would be converted into:
 # Have a great day!
 # The converted string should only feature ASCII characters.
 
 def read_zalgo(zalgotext):
     return "".join([c for c in zalgotext if c.isascii()])
 
-# Task 397. Scrolling Text
+# Task 3.97. Scrolling Text
 https://www.codewars.com/kata/5a995c2aba1bb57f660001fd
 # Let's create some scrolling text!
-# Your task is to complete the function which takes a string, and returns an array with all possible rotations of the given string, in uppercase.
+# Your task is to complete the function which takes a string, 
+# and returns an array with all possible rotations of the given string, in uppercase.
 # Example: scrollingText("codewars") should return:
 # [ "CODEWARS", "ODEWARSC", "DEWARSCO", "EWARSCOD", "WARSCODE", "ARSCODEW", "RSCODEWA", "SCODEWAR" ]
 
@@ -138,7 +142,7 @@ def scrolling_text(text):
     text = text.upper()
     return [text[i:]+text[:i] for i in range(len(text))]
 
-# Task 398. Replace all items
+# Task 3.98. Replace all items
 https://www.codewars.com/kata/57ae18c6e298a7a6d5000c7a
 # Write function replaceAll (Python: replace_all) that will replace all occurrences of an item with another.
 # Python / JavaScript: The function has to work for strings and lists.
@@ -158,7 +162,7 @@ def replace_all(obj, find, replace):
 def replace_all(obj, find, replace):
     return [replace if el == find else el for el in obj] if type(obj) is list else obj.replace(find, replace)
 
-# Task 399. Moving Average
+# Task 3.99. Moving Average
 https://www.codewars.com/kata/5c745b30f6216a301dc4dda5
 # Background: Moving average of a set of values and a window size is a series of local averages.
 # Example:
@@ -197,7 +201,7 @@ def moving_average(values,n):
 def moving_average(values,n):
     return None if n <= 0 or n > len(values) else [(sum(values[i:i+n])/n) for i in range (len(values)-n+1)]
 	
-# Task 400. Sum of Array Averages
+# Task 3.100. Sum of Array Averages
 https://www.codewars.com/kata/56d5166ec87df55dbe000063
 # Program a function sumAverage(arr) where arr is an array containing arrays full of numbers, for example:
 # sum_average([[1, 2, 2, 1], [2, 2, 2, 1]]) -> [6, 7] -> answer being 3
