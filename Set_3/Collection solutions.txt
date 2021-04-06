@@ -1,0 +1,3 @@
+# Real code challenges. Tasks set 3. 
+
+Collection solutions 3.01-3.100
