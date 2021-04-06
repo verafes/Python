@@ -1,7 +1,7 @@
-# Real code challenges. Set #4	
-# Completed_solutions 401-410
+# Real code challenges. Set #4-1
+# Completed_solutions 4.01-4.10
 
-#  Task 401. Square Every Digit
+#  Task 4.01. Square Every Digit
 https://www.codewars.com/kata/546e2562b03326a88e000020
 # Task: to square every digit of a number and concatenate them.
 # For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1.
@@ -10,7 +10,7 @@ https://www.codewars.com/kata/546e2562b03326a88e000020
 def square_digits(num):
     return int("".join([str(int(x)**2) for x in str(num)]))
 
-# Task 402. Series of integers from m to n
+# Task 4.02. Series of integers from m to n
 https://www.codewars.com/kata/5841f680c5c9b092950001ae
 # Write a function that accepts two arguments and generates a sequence containing the integers from the first argument to the second inclusive.
 # Input: Pair of integers greater than or equal to 0. The second argument will always be greater than or equal to the first.
@@ -24,7 +24,7 @@ def generate_integers(m, n):
 def generate_integers(m, n): 
     return list(range(m,n+1))
 	
-# Task 403. Show multiples of 2 numbers within a range
+# Task 4.03. Show multiples of 2 numbers within a range
 https://www.codewars.com/kata/583989556754d6f4c700018e
 # Print all numbers up to 3rd parameter which are multiple of both 1st and 2nd parameter.
 # Python, Javascript, Java versions: return results in a list/array
@@ -34,7 +34,7 @@ https://www.codewars.com/kata/583989556754d6f4c700018e
 def multiples(s1,s2,s3):
     return [el for el in range (s1,s3) if el % s1 == 0 and el % s2 == 0]
 
-# Task 404. Find longest sequence of an element in array
+# Task 4.04. Find longest sequence of an element in array
 https://www.codewars.com/kata/5f8dd79aa962b600335f7577
 # Write a function longest_sequence that takes in an array and value as arguments. 
 # Return the length of the longest sequence of the value in the array as an integer.
@@ -52,7 +52,7 @@ def longest_sequence(arr, elem):
             lst.append(" ")
     return max([len(i)/len(str(elem)) for i in ("".join(lst)).split()])  
 
-# Task 405. Prime Primes  
+# Task 4.05. Prime Primes  
 https://www.codewars.com/kata/57ba58d68dcd97e98c00012b
 # Define a "prime prime" number to be a rational number written as one prime number over another prime number: primeA / primeB (e.g. 7/31)
 # Given a whole number N, generate the number of "prime prime" rational numbers less than 1, using only prime numbers between 0 and N (non inclusive).
@@ -81,7 +81,7 @@ def prime_primes(N):
             count += 1
     return  count, int(s)
 
-# Task 406. Transform To Prime  
+# Task 4.06. Transform To Prime  
 https://www.codewars.com/kata/5a946d9fba1bb5135100007c
 # Task : Given a List [] of n integers , find minimum number to be inserted in a list, so that sum of all elements of list should equal the closest prime number .
 # Notes: List size is at least 2 .
@@ -114,7 +114,7 @@ def minimum_number(num):
         count += 1
     return count
 
-# Task 407. Next Prime
+# Task 4.07. Next Prime
 https://www.codewars.com/kata/58e230e5e24dde0996000070
 # You will get a numbern (>= 0) and your task is to find the next prime number.
 # Make sure to optimize your code: there will numbers tested up to about 10^12.
@@ -137,7 +137,7 @@ def next_prime(n):
             found = True
     return prime 
 	
-# Task 408. Pack Some Chocolates
+# Task 4.08. Pack Some Chocolates
 https://www.codewars.com/kata/5f5daf1a209a64001183af9b
 # Make Chocolates. Haloween is around the corner and we have to distribute chocolates. We need to assemble a parcel of goal grams of chocolates. 
 # The goal can be assumed to be always a positive integer value.
@@ -167,7 +167,7 @@ def make_chocolates(small, big, goal):
                 return s
     return -1
 
-# Task 409. Multiply the number
+# Task 4.09. Multiply the number
 https://www.codewars.com/kata/5708f682c69b48047b000e07
 # Jack really likes his number five: 
 # the trick here is that you have to multiply each number by 5 raised to the number of digits of each numbers, so, for example:
@@ -181,7 +181,7 @@ def multiply(n):
     l = len(str(n)) if n > 0 else len(str(-n))
     return 5**l*n
 
-# Task 410. Calculator: Coin Combination
+# Task 4.10. Calculator: Coin Combination
 https://www.codewars.com/kata/564d0490e96393fc5c000029
 # The function takes cents value (int) and needs to return the minimum number of coins combination of the same value.
 # The function should return an array where
