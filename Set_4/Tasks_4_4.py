@@ -1,7 +1,7 @@
-# Real code challenges. Set #4
-# Completed_solutions 431-440
+# Real code challenges. Set #4-4
+# Completed_solutions 4.31-4.40
 
-#  Task 431. Simple Fun #17: Rounders
+#  Task 4.31. Simple Fun #17: Rounders
 https://www.codewars.com/kata/58846d50f54f021d90000012
 # We want to turn the given integer into a number that has only one non-zero digit using a tail rounding approach. This means that at each step we take the last non 0 digit of the number and round it to 0 or to 10. If it's less than 5 we round it to 0 if it's larger than or equal to 5 we round it to 10 (rounding to 10 means increasing the next significant digit by 1). The process stops immediately once there is only one non-zero digit left.
 # Example:  For value = 15, the output should be 20
@@ -32,7 +32,7 @@ def rounders(value):
     
     return value * 10**count
 
-# Task 432. Abbreviate a Two Word Name (#2)
+# Task 4.32. Abbreviate a Two Word Name (#2)
 https://www.codewars.com/kata/57eadb7ecd143f4c9c0000a3
 # Write a function to convert a name into initials. This kata strictly takes two words with one space in between them.
 # The output should be two capital letters with a dot separating them.
@@ -44,7 +44,7 @@ def abbrev_name(name):
     names = name.title().split(' ')
     return '.'.join([f"{n[0]}" for n in names])
 
-# Task 433. All Star Code Challenge #3
+# Task 4.33. All Star Code Challenge #3
 https://www.codewars.com/kata/58640340b3a675d9a70000b9
 # Create a function, called removeVowels (or remove_vowels), that takes a string argument 
 # and returns that same string with all vowels removed (vowels are "a", "e", "i", "o", "u").
@@ -54,7 +54,7 @@ https://www.codewars.com/kata/58640340b3a675d9a70000b9
 def remove_vowels(strng):
     return ''.join([el for el in strng if el not in "aoieu"])  
 
-# Task 434. All Star Code Challenge #16
+# Task 4.34. All Star Code Challenge #16
 https://www.codewars.com/kata/586566b773bd9cbe2b000013
 # Create a function called noRepeat() that takes a string argument and returns a single letter string of the first not repeated character in the entire string.
 # noRepeat("aabbccdde") // => "e"
@@ -65,8 +65,8 @@ https://www.codewars.com/kata/586566b773bd9cbe2b000013
 def no_repeat(string):
     return [x for x in string if string.count(x) == 1][0]
 
-# Task 435. Alternate capitalization
-
+# Task 4.35. Alternate capitalization
+https://www.codewars.com/kata/59cfc000aeb2844d16000075 
 # Given a string, capitalize the letters that occupy even indexes and odd indexes separately, and return as shown below. 
 # Index 0 will be considered even.
 # For example, capitalize("abcdef") = ['AbCdEf', 'aBcDeF']. See test cases for more examples.
@@ -85,7 +85,7 @@ def capitalize(s):
             
     return [a, b]
 	
-# Task 436. ltERnaTIng cAsE <=> ALTerNAtiNG CaSe
+# Task 4.36. ltERnaTIng cAsE <=> ALTerNAtiNG CaSe
 https://www.codewars.com/kata/56efc695740d30f963000557
 # Define function that each lowercase letter becomes uppercase and each uppercase letter becomes lowercase. For example:
 # "hello world".toAlternatingCase() === "HELLO WORLD"
@@ -110,7 +110,7 @@ def to_alternating_case(string):
 def to_alternating_case(string):
     return string.swapcase()
 
-# Task 437. Autocomplete! Yay!
+# Task 4.37. Autocomplete! Yay!
 
 # It's  time to create an autocomplete function! Yay!
 # The autocomplete function will take in an input string and a dictionary array and return the values from the dictionary that start with the input string. If there are more than 5 matches, restrict your output to the first 5 results. If there are no matches, return an empty array.
@@ -123,7 +123,7 @@ def autocomplete(input_, dictionary):
     input_ = "".join([el for el in input_ if el.isalpha()])
     return [el for el in dictionary if el.lower().startswith(input_.lower())][:5]
 
-# Task 438. Backspaces in string
+# Task 4.38. Backspaces in string
 https://www.codewars.com/kata/5727bb0fe81185ae62000ae3
 # Assume "#" is like a backspace in string. This means that string "a#bc#d" actually is "bd"
 # Your task is to process a string with "#" symbols.
@@ -142,7 +142,7 @@ def clean_string(s):
             final.pop()
     return "".join(final)
 	
-# Task 439. Basics 03: Strings, Numbers and Calculation
+# Task 4.39. Basics 03: Strings, Numbers and Calculation
  https://www.codewars.com/kata/56b5dc75d362eac53d000bc8
 # Here you have to do some mathematical operations on a "dirty string". This kata checks some basics, it's not too difficult.
 # So what to do?
@@ -177,7 +177,7 @@ def calculate_string(st):
     arr = [el for el in st if el.isnumeric() or el in '.+-*/']
     return str(round(eval("".join(arr))))
 
-# Task 440. CamelCase Method
+# Task 4.40. CamelCase Method
 https://www.codewars.com/kata/587731fda577b3d1b0001196
 # Write simple .camelCase method (camel_case function in PHP, CamelCase in C# or camelCase in Java) for strings. All words must have their first letter capitalized without spaces.
 # For instance:
