@@ -1,5 +1,5 @@
-# Real code challenges. Set #4
-# Completed_solutions 441-450
+# Real code challenges. Set #4-5
+# Completed_solutions 4.41-4.50
 
 #  Task 491. Fibonacci's FizzBuzz
 https://www.codewars.com/kata/57bf599f102a39bb1e000ae5
@@ -25,7 +25,7 @@ def fibs_fizz_buzz(n):
     res = ['FizzBuzz' if (arr[x]%3 == 0 and arr[x]%5 == 0) else 'Fizz' if arr[x]%3 == 0 else 'Buzz' if arr[x]%5 == 0  else arr[x] for x in range(len(arr))]            
     return res
 
-# Task 442. 21 Sticks
+# Task 4.42. 21 Sticks
 https://www.codewars.com/kata/5866a58b9cbc02c4f8000cac
 # The game. In this game, there are 21 sticks lying in a pile. Players take turns taking 1, 2, or 3 sticks. The last person to take a stick wins. For example:
 # 21 sticks in the pile
@@ -44,7 +44,7 @@ https://www.codewars.com/kata/5866a58b9cbc02c4f8000cac
 def make_move(sticks):
     return sticks % 4
 
-# Task 443. Grasshopper - Bug Squashing
+# Task 4.43. Grasshopper - Bug Squashing
 https://www.codewars.com/kata/56214b6864fe8813f1000019
 # Terminal game bug squashing
 # You are creating a text-based terminal version of your favorite board game. In the board game, each turn has six steps that must happen in this order: roll the dice, move, combat, get coins, buy more health, and print status.
@@ -79,7 +79,7 @@ def main():
     buy_health()
     print_status()
 	
-# Task 444. Do you speak retsec?
+# Task 4.44. Do you speak retsec?
 https://www.codewars.com/kata/5516ab668915478845000780
 # You and your friends want to play undercover agents. In order to exchange your secret messages, you've come up with the following system: 
 # you take the word, cut it in half, and place the first half behind the latter. 
@@ -96,7 +96,7 @@ def reverse_by_center(s):
     i = len(s) // 2
     return s[i:] + s[:i] if len(s)%2 == 0 else s[i+1:] + s[i] + s[:i]
 	
-# Task 445. Bill & Bobs Secret Language
+# Task 4.45. Bill & Bobs Secret Language
 https://www.codewars.com/kata/58dd1c1710d1620c27000219
 # Bill & Bob chat a lot but they don’t want people to understand what they’re talking about. 
 # So they have created a secret language where they reverse each word in a sentence as well as reversing the sentence itself!
@@ -109,7 +109,7 @@ https://www.codewars.com/kata/58dd1c1710d1620c27000219
 def reverser(string):
     return "#" + string [::-1 ] + "#"
 
-# Task 446. Exclamation marks series #1: Remove a exclamation mark from the end of string
+# Task 4.46. Exclamation marks series #1: Remove a exclamation mark from the end of string
 https://www.codewars.com/kata/57fae964d80daa229d000126
 # Remove a exclamation mark from the end of string. For a beginner kata, you can assume that the input data is always a string, no need to verify it.
 # Examples
@@ -124,7 +124,7 @@ https://www.codewars.com/kata/57fae964d80daa229d000126
 def remove(s):
     return s[:-1] if s and s[-1] == "!" else s 
 	
-# Task 447. Exclamation marks series #2: Remove all exclamation marks from the end of sentence
+# Task 4.47. Exclamation marks series #2: Remove all exclamation marks from the end of sentence
 https://www.codewars.com/kata/57faece99610ced690000165
 # Remove all exclamation marks from the end of sentence.
 # Examples
@@ -138,7 +138,7 @@ https://www.codewars.com/kata/57faece99610ced690000165
 def remove(s):
     return s.rstrip("!")
 	
-# Task 448. Exclamation marks series #3: Remove all exclamation marks from sentence except at the end
+# Task 4.48. Exclamation marks series #3: Remove all exclamation marks from sentence except at the end
 https://www.codewars.com/kata/57faefc42b531482d5000123
 # Remove all exclamation marks from sentence except at the end.
 # Examples
@@ -153,7 +153,7 @@ def remove(s):
     count = len(s) - len(s.rstrip("!"))
     return s.replace("!", "") + "!"*count
 
-# Task 449. Exclamation marks series #4: Remove all exclamation marks from sentence but ensure a exclamation mark at the end of string
+# Task 4.49. Exclamation marks series #4: Remove all exclamation marks from sentence but ensure a exclamation mark at the end of string
 https://www.codewars.com/kata/57faf12b21c84b5ba30001b0
 # Remove all exclamation marks from sentence but ensure a exclamation mark at the end of string. For a beginner kata, you can assume that the input data is always a non empty string, no need to verify it.
 # Examples
@@ -167,7 +167,7 @@ https://www.codewars.com/kata/57faf12b21c84b5ba30001b0
 def remove(s):
     return s.replace("!", "") + "!"
 
-# Task 450. Backspaces in string
+# Task 4.50. Backspaces in string
 https://www.codewars.com/kata/5727bb0fe81185ae62000ae3
 # Assume "#" is like a backspace in string. This means that string "a#bc#d" actually is "bd"
 
