@@ -1,10 +1,12 @@
-# Real code challenges. Set #4
-# Completed_solutions 471-480
+# Real code challenges. Set #4-8
+# Completed_solutions 4.71-4.80
 
-#  Task 471. Find The Duplicated Number in a Consecutive Unsorted List - Tougher Version
+#  Task 4.71. Find The Duplicated Number in a Consecutive Unsorted List - Tougher Version
 https://www.codewars.com/kata/558f0553803bc3c4720000af
-# Here you will have to figure out an efficient strategy to solve the problem of finding the sole duplicate number among an unsorted array/list of numbers starting from 1 up to n.
-# Hints: a solution in linear time can be found; using the most intuitive ones to search for duplicates that can run in O(n²) time won't work.
+# Here you will have to figure out an efficient strategy to solve the problem of finding the sole duplicate number 
+# among an unsorted array/list of numbers starting from 1 up to n.
+# Hints: a solution in linear time can be found; using the most intuitive ones to search for duplicates 
+# that can run in O(n²) time won't work.
 
 def find_dup(arr):
     new = []
@@ -18,7 +20,7 @@ def find_dup(arr):
 def find_dup(arr):
     return sum(arr) - sum(range(1,max(arr)+1))
 	
-# Task 472. Pirate Code
+# Task 4.72. Pirate Code
 https://www.codewars.com/kata/54599705cbae2aa60b0011a4
 # Task. Create a function called one that accepts two params:
 # a sequence
@@ -32,7 +34,7 @@ https://www.codewars.com/kata/54599705cbae2aa60b0011a4
 def one(sq, fun): 
     return len([el for el in sq if fun(el)])== 1
 
-# Task 473. Multiply array values and filter non-numeric
+# Task 4.73. Multiply array values and filter non-numeric
 https://www.codewars.com/kata/55ed875819ae85ca8b00005c
 # Your task is to write a function, which takes two arguments and returns a sequence. 
 # First argument is a sequence of values, second is multiplier. 
@@ -41,11 +43,16 @@ https://www.codewars.com/kata/55ed875819ae85ca8b00005c
 def multiply_and_filter(seq, multiplier): 
     return [el * multiplier for el in seq if type(el) in [int, float]]
 
-# Task 474. The Lazy Startup Office
+# Task 4.74. The Lazy Startup Office
 https://www.codewars.com/kata/578fdcfc75ffd1112c0001a1 
-# A startup office has an ongoing problem with its bin. Due to low budgets, they don't hire cleaners. As a result, the staff are left to voluntarily empty the bin. It has emerged that a voluntary system is not working and the bin is often overflowing. One staff member has suggested creating a rota system based upon the staff seating plan.
-# Create a function binRota that accepts a 2D array of names. The function will return a single array containing staff names in the order that they should empty the bin.
-# Adding to the problem, the office has some temporary staff. This means that the seating plan changes every month. Both staff members' names and the number of rows of seats may change. Ensure that the function binRota works when tested with these changes.
+# A startup office has an ongoing problem with its bin. Due to low budgets, they don't hire cleaners. 
+# As a result, the staff are left to voluntarily empty the bin. 
+# It has emerged that a voluntary system is not working and the bin is often overflowing. 
+# One staff member has suggested creating a rota system based upon the staff seating plan.
+# Create a function binRota that accepts a 2D array of names. 
+# The function will return a single array containing staff names in the order that they should empty the bin.
+# Adding to the problem, the office has some temporary staff. This means that the seating plan changes every month. 
+# Both staff members' names and the number of rows of seats may change. Ensure that the function binRota works when tested with these changes.
 # Notes:
 # All the rows will always be the same length as each other.
 # There will be no empty spaces in the seating plan.
@@ -68,7 +75,7 @@ def bin_rota(arr):
     return res
 	
 
-# Task 475. Sum - Square Even, Root Odd
+# Task 4.75. Sum - Square Even, Root Odd
 https://www.codewars.com/kata/5a4b16435f08299c7000274f
 # Complete the function that takes a list of numbers (nums), as the only argument to the function. 
 # Take each number in the list and square it if it is even, or square root the number if it is odd. 
@@ -79,7 +86,7 @@ def sum_square_even_root_odd(nums):
     arr = ([el**2 if el%2 == 0 else el**0.5 for el in nums])
     return round(sum(arr), 2)
 
-# Task 476. STRONGN Strong Number (Special Numbers Series #2)
+# Task 4.76. STRONGN Strong Number (Special Numbers Series #2)
 https://www.codewars.com/kata/5a4d303f880385399b000001
 # Definition. Strong number is the number that the sum of the factorial of its digits is equal to number itself.
 # For example: 145, since 1! + 4! + 5! = 1 + 24 + 120 = 145
@@ -91,7 +98,7 @@ import math
 def strong_num(number):
     return "STRONG!!!!" if sum([math.factorial(int(el)) for el in str(number)]) == number else "Not Strong !!"
 
-# Task 477. The old switcheroo 2
+# Task 4.77. The old switcheroo 2
 https://www.codewars.com/kata/55d6a0e4ededb894be000005
 # Write a function that takes in a string str and replaces all the letters with their respective positions in the English alphabet.
 # encode('abc') == '123'   # a is 1st in English alpabet, b is 2nd and c is 3rd
@@ -103,7 +110,7 @@ def encode(string):
     return "".join([str(abc.index(char.lower())) if char.isalpha() else char for char in string])
 
 
-# Task 478. Failed Filter - Bug Fixing #3
+# Task 4.78. Failed Filter - Bug Fixing #3
 https://www.codewars.com/kata/55c606e6babfc5b2c500007c
 # Oh no, Timmy's filter doesn't seem to be working? Your task is to fix the FilterNumber function to remove all the numbers from the string.
 
@@ -117,10 +124,12 @@ def filter_numbers(string):
 def filter_numbers(string):
     return "".join([x for x in string if not x.isdigit()])
 
-# Task 479. A Rule of Divisibility by 7 
+# Task 4.79. A Rule of Divisibility by 7 
 https://www.codewars.com/kata/55e6f5e58f7817808e00002e
-# A number m of the form 10x + y is divisible by 7 if and only if x − 2y is divisible by 7. In other words, subtract twice the last digit from the number formed by the remaining digits.
-# Continue to do this until a number known to be divisible or not by 7 is obtained; you can stop when this number has at most 2 digits because you are supposed to know if a number of at m# ost 2 digits is divisible by 7 or not.
+# A number m of the form 10x + y is divisible by 7 if and only if x − 2y is divisible by 7. 
+# In other words, subtract twice the last digit from the number formed by the remaining digits.
+# Continue to do this until a number known to be divisible or not by 7 is obtained; you can stop when this number has at most 2 digits 
+# because you are supposed to know if a number of at m# ost 2 digits is divisible by 7 or not.
 # The original number is divisible by 7 if and only if the last number obtained using this procedure is divisible by 7.
 # Examples:
 # 1 - m = 371 -> 37 − (2×1) -> 37 − 2 = 35 ; thus, since 35 is divisible by 7, 371 is divisible by 7. -> The number of steps to get the result is 1.
@@ -139,10 +148,12 @@ def seven(m):
         steps += 1
     return (m, steps)
 
-# Task 480. How much coffee do you need?
+# Task 4.80. How much coffee do you need?
 https://www.codewars.com/kata/57de78848a8b8df8f10005b1
-# Your task here is to define how much coffee you need to stay awake after your night. You will have to complete a function that take an array of events in arguments, 
-# according to this list you will return the number of coffee you need to stay awake during day time. Note: If the count exceed 3 please return 'You need extra sleep'.
+# Your task here is to define how much coffee you need to stay awake after your night. 
+# You will have to complete a function that take an array of events in arguments, 
+# according to this list you will return the number of coffee you need to stay awake during day time. 
+# Note: If the count exceed 3 please return 'You need extra sleep'.
 # The list of events can contain the following:
 # You come here, to solve some kata ('cw').
 # You have a dog or a cat that just decide to wake up too early ('dog' | 'cat').
