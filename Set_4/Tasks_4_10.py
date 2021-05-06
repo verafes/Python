@@ -82,7 +82,8 @@ https://www.codewars.com/kata/54c27a33fb7da0db0100040e
 # Those blasted things! If you just had a way to know, whether you're currently working in vain… Wait! That's it! 
 # You just have to check if your number of building blocks is a perfect square.
 # Task. Given an integral number, determine if it's a square number:
-# In mathematics, a square number or perfect square is an integer that is the square of an integer; in other words, it is the product of some integer with itself.
+# In mathematics, a square number or perfect square is an integer that is the square of an integer; in other words, 
+# it is the product of some integer with itself.
 #  The tests will always use some integral number, so don't worry about that in dynamic typed languages.
 
 # Examples
@@ -134,7 +135,8 @@ def hello_world():
 	
 # Task 4.99. Numbers to Letters
 https://www.codewars.com/kata/57ebaa8f7b45ef590c00000c
-# Given an array of numbers (in string format), you must return a string. The numbers correspond to the letters of the alphabet in reverse order: a=26, z=1 etc. 
+# Given an array of numbers (in string format), you must return a string. The numbers correspond 
+# to the letters of the alphabet in reverse order: a=26, z=1 etc. 
 # You should also account for '!', '?' and ' ' that are represented by '27', '28' and '29' respectively.
 # All inputs will be valid.
 
