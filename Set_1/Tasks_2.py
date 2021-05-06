@@ -1,5 +1,5 @@
 # Real code challenges. 
-# Set#1. Completed_solutions 11-20
+# Set#1. Completed solutions 11-20
 
 # Task 11. Abbreviate a Two Word Name
 https://www.codewars.com/kata/57eadb7ecd143f4c9c0000a3
@@ -70,7 +70,9 @@ def shorten_to_date(long_date):
 
 # Task #15. Who ate the cookie?
 https://www.codewars.com/kata/55a996e0e8520afab9000055
-# For this problem you must create a program that says who ate the last cookie. If the input is a string then "Zach" ate the cookie. If the input is a float or an int then "Monica" ate the cookie. If the input is anything else "the dog" ate the cookie. The way to return the statement is: "Who ate the last cookie? It was (name)!"
+# For this problem you must create a program that says who ate the last cookie. If the input is a string then "Zach" ate the cookie. 
+# If the input is a float or an int then "Monica" ate the cookie. If the input is anything else "the dog" ate the cookie. 
+# The way to return the statement is: "Who ate the last cookie? It was (name)!"
 # Ex: Input = "hi" --> Output = "Who ate the last cookie? It was Zach! (The reason you return Zach is because the input is a string)
 # Note: Make sure you return the correct message with correct spaces and punctuation.
 # Please leave feedback for this kata. Cheers!
@@ -150,7 +152,7 @@ def how_many_pizzas(n):
 
 print (how_many_pizzas(n))
 
-# Solution 2
+# Solution 2 (short) 
 def how_many_pizzas(n): 
   return f"pizzas: {(n ** 2) // 64}, slices: {(n ** 2) % 64 // 8}"
   
@@ -191,15 +193,3 @@ https://www.codewars.com/kata/582cb0224e56e068d800003c
 
 def litres(time):
     return time // 2
-	
-time = int(input("Please enter time: ")
-
-print(litres(time))
-
-
-
-
-
-
-	
-

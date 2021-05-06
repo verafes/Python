@@ -1,7 +1,7 @@
 # Real code challenges. Set #2
-# Completed_solutions 91-100
+# Completed_solutions 2.91-2.100
 
-# Task 91. Highest and Lowest
+# Task 2.91. Highest and Lowest
 https://www.codewars.com/kata/554b4ac871d6813a03000035
 # In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
 # Example:
@@ -16,7 +16,7 @@ def high_and_low(numbers):
     a = [int(el) for el in numbers.split(' ')]
     return f'{max(a)} {min(a)}'
 
-# Task 92. Find The Parity Outlier
+# Task 2.92. Find The Parity Outlier
 https://www.codewars.com/kata/5526fc09a1bbd946250002dc
 # You are given an array (which will have a length of at least 3, but could be very large) containing integers. 
 # The array is either entirely comprised of odd integers or entirely comprised of even integers except for a single integer N. 
@@ -30,7 +30,7 @@ def find_outlier(integers):
     even = [num for num in integers if num % 2 == 0]
     return odd[0] if len(odd) == 1 else even[0]
 	
-# Task 93. Responsible Drinking
+# Task 2.93. Responsible Drinking
 https://www.codewars.com/kata/5aee86c5783bb432cd000018
 # Codewars Bar recommends you drink 1 glass of water per standard drink so you're not hungover tomorrow morning.
 # Your fellow coders have bought you several drinks tonight in the form of a string. Return a string suggesting 
@@ -44,9 +44,8 @@ def hydrate(drink_string):
     dig = sum([int(el) for el in s if el.isdigit()])
     return f'1 glass of water' if dig == 1 else f'{dig} glasses of water'
 
-# Task 94. Predict your age!
+# Task 2.94. Predict your age!
 https://www.codewars.com/kata/5aff237c578a14752d0035ae
-
 # My grandfather always predicted how old people would get, and right before he passed away he revealed his secret!
 # In honor of my grandfather's memory we will write a function using his formula!
 # Take a list of ages when each of your great-grandparent died.
@@ -61,11 +60,12 @@ def predict_age(age_1, age_2, age_3, age_4, age_5, age_6, age_7, age_8):
     s = sum([el*el for el in array])**0.5/2
     return int(s)
 
-# Task 95. Number of People in the Bus
+# Task 2.95. Number of People in the Bus
 https://www.codewars.com/kata/5648b12ce68d9daa6b000099
 # There is a bus moving in the city, and it takes and drop some people in each bus stop.
 # You are provided with a list (or array) of integer arrays (or tuples). 
-# Each integer array has two items which represent number of people get into bus (The first item) and number of people get off the bus (The second item) in a bus stop.
+# Each integer array has two items which represent number of people get into bus (The first item) 
+# and number of people get off the bus (The second item) in a bus stop.
 # Your task is to return number of people who are still in the bus after the last bus station (after the last array). 
 # Even though it is the last bus stop, the bus is not empty and some people are still in the bus, and they are probably sleeping there :D
 # Take a look on the test cases.
@@ -75,7 +75,7 @@ https://www.codewars.com/kata/5648b12ce68d9daa6b000099
 def number(bus_stops):
     return sum(el[0] - el[1] for el in bus_stops) 
 
-# Task 96. Dominant array elements
+# Task 2.96. Dominant array elements
 https://www.codewars.com/kata/5a04133e32b8b998dc000089
 # An element in an array is dominant if it is greater than all elements to its right. 
 # You will be given an array and your task will be to return a list of all dominant elements. For example:
@@ -91,12 +91,12 @@ def solve(arr):
     final.append(arr[-1])
     return final
 	
-# Solution 2. 
+# Short Solution (2):
 
 def solve(arr):
     return [arr[i] for i in range(len(arr)-1) if arr[i] > max(arr[i+1:])] + [arr[-1]]
 
-# Task 97. Santa's Naughty List
+# Task 2.97. Santa's Naughty List
 https://www.codewars.com/kata/5a0b4dc2ffe75f72f70000ef
 Christmas is coming, and Santa has a long list to go through, to find who deserves presents for the big day. 
 # Go through a list of children, and return a list containing every child who appeared on Santa's list. 
@@ -106,7 +106,7 @@ Christmas is coming, and Santa has a long list to go through, to find who deserv
 def find_children(santas_list, children):
     return sorted([el for el in children if el in santas_list])
 
-# Task 98. Return String of First Characters
+# Task 2.98. Return String of First Characters
 https://www.codewars.com/kata/5639bdcef2f9b06ce800005b
 # In this exercise, a string is passed to a method and a new string has to be returned with the first character of each word in the string.
 # For example: "This Is A Test" ==> "TIAT"
@@ -114,7 +114,7 @@ https://www.codewars.com/kata/5639bdcef2f9b06ce800005b
 def make_string(s):
     return "".join([el[0] for el in s.split()])
 
-# Task 99. Shortest Word
+# Task 2.99. Shortest Word
 https://www.codewars.com/kata/57cebe1dc6fdc20c57000ac9
 # Simple, given a string of words, return the length of the shortest word(s).
 # String will never be empty and you do not need to account for different data types.
@@ -127,13 +127,13 @@ def find_short(s):
         arr2.append(l)
     return min(arr2)
 	
-# Solution 2
+# Short Solution (2):
 
 def find_short(s):
     return min([len(el) for el in s.split()])
 
 
-# Task 100. Dubstep
+# Task 2.100. Dubstep
 https://www.codewars.com/kata/551dc350bf4e526099000ae5
 # Polycarpus works as a DJ in the best Berland nightclub, and he often uses dubstep music in his performance. 
 # Recently, he has decided to take a couple of old songs and make dubstep remixes from them.

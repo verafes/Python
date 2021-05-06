@@ -1,7 +1,7 @@
 # Real code challenges. Set #2
-# Completed_solutions 51-60
+# Completed_solutions 2.51-2.60
 
-# Task 51. Rock Off!
+# Task 2.51. Rock Off!
 https://www.codewars.com/kata/5b097da6c3323ac067000036   
 # Alice and Bob have participated to a Rock Off with their bands. A jury of true metalheads rates the two challenges, 
 # awarding points to the bands on a scale from 1 to 50 for three categories: Song Heaviness, Originality, and Members' outfits.
@@ -26,7 +26,7 @@ def solve(a, b):
             countB += 1
     return f'{countA}, {countB}: that looks like a "draw"! Rock on!' if countA == countB else f'{countA}, {countB}: Alice made "Kurt" proud!' if countA > countB else f'{countA}, {countB}: Bob made "Jeff" proud!'
 
-# Task 52. Simple consecutive pairs
+# Task 2.52. Simple consecutive pairs
 https://www.codewars.com/kata/5a3e1319b6486ac96f000049
 # In this Kata your task will be to return the count of pairs that have consecutive numbers as follows:
 # pairs([1,2,5,8,-4,-3,7,6,5]) = 3
@@ -45,7 +45,7 @@ def pairs(ar):
             count += 1
     return count
 
-# Task 53. IQ Test
+# Task 2.53. IQ Test
 https://www.codewars.com/kata/552c028c030765286c00007d
 # Bob is preparing to pass IQ test. The most frequent task in this test is to find out which one of the given numbers 
 # differs from the others. Bob observed that one number usually differs from the others in evenness. 
@@ -74,7 +74,7 @@ ef iq_test(numbers):
             if int(el) % 2 != 0:
                 return i+1
 #
-# Task 54. Beginner - Lost Without a Map
+# Task 2.54. Beginner - Lost Without a Map
 https://www.codewars.com/kata/57f781872e3d8ca2a000007e
 # Given an array of integers, return a new array with each value doubled.
 # For example: [1, 2, 3] --> [2, 4, 6]
@@ -83,9 +83,10 @@ https://www.codewars.com/kata/57f781872e3d8ca2a000007e
 def maps(a):
     return [el * 2 for el in a]
 
-# Task 55. Sum of array's elements
+# Task 2.55. Sum of array's elements
 https://www.codewars.com/kata/58f475735e78fde4a2000011
-# You will be given an array of integers. You will need to return an integer that is the sum of the elements multiplied by an incrementing constant. The first element in the array is multiplied by 1, the second element multiplied by 2, etc:
+# You will be given an array of integers. You will need to return an integer that is the sum of the elements multiplied by an incrementing constant. 
+# The first element in the array is multiplied by 1, the second element multiplied by 2, etc:
 # a, b, c, d, ... => 1*a + 2*b + 3*c + 4*d + ...
 # Examples
 # 8, 5, 4        =>  30    # 1*8 + 2*5 + 3*4 = 30
@@ -95,9 +96,10 @@ https://www.codewars.com/kata/58f475735e78fde4a2000011
 def sum1(array):
     return sum([(i+1)*el for i, el in enumerate(array)])
 
-# Task 56. Array element parity
+# Task 2.56. Array element parity
 https://www.codewars.com/kata/5a092d9e46d843b9db000064
-# In this Kata, you will be given an array of integers whose elements have both a negative and a positive value, except for one integer that is either only negative or only positive. Your task will be to find that integer.
+# In this Kata, you will be given an array of integers whose elements have both a negative and a positive value, 
+# except for one integer that is either only negative or only positive. Your task will be to find that integer.
 # Examples:
 # [1, -1, 2, -2, 3] => 3
 # 3 has no matching negative appearance
@@ -109,7 +111,7 @@ https://www.codewars.com/kata/5a092d9e46d843b9db000064
 def solve(arr):
     return [el for el in arr if -el not in arr ][0]
 
-# Task 57. Bingo ( Or Not )
+# Task 2.57. Bingo ( Or Not )
 https://www.codewars.com/kata/5a1ee4dfffe75f0fcb000145
 # For this game of BINGO, you will receive a single array of 10 numbers from 1 to 26 as an input. 
 # Duplicate numbers within the array are possible.
@@ -122,7 +124,7 @@ def bingo(array):
     bingo = [2,7,9,14,15]
     return "WIN" if len([el for el in bingo if el in array]) == len(bingo) else "LOSE"
 
-# Task 58. Even odd disparity
+# Task 2.58. Even odd disparity
 https://www.codewars.com/kata/59c62f1bdcc40560a2000060
 # Given an array, return the difference between the count of even numbers and the count of odd numbers. 0 will be considered an even number.
 # For example:
@@ -136,7 +138,7 @@ https://www.codewars.com/kata/59c62f1bdcc40560a2000060
 def solve(a):
     return sum([1 if el%2 == 0 else -1 for el in a if type(el) == int])
 
-# Task 59. Small enough? - Beginner
+# Task 2.59. Small enough? - Beginner
 https://www.codewars.com/kata/57cc981a58da9e302a000214
 # You will be given an array and a limit value. You must check that all values in the array are below or equal to the limit value. 
 # If they are, return true. Else, return false.
@@ -150,9 +152,10 @@ def small_enough(array, limit):
 def small_enough(array, limit):
     return [el for el in array if el <= limit] == array
  
-# Task 60. Peak array index
+# Task 2.60. Peak array index
 https://www.codewars.com/kata/5a61a846cadebf9738000076/
-# Given an array of ints, return the index such that the sum of the elements to the right of that index equals the sum of the elements to the left of that index. If there is no such index, return -1. If there is more than one such index, return the left-most index.
+# Given an array of ints, return the index such that the sum of the elements to the right of that index equals the sum of the elements 
+# to the left of that index. If there is no such index, return -1. If there is more than one such index, return the left-most index.
 # For example:
 # peak([1,2,3,5,3,2,1]) = 3, because the sum of the elements at indexes 0,1,2 == sum of elements at indexes 4,5,6. We don't sum index 3.
 # peak([1,12,3,3,6,3,1]) = 2
@@ -161,6 +164,4 @@ https://www.codewars.com/kata/5a61a846cadebf9738000076/
 def peak(arr):
     ar = [i for i in range(len(arr)) if sum(arr[:i]) == sum(arr[i+1:]) ]
     return ar[0] if len(ar) > 0 else -1 
-
-
 

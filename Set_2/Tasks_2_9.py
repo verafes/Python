@@ -1,7 +1,7 @@
 # Real code challenges. Set #2
-# Completed_solutions 81-90
+# Completed_solutions 2.81-2.90
 
-# Task 81. Say Me Please Operations
+# Task 2.81. Say Me Please Operations
 https://www.codewars.com/kata/5b5e0c0d83d64866bc00001d
 # You have a string of numbers; starting with the third number each number is the result 
 # of an operation performed using the previous two numbers.
@@ -27,7 +27,7 @@ def say_me_operations(nums):
             operations.append("division")
     return ", ".join(operations)
 
-# Task 82. Indexed capitalization
+# Task 2.82. Indexed capitalization
 https://www.codewars.com/kata/59cfc09a86a6fdf6df0000f1
 # Given a string and an array of integers representing indices, capitalize all letters at the given indices.
 # For example:
@@ -49,7 +49,7 @@ def capitalize(s,ind):
 def capitalize(s,ind):
     return "".join([el.upper() if i in ind else el for i, el in enumerate(s)])
 
-# Task 83. Maximum Length Difference
+# Task 2.83. Maximum Length Difference
 https://www.codewars.com/kata/5663f5305102699bad000056
 # You are given two arrays a1 and a2 of strings. Each string is composed with letters from a to z. 
 # Let x be any string in the first array and y be any string in the second array.
@@ -79,7 +79,7 @@ def mxdiflg(a1, a2):
                 maximum = diff
     return maximum
 
-# Task 84. Is every value in the array an array?
+# Task 2.84. Is every value in the array an array?
 
 # Is every value in the array an array?
 # This should only test the second array dimension of the array. The values of the nested arrays don't have to be arrays.
@@ -92,7 +92,7 @@ def arr_check(arr):
     return all(type(el) == list for el in arr)
 
 
-# Task 85. CSV representation of array
+# Task 2.85. CSV representation of array
 https://www.codewars.com/kata/5a34af40e1ce0eb1f5000036
 # Create a function that returns the CSV representation of a two-dimensional numeric array. Array's length > 2.
 # Example:
@@ -118,7 +118,7 @@ def toCsvText(array) :
     return "\n".join(",".join([str(el) for el in array]))
 
 
-# Task 86. IPv4 Validator
+# Task 2.86. IPv4 Validator
 https://www.codewars.com/kata/57193694938fcdfe3a001dd7
 # In this kata you have to write a method to verify the validity of IPv4 addresses.
 # Example of valid inputs:
@@ -136,7 +136,7 @@ def ipValidator(ip):
     if len(ip) != 4: return False
     return len([int(el) for el in ip if el.isdigit() and 0<=int(el)<=255]) == 4
 	
-# Task 87. Largest 5 digit number in a series
+# Task 2.87. Largest 5 digit number in a series
 https://www.codewars.com/kata/51675d17e0c1bed195000001
 # In the following 6 digit number: 283910
 # 91 is the greatest sequence of 2 consecutive digits.
@@ -170,9 +170,10 @@ def multiplication_table(row,col):
 def multiplication_table(row,col):
     return [list(range(i,i*col+1,i)) for i in range(1,row+1)]
 
-# Task 89. Multiplication Tables
+# Task 2.89. Multiplication Tables
 https://www.codewars.com/kata/5432fd1c913a65b28f000342
-# Create a function that accepts dimensions, of Rows x Columns, as parameters in order to create a multiplication table sized according to the given dimensions. 
+# Create a function that accepts dimensions, of Rows x Columns, 
+# as parameters in order to create a multiplication table sized according to the given dimensions. 
 # **The return value of the function must be an array, and the numbers must be Fixnums, NOT strings.
 # Example: multiplication_table(3,3)
 # 1 2 3
@@ -184,7 +185,7 @@ https://www.codewars.com/kata/5432fd1c913a65b28f000342
 def multiplication_table(size):
     return [list(range(i, i*size +1, i)) for i in range(1,size+1)]
 
-# Task 90. Maximum Product
+# Task 2.90. Maximum Product
 https://www.codewars.com/kata/5a4138acf28b82aa43000117
 # Task. Given an array of integers , Find the maximum product obtained from multiplying 2 adjacent numbers in the array.
 # adjacentElementsProduct([1, 2, 3]); ==> return 6

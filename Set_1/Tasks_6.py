@@ -48,7 +48,8 @@ def repeat_it(string,n):
 
 # Task 45. Tortoise racing
 https://www.codewars.com/kata/55e2adece53b4cdcb900006c
-# Two tortoises named A and B must run a race. A starts with an average speed of 720 feet per hour. Young B knows she runs faster than A, and furthermore has not finished her cabbage.
+# Two tortoises named A and B must run a race. A starts with an average speed of 720 feet per hour. 
+# Young B knows she runs faster than A, and furthermore has not finished her cabbage.
 # When she starts, at last, she can see that A has a 70 feet lead but B's speed is 850 feet per hour. How long will it take B to catch A?
 # More generally: given two speeds v1 (A's speed, integer > 0) and v2 (B's speed, integer > 0) and a lead g (integer > 0) how long will it take B to catch A?
 # The result will be an array [hour, min, sec] which is the time needed in hours, minutes and seconds (round down to the nearest second) or a string in some languages.
@@ -63,7 +64,6 @@ def race(v1, v2, g):
         min = int((t - hour*3600)//60)
         sec = int(t - (hour*3600 + min*60))
         return [hour, min, sec]
-
 
 # Task 45. Are You Playing Banjo?
 https://www.codewars.com/kata/53af2b8861023f1d88000832
@@ -80,7 +80,7 @@ def areYouPlayingBanjo(name):
 https://www.codewars.com/kata/5a6663e9fd56cb5ab800008b
 # I have a cat and a dog. I got them at the same time as kitten/puppy. That was humanYears years ago.
 # Return their respective ages now as [humanYears,catYears,dogYears]
-NOTES: humanYears >= 1, humanYears are whole numbers only
+# NOTES: humanYears >= 1, humanYears are whole numbers only
 #Cat Years
 #15 cat years for first year
 #+9 cat years for second year
