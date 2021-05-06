@@ -1,7 +1,7 @@
 # Real code challenges. Set #4
-# Completed_solutions 481-490
+# Completed_solutions 4.81-4.90
 
-#  Task 481. Count the Digit
+#  Task 4.81. Count the Digit
 https://www.codewars.com/kata/566fc12495810954b1000030
 # Take an integer n (n >= 0) and a digit d (0 <= d <= 9) as an integer. Square all numbers k (0 <= k <= n) between 0 and n. 
 # Count the numbers of digits d used in the writing of all the k**2. Call nb_dig (or nbDig or ...) the function taking n and d as parameters and returning this count.
@@ -22,7 +22,7 @@ def nb_dig(n, d):
 def nb_dig(n, d):
 	sum(str(i*i).count(str(d)) for i in range(n+1))
 
-# Task 482. Counting Duplicates
+# Task 4.82. Counting Duplicates
 https://www.codewars.com/kata/54bf1c2cd5b56cc47f0007a1
 # Write a function that will return the count of distinct case-insensitive alphabetic characters and numeric digits that occur more than once in the input string. 
 # The input string can be assumed to contain only alphabets (both uppercase and lowercase) and numeric digits.
@@ -42,7 +42,7 @@ def duplicate_count(text):
             dup.append(i) 
     return len(dup)
 
-# Task 483. Credit Card Mask
+# Task 4.83. Credit Card Mask
 https://www.codewars.com/kata/5412509bd436bd33920011bc
 # Usually when you buy something, you're asked whether your credit card number, phone number or answer to your most secret question is still correct. 
 # However, since someone could look over your shoulder, you don't want that shown on your screen. Instead, we mask it.
@@ -58,7 +58,7 @@ https://www.codewars.com/kata/5412509bd436bd33920011bc
 def maskify(cc):
     return "#"*(len(cc)-4) + cc[-4:]
 
-# Task 484. Disemvowel Trolls
+# Task 4.84. Disemvowel Trolls
 https://www.codewars.com/kata/52fba66badcd10859f00097e
 # Trolls are attacking your comment section!
 # A common way to deal with this situation is to remove all of the vowels from the trolls' comments, neutralizing the threat.
@@ -81,7 +81,7 @@ def first_non_repeating_letter(string):
     res = [c for c in string if string.lower().count(c.lower()) == 1]
     return res[0] if len(res) > 0 else ""
 
-# Task 486. Duplicate Encoder
+# Task 4.86. Duplicate Encoder
 https://www.codewars.com/kata/54b42f9314d9229fd6000d9c
 # The goal of this exercise is to convert a string to a new string where each character in the new string is "(" if that character appears only once in the original string, 
 # or ")" if that character appears more than once in the original string. Ignore capitalization when determining if a character is a duplicate.
@@ -95,7 +95,7 @@ https://www.codewars.com/kata/54b42f9314d9229fd6000d9c
 def duplicate_encode(word):
     return "".join(["(" if word.lower().count(el) == 1 else ")"  for el in word.lower()])
 
-# Task 487. Find the non-unique number
+# Task 4.87. Find the non-unique number
 https://www.codewars.com/kata/5b62031b97568072da0003db
 # Given a list of numbers, a number that appears only once is considered unique. The number that appears more than once is considered non-unique.
 # In this kata find the non-unique number and return a list consisting of two elements: [number, # of occurrences of the non-unique number]
@@ -117,7 +117,7 @@ def non_unique(lst):
             arr = [el, num]
     return arr if (len(arr) > 0) else lst if (lst == []) else 'unique'
 
-# Task 488. Sum of numbers from 0 to N
+# Task 4.88. Sum of numbers from 0 to N
 https://www.codewars.com/kata/56e9e4f516bcaa8d4f001763/
 # Description: We want to generate a function that computes the series starting from 0 and ending until the given number.
 # Example:
@@ -133,7 +133,7 @@ def show_sequence(n):
     serie = "+".join([str(el) for el in range(n+1)])
     return f'{n}=0' if n == 0 else f'{n}<0' if n < 0 else f'{serie} = {sum(range(n+1))}'
 
-# Task 489. Find all occurrences of an element in an array
+# Task 4.89. Find all occurrences of an element in an array
 https://www.codewars.com/kata/59a9919107157a45220000e1
 # Given an array (a list in Python) of integers and an integer n, find all occurrences of n in the given array and return another array containing all the index positions of n in the given array.
 # If n is not in the given array, return an empty array [].
@@ -143,7 +143,7 @@ https://www.codewars.com/kata/59a9919107157a45220000e1
 def find_all(array, n):
     return [i for i, el in enumerate(array) if el == n]
 
-# Task 490. Split By Value
+# Task 4.90. Split By Value
 https://www.codewars.com/kata/5a433c7a8f27f23bb00000dc
 # For an integer k rearrange all the elements of the given array in such way, that:
 # all elements that are less than k are placed before elements that are not less than k;
