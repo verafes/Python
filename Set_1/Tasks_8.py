@@ -126,6 +126,18 @@ def solve(n):
         n = int(n%y[i])
         i = i + 1
     return count
+	
+# Solution 2
+
+def solve(n):
+    if n % 10 != 0: return -1
+    count=0
+    arr = [500,200,100,50,20,10]
+    for el in arr:
+        while n >= el:
+            n -= el
+            count += 1
+    return count
 
 # Task 79. Sum of Digits / Digital Root
 https://www.codewars.com/kata/541c8630095125aba6000c00
@@ -159,4 +171,5 @@ https://www.codewars.com/kata/55225023e1be1ec8bc000390
 
 def greet(name):
     return "Hello, my love!" if name == "Johnny" else f"Hello, {name}!"
+
 #

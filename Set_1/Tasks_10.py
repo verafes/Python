@@ -18,10 +18,13 @@ def rental_car_cost(d):
 	
 # Task 92. Watermelon
 https://www.codewars.com/kata/55192f4ecd82ff826900089e
-# One hot summer day Pete and his friend Billy decided to buy watermelons. They chose the biggest crate. They rushed home, dying of thirst, and decided to divide their loot, however they faced a hard problem.
-# Pete and Billy are great fans of even numbers, that's why they want to divide the number of watermelons in such a way that each of the two parts consists of an even number of watermelons. However, it is not obligatory that the parts are equal.
+# One hot summer day Pete and his friend Billy decided to buy watermelons. They chose the biggest crate. 
+# They rushed home, dying of thirst, and decided to divide their loot, however they faced a hard problem.
+# Pete and Billy are great fans of even numbers, that's why they want to divide the number of watermelons in such a way 
+# that each of the two parts consists of an even number of watermelons. However, it is not obligatory that the parts are equal.
 # Example: the boys can divide a stack of 8 watermelons into 2+6 melons, or 4+4 melons.
-# The boys are extremely tired and want to start their meal as soon as possible, that's why you should help them and find out, whether they can divide the fruits in the way they want. For sure, each of them should get a part of positive weight.
+# The boys are extremely tired and want to start their meal as soon as possible, that's why you should help them and find out, 
+# whether they can divide the fruits in the way they want. For sure, each of them should get a part of positive weight.
 # Task
 # Given an integral number of watermelons w (1 ≤ w ≤ 100; 1 ≤ w in Haskell), check whether Pete and Billy can divide the melons so that each of them gets an even amount.
 
@@ -72,9 +75,11 @@ def what_century(year):
 
 # Task 96. Build a pile of Cubes
 https://www.codewars.com/kata/5592e3bd57b64d00f3000047
-# Your task is to construct a building which will be a pile of n cubes. The cube at the bottom will have a volume of n^3, the cube above will have volume of (n-1)^3 and so on until the top which will have a volume of 1^3.
+# Your task is to construct a building which will be a pile of n cubes. The cube at the bottom will have a volume of n^3, 
+# the cube above will have volume of (n-1)^3 and so on until the top which will have a volume of 1^3.
 # You are given the total volume m of the building. Being given m can you find the number n of cubes you will have to build?
-# The parameter of the function findNb (find_nb, find-nb, findNb) will be an integer m and you have to return the integer n such as n^3 + (n-1)^3 + ... + 1^3 = m if such a n exists or -1 if there is no such n.
+# The parameter of the function findNb (find_nb, find-nb, findNb) will be an integer m and you have to return the integer n 
+# such as n^3 + (n-1)^3 + ... + 1^3 = m if such a n exists or -1 if there is no such n.
 # Examples: findNb(1071225) --> 45
 # findNb(91716553919377) --> -1
 
@@ -110,7 +115,8 @@ def difference_of_squares(n):
 # Task 98. Find the next perfect square!
 https://www.codewars.com/kata/56269eb78ad2e4ced1000013
 # You might know some pretty large perfect squares. But what about the NEXT one?
-# Complete the findNextSquare method that finds the next integral perfect square after the one passed as a parameter. Recall that an integral perfect square is an integer n such that sqrt(n) is also an integer.
+# Complete the findNextSquare method that finds the next integral perfect square after the one passed as a parameter. 
+# Recall that an integral perfect square is an integer n such that sqrt(n) is also an integer.
 # If the parameter is itself not a perfect square then -1 should be returned. You may assume the parameter is positive.
 # Examples:
 # findNextSquare(121) --> returns 144
@@ -125,8 +131,10 @@ def find_next_square(sq):
 # Task 99. Graceful Tipping
 https://www.codewars.com/kata/5eb27d81077a7400171c6820
 # Adding tip to a restaurant bill in a graceful way can be tricky, thats why you need make a function for it.
-# The function will receive the restaurant bill (always a positive number) as an argument. You need to 1) add at least 15% in tip, 2) round that number up to an elegant value and 3) return it.
-# What is an elegant number? It depends on the magnitude of the number to be rounded. Numbers below 10 should simply be rounded to whole numbers. Numbers 10 and above should be rounded like this:
+# The function will receive the restaurant bill (always a positive number) as an argument. 
+# You need to 1) add at least 15% in tip, 2) round that number up to an elegant value and 3) return it.
+# What is an elegant number? It depends on the magnitude of the number to be rounded. Numbers below 10 should simply be rounded to whole numbers. 
+# Numbers 10 and above should be rounded like this:
 # 10 - 99.99... ---> Round to number divisible by 5
 # 100 - 999.99... ---> Round to number divisible by 50
 # 1000 - 9999.99... ---> Round to number divisible by 500
@@ -167,7 +175,8 @@ https://www.codewars.com/kata/563f037412e5ada593000114
 # After 3rd Year -->   P = 1128.30
 # Thus Mr. Scrooge has to wait for 3 years for the initial principal to amount to the desired sum.
 # Your task is to complete the method provided and return the number of years 'Y' as a whole in order for Mr. Scrooge to get the desired sum.
-# Assumption: Assume that Desired Principal 'D' is always greater than the initial principal. However it is best to take into consideration that if Desired Principal 'D' is equal to Principal 'P' this should return 0 Years.
+# Assumption: Assume that Desired Principal 'D' is always greater than the initial principal. However it is best to take into consideration 
+# that if Desired Principal 'D' is equal to Principal 'P' this should return 0 Years.
 
 def calculate_years(principal, interest, tax, desired):
     y = 0

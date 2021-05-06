@@ -108,7 +108,8 @@ def final_grade(exam, projects):
 # Task 88. The Office IV - Find a Meeting Room
 https://www.codewars.com/kata/57f604a21bd4fe771b00009c
 # Your job at E-Corp is both boring and difficult. It isn't made any easier by the fact that everyone constantly wants to have a meeting with you, and that the meeting rooms are always taken!
-# In this kata, you will be given an array. Each value represents a meeting room. Your job? Find the first empty one and return its index (N.B. There may be more than one empty room in some test cases).
+# In this kata, you will be given an array. Each value represents a meeting room. Your job? Find the first empty one and return its index 
+# (N.B. There may be more than one empty room in some test cases).
 # 'X' --> busy 'O' --> empty
 # If all rooms are busy, return 'None available!'.
 
@@ -133,7 +134,8 @@ def update_light(current):
 
 # Task 90. Training JS #7: if..else and ternary operator
 https://www.codewars.com/kata/57202aefe8d6c514300001fd
-# Complete function saleHotdogs/SaleHotDogs/sale_hotdogs, function accept 1 parameters:n, n is the number of customers to buy hotdogs, different numbers have different prices (refer to the following table), return a number that the customer need to pay how much money.
+# Complete function saleHotdogs/SaleHotDogs/sale_hotdogs, function accept 1 parameters:n, n is the number of customers to buy hotdogs, 
+# different numbers have different prices (refer to the following table), return a number that the customer need to pay how much money.
 # +---------------+-------------+
 # |  numbers n    | price(cents)|
 # +---------------+-------------+
@@ -153,4 +155,5 @@ def sale_hotdogs(n):
         return n*95
     else: 
         return n*90 
+
 #
