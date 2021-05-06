@@ -1,7 +1,7 @@
-# Real code challenges. Set #4
-# Completed_solutions 491-500
+# Real code challenges. Set #4-10
+# Completed_solutions 4.91-5.00
 
-#  Task 491. Vowel Count
+#  Task 4.91. Vowel Count
 https://www.codewars.com/kata/54ff3102c1bad923760001f3 
 # Return the number (count) of vowels in the given string.
 # We will consider a, e, i, o, u as vowels for this Kata (but not y).
@@ -33,7 +33,7 @@ def highest_value(a, b):
 def highest_value(a, b):
     return a if sum(ord(c) for c in a) >= sum(ord(c) for c in b) else b
 
-# Task 493. This is odd
+# Task 4.93. This is odd
 https://www.codewars.com/kata/554003323fd6af1c4200004e
 # Create a function that checks if a number is odd.
 # Expect negative and decimal numbers too. Remember... all negative numbers can also be either odd or even.
@@ -51,7 +51,7 @@ https://www.codewars.com/kata/554003323fd6af1c4200004e
 def is_odd(n):
     return n % 2 !=0 and n % 1 == 0 
 
-# Task 494. Is it a vowel on this position?
+# Task 4.94. Is it a vowel on this position?
 https://www.codewars.com/kata/5a2b7edcb6486a856e00005b
 # Check if it is a vowel(a, e, i, o, u,) on the n position in a string (the first argument). Don't forget about uppercase.
 # A few cases:
@@ -63,7 +63,7 @@ def check_vowel(string, position):
     print(string, position)
     return 0 <= position < len(string) and string[position].lower() in 'aouei'
 
-# Task 495. Check if a triangle is an equable triangle!
+# Task 4.95. Check if a triangle is an equable triangle!
 https://www.codewars.com/kata/57d0089e05c186ccb600035e
 # A triangle is called an equable triangle if its area equals its perimeter. 
 # Return true, if it is an equable triangle, else return false. 
@@ -74,9 +74,10 @@ def equable_triangle(a,b,c):
     s = (p * (p - a) * (p - b) * (p - c)) ** 0.5
     return a + b + c == s
 
-# Task 496. You're a square!
+# Task 4.96. You're a square!
 https://www.codewars.com/kata/54c27a33fb7da0db0100040e
-# You like building blocks. You especially like building blocks that are squares. And what you even like more, is to arrange them into a square of square building blocks!
+# You like building blocks. You especially like building blocks that are squares. And what you even like more, 
+# is to arrange them into a square of square building blocks!
 # However, sometimes, you can't arrange them into a square. Instead, you end up with an ordinary rectangle! 
 # Those blasted things! If you just had a way to know, whether you're currently working in vain… Wait! That's it! 
 # You just have to check if your number of building blocks is a perfect square.
@@ -96,7 +97,7 @@ def is_square(n):
     if n < 0: return False
     return n**0.5 % 1 == 0
 
-# Task 497. Hello World without strings, numbers and booleans
+# Task 4.97. Hello World without strings, numbers and booleans
 https://www.codewars.com/kata/5b0148133e9715bf6f000154
 # Create the hi_all() function without using strings, numbers and booleans. The return value is "Hello World". 
 # No, it is not impossible, use the builtin functions. Good luck :)
@@ -122,7 +123,7 @@ def hi_all():
     d = chr(ten * ten)
     return H + e + l + l + o + space + W + o + r + l + d
 
-# Task 498. Hello World - Without Strings
+# Task 4.98. Hello World - Without Strings
 https://www.codewars.com/kata/584c7b1e2cb5e1a727000047
 # You need to create a function, helloWorld, that will return the String Hello, World! without actually using raw strings. 
 # This includes quotes, double quotes and template strings. You can, however, use the String constructor and any related functions.
@@ -131,7 +132,7 @@ https://www.codewars.com/kata/584c7b1e2cb5e1a727000047
 def hello_world():
     return chr(72)+chr(101)+chr(108)+chr(108)+chr(111)+chr(44)+chr(32)+chr(87)+chr(111)+chr(114)+chr(108)+chr(100)+chr(33) 
 	
-# Task 499. Numbers to Letters
+# Task 4.99. Numbers to Letters
 https://www.codewars.com/kata/57ebaa8f7b45ef590c00000c
 # Given an array of numbers (in string format), you must return a string. The numbers correspond to the letters of the alphabet in reverse order: a=26, z=1 etc. 
 # You should also account for '!', '?' and ' ' that are represented by '27', '28' and '29' respectively.
@@ -144,7 +145,7 @@ def switcher(arr):
         s += alph[int(el)]
     return s
 	
-# Task 500. Replace With Alphabet Position
+# Task 5.00. Replace With Alphabet Position
 https://www.codewars.com/kata/546f922b54af40e1e90001da
 # In this kata you are required to, given a string, replace every letter with its position in the alphabet.
 # If anything in the text isn't a letter, ignore it and don't return it.
