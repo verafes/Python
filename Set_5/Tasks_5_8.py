@@ -1,7 +1,7 @@
 # Real code challenges. Set #5-8
-# Completed_solutions 5.81-5.90
+# Completed_solutions 5.71-5.80
 
-#  Task 5.81. Thinkful - Number Drills: Congo warehouses
+#  Task 5.71. Thinkful - Number Drills: Congo warehouses
 https://www.codewars.com/kata/5862e7c63f8628a126000e18
 # Your company, Congo Pizza, is the second-largest online frozen pizza retailer. You own a number of international warehouses that you use to store your frozen pizzas, 
 # and you need to figure out how many crates of pizzas you can store at each location.
@@ -16,14 +16,14 @@ https://www.codewars.com/kata/5862e7c63f8628a126000e18
 def box_capacity(length, width, height):
    return int(length * 12//16) * int(width * 12//16) * int(height * 12//16)
 
-# Task 5.82. Is it a palindrome?
+# Task 5.72. Is it a palindrome?
 https://www.codewars.com/kata/57a1fd2ce298a731b20006a4
 # Write function that checks if a given string (case insensitive) is a palindrome.
 
 def is_palindrome(s):
     return s.lower() == s.lower()[::-1]
 
-# Task 5.83. Multiply characters
+# Task 5.73. Multiply characters
 https://www.codewars.com/kata/52e9aa89b5acdd26d3000127
 # Here we have a function that help us spam our hearty laughter. But is not working! I need you to find out why...
 
@@ -35,7 +35,7 @@ def spam(number):
 def spam(number):
     return "".join(['hue' for i in range(number)])
 
-# Task 5.84. Regex validate PIN code
+# Task 5.74. Regex validate PIN code
 https://www.codewars.com/kata/55f8a9c06c018a0d6e000132
 # ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but exactly 4 digits or exactly 6 digits.
 # If the function is passed a valid PIN string, return true, else return false.
@@ -47,7 +47,7 @@ https://www.codewars.com/kata/55f8a9c06c018a0d6e000132
 def validate_pin(pin):
     return pin.isdigit() and len(pin) in [4,6]
 
-# Task 5.85. validate code with simple regex
+# Task 5.75. validate code with simple regex
 https://www.codewars.com/kata/56a25ba95df27b7743000016
 # Basic regex tasks. Write a function that takes in a numeric code of any length. 
 # The function should check if the code begins with 1, 2, or 3 and return true if so. Return false otherwise.
@@ -56,7 +56,7 @@ https://www.codewars.com/kata/56a25ba95df27b7743000016
 def validate_code(code):
     return str(code).startswith(('1', '2', '3'))
 
-# Task 5.86. Switcheroo
+# Task 5.76. Switcheroo
 https://www.codewars.com/kata/57f759bb664021a30300007d
 # Given a string made up of letters a, b, and/or c, switch the position of letters a and b (change a to b and vice versa). Leave any incidence of c untouched.
 # Example:
@@ -66,7 +66,7 @@ https://www.codewars.com/kata/57f759bb664021a30300007d
 def switcheroo(s):
     return s.replace("a", "A").replace("b", "a").replace("A", "b")
 	
-# Task 5.87. FIXME: Replace all dots
+# Task 5.77. FIXME: Replace all dots
 https://www.codewars.com/kata/596c6eb85b0f515834000049
 # The code provided is supposed replace all the dots . in the specified String str with dashes -
 # But it's not working properly.
@@ -82,7 +82,7 @@ def replace_dots(str):
 def replace_dots(str):
     return str.replace(".", "-")
 
-# Task 5.88. Switcheroo
+# Task 5.78. Switcheroo
 https://www.codewars.com/kata/57f759bb664021a30300007d
 # Given a string made up of letters a, b, and/or c, switch the position of letters a and b (change a to b and vice versa). 
 # Leave any incidence of c untouched.
@@ -98,7 +98,7 @@ def switcheroo(s):
 def switcheroo(s):
     return "".join([ "a" if el == "b" else "b" if el =="a" else "c" for el in s])
 	
-# Task 5.89. Initialize my name
+# Task 5.79. Initialize my name
  https://www.codewars.com/kata/5768a693a3205e1cc100071f
 # Some people just have a first name; some people have first and last names and some people have first, middle and last names.
 # You task is to initialize the middle names (if there is any).
