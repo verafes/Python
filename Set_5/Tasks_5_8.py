@@ -65,7 +65,12 @@ https://www.codewars.com/kata/57f759bb664021a30300007d
 
 def switcheroo(s):
     return s.replace("a", "A").replace("b", "a").replace("A", "b")
-	
+
+# 2nd solution:
+
+def switcheroo(s):
+    return "".join([ "a" if el == "b" else "b" if el =="a" else "c" for el in s])
+
 # Task 5.77. FIXME: Replace all dots
 https://www.codewars.com/kata/596c6eb85b0f515834000049
 # The code provided is supposed replace all the dots . in the specified String str with dashes -
@@ -82,24 +87,23 @@ def replace_dots(str):
 def replace_dots(str):
     return str.replace(".", "-")
 
-# Task 5.78. Switcheroo
+# Task 5.78. BASIC: Making Six Toast
 https://www.codewars.com/kata/57f759bb664021a30300007d
-# Given a string made up of letters a, b, and/or c, switch the position of letters a and b (change a to b and vice versa). 
-# Leave any incidence of c untouched.
-# Example:
-# 'acb' --> 'bca'
-# 'aabacbaa' --> 'bbabcabb'
+# Story:
+# You are going to make toast fast, you think that you should make multiple pieces of toasts and once. So, you try to make 6 pieces of toast.
+# Problem: You forgot to count the number of toast you put into there, you don't know if you put exactly six pieces of toast into the toasters.
+# Define a function that counts how many more (or less) pieces of toast you need in the toasters. 
+# Even though you need more or less, the number will still be positive, not negative.
+# Examples: You must return the number of toast the you need to put in (or to take out). In case of 5 you can still put 1 toast in:
+# six_toast(5) == 1
+# And in case of 12 you need 6 toasts less (but not -6):
+# six_toast(12) == 6
 
-def switcheroo(s):
-    return s.replace("a", "A").replace("b", "a").replace("A", "b")
+def six_toast(num):
+    return abs(num - 6)
 
-# 2nd solution:
-
-def switcheroo(s):
-    return "".join([ "a" if el == "b" else "b" if el =="a" else "c" for el in s])
-	
 # Task 5.79. Initialize my name
- https://www.codewars.com/kata/5768a693a3205e1cc100071f
+https://www.codewars.com/kata/5768a693a3205e1cc100071f
 # Some people just have a first name; some people have first and last names and some people have first, middle and last names.
 # You task is to initialize the middle names (if there is any).
 # Examples
